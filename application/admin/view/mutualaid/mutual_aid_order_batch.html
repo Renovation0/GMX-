@@ -1,0 +1,171 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}互助列表{/block}
+{block name="style"}
+<style>
+    .layui-table td, .layui-table th {
+        min-width: unset !important;
+    }
+    .role_user {
+        display: inline-block;
+        margin-right: 5px;
+        padding: 5px;
+        background-color: #f0f0f0;
+    }
+	.layui-form-radio {
+	    line-height: 1px;
+	    padding-right: 1px;
+	    cursor: pointer;
+	    margin: 0px 0px 0px 0px;
+	}
+</style>
+{/block}
+{block name="page"}
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+<!--                          <div class="layui-tab-content">
+                            <form class="layui-form layui-col-space5">
+                                <div class="layui-input-inline layui-show-xs-block">
+                                    <input type="text" name="serach" value="{$param_serach}" placeholder="账号搜索" autocomplete="off" class="layui-input">
+                                </div>
+
+                                <div class="layui-input-inline layui-show-xs-block">
+                                    <button class="layui-btn" lay-submit="" lay-filter="sreach">
+                                        <i class="layui-icon">&#xe615;</i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div> -->
+                        <input type="text" hidden name="idstr" id="idstr" value="{$idstr}">
+                <div class="layui-card-body ">
+                    <table class="layui-table layui-form">
+                        <thead>
+                        <tr>
+                            <th style="width: 1%;">
+                            <input type="checkbox" lay-filter="checkalls" name="" lay-skin="primary">
+                            </th>
+                            <th style="width: 25px;"><b>ID</b></th>
+                            <!-- <th style="width: 35px;"><b>用户id</b></th> -->
+                            <th style="min-width: 70px;"><b>会员账号</b></th>
+                            <th style="min-width: 70px;"><b>预约宠物</b></th>
+                            <th style="min-width: 30px;"><b>失败次数</b></th>
+                            <th style="min-width: 50px;"><b>花费金额</b></th>
+                            <th style="min-width: 100px;"><b>推荐人账号</b></th>
+                            <th style="min-width: 100px;"><b>时间</b></th>
+                            <th  style="min-width: 60px;"><b>IP地址</b></th>
+                            <th  style="min-width: 60px;"><b>总资产</b></th>
+                            <th style="min-width: 80px;"><b>是否指定</b></th>
+                            <th style="min-width: 80px;"><b>备注</b></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {if !empty($list->items())}
+                        {volist name="list" id="user"}
+                        <tr align="center">
+                            <td><input type="checkbox" name="cbtd"  value="{$user['id']}"  lay-skin="primary"></td>
+                            <td>{$user['id']}</td>
+                            <!-- <td>{$user['uid']}</td> -->
+                            <td>{$user['tel']}{if $user['real_name'] != ''}({$user['real_name']}){/if}</td>
+                            <td>{$user['name']}</td>
+                            <td>{$user['fail_num']}</td>
+                            <td>{$user['num']}</td>
+                            <td>{$user['f_tel']}{if $user['f_real_name'] != ''}({$user['f_real_name']}){/if}</td>
+                            <td>{:date('m-d H:i:s',$user['time'])}</td>
+                            <td>{$user['last_ip']}</td>
+                            <td>{$user['total_asset']}</td>
+                            {if $user['appoint_order'] == ''}
+                            <td>未指定</td>
+                            {else/}
+                            <td>已指定订单ID:{$user['appoint_order']}</td>
+                            {/if}
+                            <td>
+                                <button title="查看" class="layui-btn layui-btn-normal" onclick="xadmin.open('查看预约记录','{:url('mutualaid/mutualaidorderbatchuser')}?id='+{$user[\'uid\']}, 0, 0, true)">
+                                    <i class="iconfont">&#xe69e;</i>
+                                </button>
+                            </td>
+                        </tr>
+                        {/volist}
+                        {else /}
+                        <tr>
+                            <td colspan="13" class="nodata_td">无记录</td>
+                        </tr>
+                        {/if}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="layui-card-body ">
+                    <div class="page">
+                        {$list|raw}
+                    </div>
+                </div>
+            {if in_array('/mutualaid/mutualaidorderappointpost', (array)session('power_action'))}
+            <div class="layui-form-item" style="position: fixed;bottom: 0;z-index: 100;">
+                <button class="layui-btn" lay-submit lay-filter="role_add">修改</button>
+            </div>
+            {else /}
+                                  无权限
+            {/if}
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    layui.use('form', function () {
+        let form = layui.form;
+        form.render();
+        
+        // 监听全选
+        form.on('checkbox(checkalls)', function(data){
+
+          if(data.elem.checked){
+            $('tbody input').prop('checked',true);
+          }else{
+            $('tbody input').prop('checked',false);
+          }
+          form.render('checkbox');
+        });
+        
+    });
+    	str = $('#idstr').val();
+
+    $(function  () {
+        layui.use('form', function(){       	
+            let form = layui.form;
+            form.on('submit(role_add)', function(data){         
+       	           	
+                var id_arr = [];           	
+                // 获取选中的id 
+                $('tbody input').each(function(index, el) {
+                    if($(this).prop('checked')){
+                    	id_arr.push($(this).val())
+                    }
+                });
+
+                $.ajax({
+                    url: "{:url('mutualaid/mutualAidOrderBatchPost')}",//'/admin/mutualaid/mutualAidOrderBatchPost',
+                    type: 'post',
+                    data: {
+                    	id_arr: id_arr,
+                    	idstr: str
+                    },
+                    success: function (data) {
+                        if(data.code === 1){
+                            layer.msg(data.msg);
+                            setTimeout(function(){
+                                parent.location.reload();
+                            }, 500);
+                        }else {
+                            layer.msg(data.msg);
+                        }
+                    }
+                });
+                return false;
+            });
+        });
+    });
+
+</script>
+{/block}

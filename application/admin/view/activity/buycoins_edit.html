@@ -1,0 +1,156 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}角色添加{/block}
+{block name="style"}{/block}
+{block name="page"}
+<div class="layui-fluid">
+    <div class="layui-row">
+        <form class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                <label for="buy_num" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>买币数量
+                </label>
+                <div class="layui-input-inline">
+                    <input type="number" id="buy_num" name="buy_num" value="{$activity['buy_num']}" lay-verify="required" autocomplete="off" class="layui-input">
+                    <input type="text" hidden value="{$activity['id']}" name="act_id">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="assets" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>矿池资产
+                </label>
+                <div class="layui-input-inline">
+                    <input type="number" id="assets" name="assets" value="{$activity['assets']}" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>矿机类型
+                </label>
+                <div class="layui-input-inline layui-show-xs-block">
+                    <select name="mac_id" id="mac_id">
+                        <option value="">请选择</option>
+                        {volist name="machine" id="mac"}
+                        <option value="{$mac['id']}" <?php if($activity['mac_id'] == $mac['id']) echo 'selected';?>>{$mac['name']}</option>
+                        {/volist}
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 150px">
+                    矿机数量
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="mac_num" name="mac_num" value="{$activity['mac_num']}" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="superior" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>上级同等矿机
+                </label>
+                <div class="layui-input-inline layui-show-xs-block">
+                    <select name="superior" id="superior">
+                        <option value="">请选择</option>
+                        <option value="1" <?php if($activity['superior'] == 1) echo 'selected';?>>开启</option>
+                        <option value="2" <?php if($activity['superior'] == 2) echo 'selected';?>>关闭</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="mac_num" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>活动开始时间
+                </label>
+                <div class="layui-input-inline">
+                    <input class="layui-input"  autocomplete="off" value="{$activity['begin_time']|date='Y-m-d H:i:s'}" placeholder="活动开始时间" name="add_time_s" id="add_time_s">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="mac_num" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>活动截至时间
+                </label>
+                <div class="layui-input-inline">
+                    <input class="layui-input"  autocomplete="off" value="{$activity['end_time']|date='Y-m-d H:i:s'}" placeholder="活动截至时间" name="add_time_e" id="add_time_e">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="status" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>是否开启活动
+                </label>
+                <div class="layui-input-inline layui-show-xs-block">
+                    <select name="status" id="status">
+                        <option value="">请选择</option>
+                        <option value="1" <?php if($activity['status'] == 1) echo 'selected';?>>开启</option>
+                        <option value="2" <?php if($activity['status'] == 2) echo 'selected';?>>关闭</option>
+                    </select>
+                </div>
+            </div>
+            {if in_array('/index/activity/buycoinseditpost', (array)session('power_action'))}
+            <div class="layui-form-item">
+                <button class="layui-btn" lay-submit lay-filter="role_add">修改</button>
+            </div>
+            {else /}
+            <button class="layui-btn layui-btn-disabled">
+                无权限
+            </button>
+            {/if}
+        </form>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    //日期选择
+    layui.use(['laydate','form'], function(){
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#add_time_s',
+            type: 'datetime'
+        });
+        laydate.render({
+            elem: '#add_time_e',
+            type: 'datetime'
+        });
+
+    });
+
+    $(function  () {
+        layui.use('form', function(){
+            let form = layui.form;
+            form.on('submit(role_add)', function(data){
+                $.ajax({
+                    url: '/index/activity/buycoinsEditpost',
+                    type: 'post',
+                    data: {
+                        id: data.field.act_id,
+                        assets: data.field.assets,
+                        buy_num: data.field.buy_num,
+                        mac_id: data.field.mac_id,
+                        mac_num: data.field.mac_num,
+                        superior: data.field.superior,
+                        add_time_s: data.field.add_time_s,
+                        add_time_e: data.field.add_time_e,
+                        status: data.field.status,
+                    },
+                    success: function (data) {
+                        if(data.code === 1){
+                            layer.msg(data.msg);
+                            setTimeout(function(){
+                                parent.location.reload();
+                            }, 500);
+                        }else {
+                            layer.msg(data.msg);
+                        }
+                    }
+                });
+                return false;
+            });
+        });
+    });
+</script>
+{/block}

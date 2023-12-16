@@ -1,0 +1,111 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}资讯分类添加{/block}
+{block name="style"}
+<style>
+    .thumbnail_box {
+        display: none;
+    }
+</style>
+{/block}
+{block name="page"}
+<div class="layui-fluid">
+    <div class="layui-row">
+        <form action="" method="post" class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                <label for="thumbnail" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>分类logo
+                </label>
+                <div class="layui-input-block">
+                    <button type="button" class="layui-btn" id="thumbnail">
+                        <i class="layui-icon">&#xe67c;</i>上传图片
+                    </button>
+                    <div class="thumbnail_box" id="thumbnail_box">
+                        <img id="thumbnail_img" src="" alt="" width="100" onclick="$('#thumbnail').click()">
+                        <input type="button" class="layui-btn layui-btn-danger" onclick="delete_thumbnail()" value="删除">
+                    </div>
+                    <input type="hidden" name="thumbnail" value="" id="thumbnail_value">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>分类名
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="name" name="name" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label"></label>
+                <button class="layui-btn" lay-submit lay-filter="role_add">增加</button>
+            </div>
+        </form>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    // 图片上传
+    layui.use('upload', function(){
+        var upload = layui.upload;
+        var uploadInst = upload.render({
+            elem: '#thumbnail',
+            field: 'image',
+            accept: 'images',
+            url: "{:url('base/uploadImage')}",//'/admin/base/uploadImage',
+            data: {module: 'notice', folder: '/cat/logo'},
+            done: function(res){
+                if(res.code == 1){
+                    layer.msg(res.msg);
+                    $("#thumbnail_img").attr('src', res.url);
+                    $("#thumbnail_value").val(res.url);
+                    $("#thumbnail").hide();
+                    $("#thumbnail_box").show();
+                }else {
+                    layer.msg(res.msg);
+                }
+            },
+            error: function(){
+                //请求异常回调
+            }
+        });
+    });
+
+    // 删除缩略图
+    function delete_thumbnail()
+    {
+        $("#thumbnail_box").hide();
+        $("#thumbnail").show();
+        $("#thumbnail_img").attr('src', '');
+        $("#thumbnail_value").val('');
+        return false;
+    }
+
+    $(function  () {
+        layui.use('form', function(){
+            let form = layui.form;
+            form.on('submit(role_add)', function(data){
+                $.ajax({
+                    url: "{:url('notice/catAdd')}",//'/admin/notice/catAdd',
+                    type: 'post',
+                    data: {
+                        xl_title: data.field.name,
+                        img: data.field.thumbnail,
+                    },
+                    success: function (data) {
+                        if(data.code === 1){
+                            layer.msg(data.msg);
+                            setTimeout(function(){
+                                parent.location.reload();
+                            }, 500);
+                        }else {
+                            layer.msg(data.msg);
+                        }
+                    }
+                });
+                return false;
+            });
+        });
+    });
+</script>
+{/block}

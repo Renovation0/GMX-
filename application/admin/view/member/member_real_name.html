@@ -1,0 +1,164 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}订单详情{/block}
+{block name="style"}{/block}
+{block name="page"}
+<div class="layui-fluid">
+    <div class="layui-row">
+        <form class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" style="width: 150px">
+                    姓名
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="name" name="real_name" value="{$info['real_name']}"  class="layui-input" disabled>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" style="width: 150px">
+                    身份证号码
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="idcard" name="idcard" value="{$info['idcard']}"  class="layui-input" disabled>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" style="width: 150px">
+                    紧急联系人
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="urgent_mobile" name="urgent_mobile" value="{$info['urgent_mobile']}"  class="layui-input" disabled>
+                </div>
+            </div>
+<!--            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" style="width: 150px">
+                    收款码账号
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="name" name="real_contact" value="{$info['real_contact']}"  class="layui-input" disabled>
+                </div>
+            </div>
+             <div class="layui-form-item">
+                <label for="name" class="layui-form-label" style="width: 150px">
+                    支付宝收款码
+                </label>
+                <div class="layui-input-inline" onclick="confirm('{$info[\'payment_code_img1\']}')">
+                	{if condition = "$info.payment_code_img1 eq ''"}
+                    <img src="__UPLOAD__/404_img.jpg" alt="" style="width:80px">
+                    {else/}
+                    <img src="{$info.payment_code_img1}" alt="" style="width:80px">
+                    {/if}
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" style="width: 150px">
+                    微信收款码
+                </label>
+                <div class="layui-input-inline" onclick="confirm('{$info[\'payment_code_img2\']}')">
+                	{if condition = "$info.payment_code_img2 eq ''"}
+                    <img src="__UPLOAD__/404_img.jpg" alt="" style="width:80px">
+                    {else/}
+                    <img src="{$info.payment_code_img2}" alt="" style="width:80px">
+                    {/if}
+                </div>
+            </div> -->
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" style="width: 150px">
+                    身份证正面
+                </label>
+                <div class="layui-input-inline" onclick="confirm('{$info[\'cardImg1\']}')">
+                	{if condition = "$info.cardImg1 eq ''"}
+                    <img src="__UPLOAD__/404_img.jpg" alt="" style="width:80px">
+                    {else/}
+                    <img src="{$info.cardImg1}" alt="" style="width:80px">
+                    {/if}
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" style="width: 150px">
+                    身份证反面
+                </label>
+                <div class="layui-input-inline" onclick="confirm('{$info[\'cardImg2\']}')">
+                	{if condition = "$info.cardImg2 eq ''"}
+                    <img src="__UPLOAD__/404_img.jpg" alt="" style="width:80px">
+                    {else/}
+                    <img src="{$info.cardImg2}" alt="" style="width:80px">
+                    {/if}
+                </div>
+            </div>
+<!--             {if condition="$info.real_name_status neq 1"}
+            <div class="layui-form-item" >
+                <label for="name" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>是否通过
+                </label>
+                <div class="layui-input-inline">
+                	<input type="checkbox" checked lay-filter="my_checkbox" name="sta" value="1" lay-skin="switch">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" style="width: 150px">
+                    	拒绝理由
+                </label>
+                <div class="layui-input-inline">
+                	<textarea rows="5" cols="50" name="refusal_reason"> </textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <button class="layui-btn" lay-submit lay-filter="role_add">提交</button>
+            </div>
+            {/if} -->
+        </form>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+
+function confirm(url) {   	
+    $("#displayImg").attr("src", url);
+    var width = 'auto';
+    var height = 'auto';
+    if(url == ''){
+    	url = '__UPLOAD__/404_img.jpg';
+    }
+    layer.open({
+        type: 1,
+        title: false,
+        closeBtn: 0,
+        shadeClose: true,
+        area: [width + 'px', height + 'px'], //宽高
+        content: "<img src=" + url + " />"
+    });
+}
+
+
+$(function  () {
+    layui.use('form', function(){
+        let form = layui.form;
+        form.on('submit(role_add)', function(data){
+            $.ajax({
+                url: '/admin/member/memberRealNamePost',
+                type: 'post',
+                data: {
+                    id: {$info['id']},
+                    real_name_time: {$info['real_name_time']},
+                    sta: data.field.sta,
+                    refusal_reason: data.field.refusal_reason
+                },
+                success: function (data) {
+                    if(data.code === 1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            parent.location.reload();
+                        }, 500);
+                    }else {
+                        layer.msg(data.msg);
+                    }
+                }
+            }); 
+            return false;
+        });
+    });
+});
+
+</script>
+{/block}

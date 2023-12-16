@@ -1,0 +1,135 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}用户矿机{/block}
+{block name="style"}
+<style>
+    .layui-table td, .layui-table th {
+        min-width: unset !important;
+    }
+    .role_user {
+        display: inline-block;
+        margin-right: 5px;
+        padding: 5px;
+        background-color: #f0f0f0;
+    }
+    .aaa {
+		color: red;
+    }
+    .bbb{
+		color: blue;
+    }    
+</style>
+{/block}
+{block name="page"}
+<div class="x-nav">
+    <span class="layui-breadcrumb">
+        <a href="javascript:;">系统</a>
+        <a href="javascript:;">矿机管理</a>
+        <a><cite>用户矿机</cite></a>
+    </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" onclick="location.reload()" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+    </a>
+</div>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body ">
+                    <form class="layui-form layui-col-space5">
+                        <div class="layui-input-inline layui-show-xs-block">
+                            <select name="mac_id" id="mac_id">
+                                <option value="">请选择</option>
+                                {volist name="machine" id="mac"}
+                                <option value="{$mac['id']}" {if condition="$mac_id == $mac.id"}selected="selected"{/if}>{$mac['name']}</option>
+                                {/volist}
+                            </select>
+                        </div>
+                        <div class="layui-input-inline layui-show-xs-block">
+                            <input type="text" name="user_tel" value="{$user_tel}" placeholder="手机号" autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline layui-show-xs-block">
+                            <button class="layui-btn" lay-submit="" lay-filter="sreach">
+                                <i class="layui-icon">&#xe615;</i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="layui-card-body ">
+                    <!-- {if in_array('/admin/machine/machinesend', (array)session('power_action'))}
+                    <button class="layui-btn layui-btn-normal" onclick="xadmin.open('发送矿机', '/admin/machine/machineSend', 600, 500)">
+                        <i class="layui-icon"></i>发送
+                    </button>
+                    {else /}
+                    <button class="layui-btn layui-btn-disabled" onclick="return false">
+                        <i class="layui-icon"></i>发送
+                    </button>
+                    {/if} -->
+                    <table class="layui-table layui-form">
+                        <thead>
+                        <tr>
+                            <th style="width: 40px;">ID<br>   <a class="<?php echo $sort == 'id asc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/id asc'"><i class="layui-icon">&#xe619;</i></a> <a class="<?php echo $sort == 'id desc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/id desc'"><i class="layui-icon">&#xe61a;</i></a></th>
+                            <th style="width: 50px;">矿机种类</th>
+                            <th style="width: 60px;">用户id</th>
+                            <th style="width: 50px;">花费<br>   <a class="<?php echo $sort == 'num asc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/num asc'"><i class="layui-icon">&#xe619;</i></a> <a class="<?php echo $sort == 'num desc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/num desc'"><i class="layui-icon">&#xe61a;</i></a></th>
+                            <th style="width: 40px;">收益次数<br>   <a class="<?php echo $sort == 'hours asc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/hours asc'"><i class="layui-icon">&#xe619;</i></a> <a class="<?php echo $sort == 'hours desc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/hours desc'"><i class="layui-icon">&#xe61a;</i></a></th>
+                            <th style="width: 40px;">剩余周期<br>   <a class="<?php echo $sort == 's_cycle asc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/s_cycle asc'"><i class="layui-icon">&#xe619;</i></a> <a class="<?php echo $sort == 's_cycle desc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/s_cycle desc'"><i class="layui-icon">&#xe61a;</i></a></th>
+                            <th style="width: 40px;">产矿周期<br>   <a class="<?php echo $sort == 'cycle asc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/cycle asc'"><i class="layui-icon">&#xe619;</i></a> <a class="<?php echo $sort == 'cycle desc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/cycle desc'"><i class="layui-icon">&#xe61a;</i></a></th>
+                            <th style="width: 60px;">每24小时收益<br>   <a class="<?php echo $sort == 'hour_output asc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/hour_output asc'"><i class="layui-icon">&#xe619;</i></a> <a class="<?php echo $sort == 'hour_output desc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/hour_output desc'"><i class="layui-icon">&#xe61a;</i></a></th>
+                            <th style="width: 60px;">已结算收益<br>   <a class="<?php echo $sort == 'output asc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/output asc'"><i class="layui-icon">&#xe619;</i></a> <a class="<?php echo $sort == 'output desc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/output desc'"><i class="layui-icon">&#xe61a;</i></a></th>
+                            <th style="width: 50px;">剩余收益<br>   <a class="<?php echo $sort == 'r_output asc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/r_output asc'"><i class="layui-icon">&#xe619;</i></a> <a class="<?php echo $sort == 'r_output desc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/r_output desc'"><i class="layui-icon">&#xe61a;</i></a></th>
+                            <th style="width: 120px;">购买时间<br>   <a class="<?php echo $sort == 'time asc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/time asc'"><i class="layui-icon">&#xe619;</i></a> <a class="<?php echo $sort == 'time desc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/time desc'"><i class="layui-icon">&#xe61a;</i></a></th>
+                            <th style="width: 120px;">上次领取时间<br>   <a class="<?php echo $sort == 'last_time asc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/last_time asc'"><i class="layui-icon">&#xe619;</i></a> <a class="<?php echo $sort == 'last_time desc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/last_time desc'"><i class="layui-icon">&#xe61a;</i></a></th>
+                            <th style="width: 120px;">到期时间<br>   <a class="<?php echo $sort == 'e_time asc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/e_time asc'"><i class="layui-icon">&#xe619;</i></a> <a class="<?php echo $sort == 'e_time desc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/e_time desc'"><i class="layui-icon">&#xe61a;</i></a></th>
+                            <th style="width: 120px;">状态<br>   <a class="<?php echo $sort == 'status asc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/status asc'"><i class="layui-icon">&#xe619;</i></a> <a class="<?php echo $sort == 'status desc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/machine/userMachine/sort/status desc'"><i class="layui-icon">&#xe61a;</i></a></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {if !empty($list['list']->items())}
+                        {volist name="list['list']" id="user"}
+                        <tr>
+                            <td>{$user['id']}</td>
+                            <td><?php if(isset($list['mac'][$user['mac_id']]['name'])) echo $list['mac'][$user['mac_id']]['name'];?></td>
+                            <td><?php if(isset($list['member'][$user['u_id']]['tel'])) echo $list['member'][$user['u_id']]['tel'];?></td>
+                            <td>{$user['num']}</td>
+                            <td>{$user['hours']}</td>
+                            <td>{$user['s_cycle']}</td>
+                            <td>{$user['cycle']}</td>
+                            <td>{$user['hour_output']}</td>
+                            <td>{$user['output']}</td>
+                            <td>{$user['r_output']}</td>
+                            <td>{$user['time']|date='Y-m-d H:i:s'}</td>
+                            <td>{if condition="$user.last_time eq 0"}-- 无 --{else/}{$user['last_time']|date='Y-m-d H:i:s'}{/if}</td>
+                            <td>{if condition="$user.e_time eq 0"}-- 无 --{else/}{$user['e_time']|date='Y-m-d H:i:s'}{/if}</td>
+                            {switch $user['status']}
+                            {case 1}<td style="color: green">开启中</td>{/case}
+                            {case 2}<td style="color: red">已到期</td>{/case}
+                            {default /}
+                            {/switch}
+                        </tr>
+                        {/volist}
+                        {else /}
+                        <tr>
+                            <td colspan="14" class="nodata_td">无记录</td>
+                        </tr>
+                        {/if}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="layui-card-body ">
+                    <div class="page">
+                        {$list['list']|raw}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    layui.use('form', function () {
+        let form = layui.form;
+        form.render();
+    });
+</script>
+{/block}

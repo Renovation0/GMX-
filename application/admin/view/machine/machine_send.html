@@ -1,0 +1,81 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}矿机发送{/block}
+{block name="style"}{/block}
+{block name="page"}
+<div class="layui-fluid">
+    <div class="layui-row">
+        <form class="layui-form layui-form-pane">
+
+            <div class="layui-form-item">
+                <label for="user_tel" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>发送账户
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="user_tel" name="user_tel" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="num" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>发送数量
+                </label>
+                <div class="layui-input-inline">
+                    <input type="number" id="num" name="num" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="mac_id" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>矿机种类
+                </label>
+                <div class="layui-input-inline layui-show-xs-block">
+                    <select name="mac_id" id="mac_id">
+                        <option value="">请选择</option>
+                        {volist name="machine" id="mac"}
+                        <option value="{$mac['id']}">{$mac['name']}</option>
+                        {/volist}
+                    </select>
+                </div>
+            </div>
+            {if in_array('/admin/machine/newmachinesend', (array)session('power_action'))}
+            <div class="layui-form-item">
+                <button class="layui-btn" lay-submit lay-filter="role_add">增加</button>
+            </div>
+            {else /}
+            无权限
+            {/if}
+        </form>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    $(function  () {
+        layui.use('form', function(){
+            let form = layui.form;
+            form.on('submit(role_add)', function(data){
+                $.ajax({
+                    url: '/admin/machine/newmachineSend',
+                    type: 'post',
+                    data: {
+                        user_tel: data.field.user_tel,
+                        num: data.field.num,
+                        mac_id: data.field.mac_id
+                    },
+                    success: function (data) {
+                        if(data.code === 1){
+                            layer.msg(data.msg);
+                            setTimeout(function(){
+                                parent.location.reload();
+                            }, 500);
+                        }else {
+                            layer.msg(data.msg);
+                        }
+                    }
+                });
+                return false;
+            });
+        });
+    });
+</script>
+{/block}

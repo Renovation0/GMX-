@@ -1,0 +1,190 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}回收站{/block}
+{block name="style"}
+<style>
+    .layui-table td, .layui-table th {
+        min-width: unset !important;
+    }
+    .role_user {
+        display: inline-block;
+        margin-right: 5px;
+        padding: 5px;
+        background-color: #f0f0f0;
+    }
+    .x-admin-sm .layui-form-pane .layui-form-label {
+        height: 38px;
+        line-height: 20px;
+    }
+    .x-admin-sm .layui-input, .x-admin-sm .layui-select, .x-admin-sm .layui-textarea {
+        height: 38px;
+        border-radius: 2px;
+    }
+    /*.layui-form-pane .layui-form-item[pane] {
+        border-style: unset;
+    }*/
+    .x-admin-sm .layui-btn {
+        height: 38px;
+        line-height: 38px;
+    }
+</style>
+{/block}
+{block name="page"}
+<div class="x-nav">
+    <span class="layui-breadcrumb">
+        <a href="javascript:;">系统</a>
+        <a href="javascript:;">系统设置</a>
+        <a><cite>回收站</cite></a>
+    </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" onclick="location.reload()" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+    </a>
+</div>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body ">
+                    <form class="layui-form layui-form-pane layui-col-space5">
+                        <input type="hidden" name="type" value="{$param_type}">
+                        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+                            <ul class="layui-tab-title">
+                                <li class="type_chose <?php if($param_type == 1) echo 'layui-this';?>" data-type="1">角色</li>
+                                <li class="type_chose <?php if($param_type == 2) echo 'layui-this';?>" data-type="2">管理员</li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+                <!-- <div class="layui-card-header">
+                     {if in_array('/admin/admin/roleadd', (array)session('power_action'))}
+                     <button class="layui-btn layui-btn-normal" onclick="xadmin.open('添加角色','/admin/admin/roleAdd',600,400)">
+                         <i class="layui-icon"></i>添加
+                     </button>
+                     {else /}
+                     <button class="layui-btn layui-btn-disabled">
+                         <i class="layui-icon"></i>添加
+                     </button>
+                     {/if}
+                 </div>-->
+                <div class="layui-card-body ">
+                    <table class="layui-table layui-form">
+                        <thead>
+                        <tr>
+                            <th style="width: 20px;">ID</th>
+                            <th style="width: 100px;">内容</th>
+                            <th style="width: 290px;">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {if !empty($list->items())}
+                        {volist name="list" id="item"}
+                        <tr>
+                            <td>{$item['id']}</td>
+                            <td>{$item['name']}</td>
+                            <td class="td-manage">
+                                <!--恢复-->
+                                {if in_array('/admin/system/recycleback', (array)session('power_action'))}
+                                <button class="layui-btn" onclick="dataBack(this, '{$item[\'id\']}')">
+                                    <i class="iconfont">&#xe6af;</i> 恢复
+                                </button>
+                                {else /}
+                                <button class="layui-btn layui-btn-disabled">
+                                    <i class="iconfont">&#xe6af;</i> 恢复
+                                </button>
+                                {/if}
+                                <!--清除-->
+                                {if in_array('/admin/system/recycleclear', (array)session('power_action'))}
+                                <button class="layui-btn layui-btn-danger" onclick="dataClear(this, '{$item[\'id\']}')">
+                                    <i class="iconfont">&#xe69d;</i> 清除
+                                </button>
+                                {else /}
+                                <button class="layui-btn layui-btn-disabled">
+                                    <i class="iconfont">&#xe69d;</i> 清除
+                                </button>
+                                {/if}
+                            </td>
+                        </tr>
+                        {/volist}
+                        {else /}
+                        <tr>
+                            <td colspan="3" class="nodata_td">无记录</td>
+                        </tr>
+                        {/if}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="layui-card-body ">
+                    <div class="page">
+                        {$list|raw}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    // 初始化表单
+    layui.use('form', function () {
+        let form = layui.form;
+        form.render();
+    });
+
+    // 切换回收分类
+    $('.type_chose').click(function () {
+        $("input[name='type']").val($(this).attr('data-type'));
+        $(".layui-form").submit();
+    });
+
+    // 恢复数据
+    function dataBack(obj, id) {
+        layer.confirm('确认恢复？', function(index) {
+            $.ajax({
+                url: '/admin/system/recycleBack',
+                type: 'post',
+                data: {
+                    type: {$param_type},
+                    id: id,
+                },
+                success: function (data) {
+                    if(data.code === 1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            window.location.reload();
+                        }, 500);
+                    }else {
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+        });
+    }
+    
+    
+    // 清除数据
+    function dataClear(obj, id) {
+        layer.confirm('确认清除？', function(index) {
+            $.ajax({
+                url: '/admin/system/recycleClear',
+                type: 'post',
+                data: {
+                    type: {$param_type},
+                    id: id,
+                },
+                success: function (data) {
+                    if(data.code === 1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            window.location.reload();
+                        }, 500);
+                    }else {
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+        });
+    }
+
+</script>
+{/block}

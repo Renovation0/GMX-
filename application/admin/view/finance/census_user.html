@@ -1,0 +1,681 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}统计中心{/block}
+{block name="style"}
+{/block}
+{block name="page"}
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header" style="position: relative">会员统计
+                    <span style="color: red;position: absolute;right: 70px;">*请不要过于频繁的刷新
+                    上次刷新时间:
+                        <?php if(array_key_exists('member_refresh_time',$census)){?>
+                        {:date('Y-m-d H:i:s',$census['member_refresh_time'])}
+                        <?php }else{?>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <?php }?>
+                    </span>
+                    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+                       onclick="refresh(this, 1)" title="刷新">
+                        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+                    </a>
+                </div>
+                <div class="layui-card-body ">
+                    <ul class="layui-row layui-col-space10 layui-this x-admin-carousel x-admin-backlog">
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>会员总数</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('member_num',$census)){?>
+                                    {$census['member_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>昨日新增</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('member_yesterday',$census)){?>
+                                    {$census['member_yesterday']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>今日新增</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('member_today',$census)){?>
+                                    {$census['member_today']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>在线会员</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('member_online',$census)){?>
+                                    {$census['member_online']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>未实名</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('reg_member',$census)){?>
+                                    {$census['reg_member']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>已实名</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('real_name_time',$census)){?>
+                                    {$census['real_name_time']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7 ">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>已禁用</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('member_disabled_num',$census)){?>
+                                    {$census['member_disabled_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7 ">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>已删除</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('member_disabled_num_forever',$census)){?>
+                                    {$census['member_disabled_num_forever']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7 ">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>有效会员</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('effective_member',$census)){?>
+                                    {$census['effective_member']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7 ">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>一级会员</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('member_level1',$census)){?>
+                                    {$census['member_level1']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7 ">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>二级会员</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('member_level2',$census)){?>
+                                    {$census['member_level2']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7 ">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>三级会员</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('member_level3',$census)){?>
+                                    {$census['member_level3']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7 ">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>四级会员</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('member_level4',$census)){?>
+                                    {$census['member_level4']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7 ">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>五级会员</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('member_level5',$census)){?>
+                                    {$census['member_level5']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7 ">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>六级会员</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('member_level6',$census)){?>
+                                    {$census['member_level6']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7 ">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>七级会员</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('member_level7',$census)){?>
+                                    {$census['member_level7']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header" style="position: relative">矿机统计
+                    <span style="color: red;position: absolute;right: 70px;">*请不要过于频繁的刷新
+                    上次刷新时间:
+                        <?php if(array_key_exists('mac_refresh_time',$census)){?>
+                        {:date('Y-m-d H:i:s',$census['mac_refresh_time'])}
+                        <?php }else{?>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <?php }?>
+                    </span>
+                    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+                       onclick="refresh(this, 2)" title="刷新">
+                        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+                    </a>
+                </div>
+                <div class="layui-card-body ">
+                    <ul class="layui-row layui-col-space10 layui-this x-admin-carousel x-admin-backlog">
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>累计矿机</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('mac_num',$census)){?>
+                                    {$census['mac_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>已过期矿机</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('mac_pass_num',$census)){?>
+                                    {$census['mac_pass_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>赠送矿机</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('mac_give_num',$census)){?>
+                                    {$census['mac_give_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>总产量</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('mac_yield_num',$census)){?>
+                                    {$census['mac_yield_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>昨日产量(按领取时间)</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('mac_yesterday_num',$census)){?>
+                                    {$census['mac_yesterday_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7 ">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>今日产量(按领取时间)</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('mac_today_num',$census)){?>
+                                    {$census['mac_today_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header" style="position: relative">交易统计
+                    <span style="color: red;position: absolute;right: 70px;">*请不要过于频繁的刷新
+                    上次刷新时间:
+                        <?php if(array_key_exists('order_refresh_time',$census)){?>
+                        {:date('Y-m-d H:i:s',$census['order_refresh_time'])}
+                        <?php }else{?>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <?php }?>
+                    </span>
+                    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+                       onclick="refresh(this, 3)" title="刷新">
+                        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+                    </a>
+                </div>
+                <div class="layui-card-body">
+                    <ul class="layui-row layui-col-space10 layui-this x-admin-carousel x-admin-backlog">
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>交易累计(量)</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('sum_num',$census)){?>
+                                    {$census['sum_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>昨日交易(量)</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('yesterday_num',$census)){?>
+                                    {$census['yesterday_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>今日交易(量)</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('today_num',$census)){?>
+                                    {$census['today_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>挂单中(量)</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('in_num',$census)){?>
+                                    {$census['in_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>交易进行中(量)</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('num',$census)){?>
+                                    {$census['num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7 ">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>已完成金额</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('bo_money',$census)){?>
+                                    {$census['bo_money']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7 ">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>已完成手续费</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('rechange',$census)){?>
+                                    {$census['rechange']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header" style="position: relative">子币交易统计
+                    <span style="color: red;position: absolute;right: 70px;">*请不要过于频繁的刷新
+                    上次刷新时间:
+                        <?php if(array_key_exists('coin_order_refresh_time',$census)){?>
+                        {:date('Y-m-d H:i:s',$census['coin_order_refresh_time'])}
+                        <?php }else{?>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <?php }?>
+                    </span>
+                    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+                       onclick="refresh(this, 4)" title="刷新">
+                        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+                    </a>
+                </div>
+                <div class="layui-card-body">
+                    <ul class="layui-row layui-col-space10 layui-this x-admin-carousel x-admin-backlog">
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>交易累计(量)</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('zb_sum_num',$census)){?>
+                                    {$census['zb_sum_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>昨日交易(量)</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('zb_yesterday_num',$census)){?>
+                                    {$census['zb_yesterday_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>今日交易(量)</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('zb_today_num',$census)){?>
+                                    {$census['zb_today_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>挂单中(量)</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('zb_in_num',$census)){?>
+                                    {$census['zb_in_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>交易进行中(量)</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('zb_num',$census)){?>
+                                    {$census['zb_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7 ">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>已完成金额</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('zb_bo_money',$census)){?>
+                                    {$census['zb_bo_money']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7 ">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>已完成手续费</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('zb_rechange',$census)){?>
+                                    {$census['zb_rechange']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header" style="position: relative">游戏统计
+                    <span style="color: red;position: absolute;right: 70px;">*请不要过于频繁的刷新
+                    上次刷新时间:
+                        <?php if(array_key_exists('game_refresh_time',$census)){?>
+                        {:date('Y-m-d H:i:s',$census['game_refresh_time'])}
+                        <?php }else{?>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <?php }?>
+                    </span>
+                    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+                       onclick="refresh(this, 5)" title="刷新">
+                        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+                    </a>
+                </div>
+                <div class="layui-card-body">
+                    <ul class="layui-row layui-col-space10 layui-this x-admin-carousel x-admin-backlog">
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>额度下注量(总)</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('game_num_btc',$census)){?>
+                                    {$census['game_num_btc']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?></cite>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>额度总盈余</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('btc_pay_num',$census)){?>
+                                    {$census['btc_pay_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>额度今日盈余</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('btc_today_num',$census)){?>
+                                    {$census['btc_today_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>额度今日下注量</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('td_btc_num',$census)){?>
+                                    {$census['td_btc_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>子币下注量(总)</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('game_num_eth',$census)){?>
+                                    {$census['game_num_eth']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>子币总盈余</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('eth_pay_num',$census)){?>
+                                    {$census['eth_pay_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>子币今日盈余</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('eth_today_num',$census)){?>
+                                    {$census['eth_today_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs7">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>子币今日下注量</h3>
+                                <p><cite>
+                                    <?php if(array_key_exists('td_eth_num',$census)){?>
+                                    {$census['td_eth_num']}
+                                    <?php }else{?>
+                                    请刷新&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }?>
+                                </cite></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <style id="welcome_style"></style>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    // 刷新数据
+    function refresh(obj, type) {
+        layer.confirm('请确认操作', function(index) {
+            $.ajax({
+                url: '/admin/finance/updataCensus',
+                type: 'post',
+                data: {
+                    type: type
+                },
+                success: function (data) {
+                    if(data.code === 1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            window.location.reload();
+                        }, 500);
+                    }else {
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+        });
+    }
+</script>
+{/block}

@@ -1,0 +1,1093 @@
+---------------------------------------------------------------
+[2023-10-31T18:45:53+08:00] 47.15.161.1 GET gem-xtra.pro/public/
+[运行时间：0.056816s] [吞吐率：17.60req/s] [内存消耗：592.03kb] [文件加载：66]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81eb4fa01aaf0769-MRS',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+  'accept-language' => 'en-GB,en;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'cookie' => 'SESSIONID=d4d18652-6e98-438a-9f95-7512b1b2d489.Sc5LTxSKmpRCaZP2FVBURvEdbJg; Path=/www/wwwroot/code/web.xstrataplc.net_zhnHMi; order=id%20desc; serverType=nginx; request_token=P51yMyB12XzrcpeJYweKkV8KfA7GJJyeJOPmLYbbpMOPrQLy; backup_path=/www/backup; memSize=3789; bt_user_info=%7B%22status%22%3Atrue%2C%22msg%22%3A%22%u83B7%u53D6%u6210%u529F%21%22%2C%22data%22%3A%7B%22username%22%3A%22139****9999%22%7D%7D; ltd_end=4086842076; pro_end=-1; sites_path=/www/wwwroot; rank=list',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '47.15.161.1',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '47.15.161.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /home/gemxpbra/public_html/application/index/view/index/index.html [ array (
+) ]
+---------------------------------------------------------------
+[2023-10-31T18:46:27+08:00] 47.15.161.1 GET gem-xtra.pro/public/witkey2022.php
+[运行时间：0.012277s] [吞吐率：81.45req/s] [内存消耗：391.80kb] [文件加载：69]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81eb507539780769-MRS',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+  'accept-language' => 'en-GB,en;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'cookie' => 'SESSIONID=d4d18652-6e98-438a-9f95-7512b1b2d489.Sc5LTxSKmpRCaZP2FVBURvEdbJg; Path=/www/wwwroot/code/web.xstrataplc.net_zhnHMi; order=id%20desc; serverType=nginx; request_token=P51yMyB12XzrcpeJYweKkV8KfA7GJJyeJOPmLYbbpMOPrQLy; backup_path=/www/backup; memSize=3789; bt_user_info=%7B%22status%22%3Atrue%2C%22msg%22%3A%22%u83B7%u53D6%u6210%u529F%21%22%2C%22data%22%3A%7B%22username%22%3A%22139****9999%22%7D%7D; ltd_end=4086842076; pro_end=-1; sites_path=/www/wwwroot; rank=list',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '47.15.161.1',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '47.15.161.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /home/gemxpbra/public_html/thinkphp/tpl/dispatch_jump_zm.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+---------------------------------------------------------------
+[2023-10-31T18:46:39+08:00] 47.15.161.1 GET gem-xtra.pro/public/witkey2022.php/login/login
+[运行时间：0.043510s] [吞吐率：22.98req/s] [内存消耗：744.95kb] [文件加载：82]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81eb50bfff280769-MRS',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+  'accept-language' => 'en-GB,en;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'cookie' => 'PHPSESSID=2ee494b8855ccbf99828c12f0048b51a; SESSIONID=d4d18652-6e98-438a-9f95-7512b1b2d489.Sc5LTxSKmpRCaZP2FVBURvEdbJg; Path=/www/wwwroot/code/web.xstrataplc.net_zhnHMi; order=id%20desc; serverType=nginx; request_token=P51yMyB12XzrcpeJYweKkV8KfA7GJJyeJOPmLYbbpMOPrQLy; backup_path=/www/backup; memSize=3789; bt_user_info=%7B%22status%22%3Atrue%2C%22msg%22%3A%22%u83B7%u53D6%u6210%u529F%21%22%2C%22data%22%3A%7B%22username%22%3A%22139****9999%22%7D%7D; ltd_end=4086842076; pro_end=-1; sites_path=/www/wwwroot; rank=list',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '47.15.161.1',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '47.15.161.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/gemxpbra/public_html/application/admin/view/login/login.html [ array (
+  0 => 'log_title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000940s ] mysql:host=127.0.0.1;port=3306;dbname=gemxpbra_pro;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_config` [ RunTime:0.005207s ]
+[ sql ] [ SQL ] SELECT `value` FROM `zm_system_config` WHERE  `key` = 'website' LIMIT 1 [ RunTime:0.000562s ]
+---------------------------------------------------------------
+[2023-10-31T18:46:53+08:00] 47.15.161.1 POST gem-xtra.pro/public/witkey2022.php/login/do_login
+[运行时间：0.045150s] [吞吐率：22.15req/s] [内存消耗：781.70kb] [文件加载：83]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81eb5117fa350769-MRS',
+  'content-length' => '33',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'sec-fetch-site' => 'same-origin',
+  'accept-language' => 'en-GB,en;q=0.9',
+  'sec-fetch-mode' => 'navigate',
+  'origin' => 'https://gem-xtra.pro',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+  'referer' => 'https://gem-xtra.pro/public/witkey2022.php/login/login',
+  'sec-fetch-dest' => 'document',
+  'cookie' => 'PHPSESSID=2ee494b8855ccbf99828c12f0048b51a; SESSIONID=d4d18652-6e98-438a-9f95-7512b1b2d489.Sc5LTxSKmpRCaZP2FVBURvEdbJg; Path=/www/wwwroot/code/web.xstrataplc.net_zhnHMi; order=id%20desc; serverType=nginx; request_token=P51yMyB12XzrcpeJYweKkV8KfA7GJJyeJOPmLYbbpMOPrQLy; backup_path=/www/backup; memSize=3789; bt_user_info=%7B%22status%22%3Atrue%2C%22msg%22%3A%22%u83B7%u53D6%u6210%u529F%21%22%2C%22data%22%3A%7B%22username%22%3A%22139****9999%22%7D%7D; ltd_end=4086842076; pro_end=-1; sites_path=/www/wwwroot; rank=list',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '47.15.161.1',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '47.15.161.1',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456789',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000883s ] mysql:host=127.0.0.1;port=3306;dbname=gemxpbra_pro;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_user` [ RunTime:0.004761s ]
+[ sql ] [ SQL ] SELECT * FROM `zm_system_user` WHERE  `username` = 'admin' OR `phone` = 'admin' LIMIT 1 [ RunTime:0.000674s ]
+[ sql ] [ SQL ] UPDATE `zm_system_user`  SET `login_time` = 1698749213 , `login_ip` = '47.15.161.1'  WHERE  `id` = 1 [ RunTime:0.001633s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_user_role` [ RunTime:0.002335s ]
+[ sql ] [ SQL ] SELECT `role_id` FROM `zm_system_user_role` WHERE  `u_id` = 1 [ RunTime:0.000546s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_role` [ RunTime:0.003545s ]
+[ sql ] [ SQL ] SELECT `id` FROM `zm_system_role` WHERE  `id` IN (1)  AND `status` = 1 [ RunTime:0.000512s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_menu` [ RunTime:0.004682s ]
+[ sql ] [ SQL ] SELECT `id` FROM `zm_system_menu` WHERE  `status` = 1 [ RunTime:0.000645s ]
+[ sql ] [ SQL ] SELECT `id` FROM `zm_system_menu` WHERE  `id` IN (1,2,3,4,10000,10100,10101,10200,10201,10301,10302,10401,10500,10600,10700,10701,10800,10801,10802,10803,20000,20100,20101,20102,20103,20104,20105,20106,20107,20108,20200,20201,20202,20203,20204,20205,20206,20300,20301,20302,20303,20304,20305,20306,30000,30100,30101,30102,30103,30104,30105,30106,30107,30108,30109,30110,30111,30112,30113,30114,30200,30201,30202,30203,30700,30701,30800,30801,30900,31000,31001,31002,31003,31004,31005,31006,31100,31200,31201,31202,70000,70100,70101,70102,70103,70104,70105,70106,70300,70301,70302,70303,70304,80000,80100,80101,80102,80103,80104,80105,80201,80202,90100,90101,90102,90103,90104,90200,100000,100100,100101,100102,100103,100200,100201,100202,100203,100204,140001,140002,140003)  AND `status` = 1 [ RunTime:0.001032s ]
+[ sql ] [ SQL ] SELECT `action` FROM `zm_system_menu` WHERE  `id` IN (1,2,3,4,10000,10100,10101,10200,10201,10301,10302,10401,10500,10600,10700,10701,10800,10801,10802,10803,20000,20100,20101,20102,20103,20104,20105,20106,20107,20108,20200,20201,20202,20203,20204,20205,20206,20300,20301,20302,20303,20304,20305,20306,30000,30100,30101,30102,30103,30104,30105,30106,30107,30108,30109,30110,30111,30112,30113,30114,30200,30201,30202,30203,30700,30701,30800,30801,30900,31000,31001,31002,31003,31004,31005,31006,31100,31200,31201,31202,70000,70100,70101,70102,70103,70104,70105,70106,70300,70301,70302,70303,70304,80000,80100,80101,80102,80103,80104,80105,80201,80202,90100,90101,90102,90103,90104,90200,100000,100100,100101,100102,100103,100200,100201,100202,100203,100204,140001,140002,140003)  AND `status` = 1 [ RunTime:0.001004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_login_log` [ RunTime:0.002163s ]
+[ sql ] [ SQL ] INSERT INTO `zm_system_login_log` (`u_id` , `res` , `ip` , `time` , `status`) VALUES (1 , '登录成功' , '47.15.161.1' , 1698749213 , 1) [ RunTime:0.002556s ]
+---------------------------------------------------------------
+[2023-10-31T18:47:20+08:00] 47.15.161.1 GET gem-xtra.pro/public/witkey2022.php/login/do_login
+[运行时间：0.011070s] [吞吐率：90.33req/s] [内存消耗：493.53kb] [文件加载：72]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81eb51c0985d0769-MRS',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+  'accept-language' => 'en-GB,en;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'cookie' => 'PHPSESSID=2ee494b8855ccbf99828c12f0048b51a; SESSIONID=d4d18652-6e98-438a-9f95-7512b1b2d489.Sc5LTxSKmpRCaZP2FVBURvEdbJg; Path=/www/wwwroot/code/web.xstrataplc.net_zhnHMi; order=id%20desc; serverType=nginx; request_token=P51yMyB12XzrcpeJYweKkV8KfA7GJJyeJOPmLYbbpMOPrQLy; backup_path=/www/backup; memSize=3789; bt_user_info=%7B%22status%22%3Atrue%2C%22msg%22%3A%22%u83B7%u53D6%u6210%u529F%21%22%2C%22data%22%3A%7B%22username%22%3A%22139****9999%22%7D%7D; ltd_end=4086842076; pro_end=-1; sites_path=/www/wwwroot; rank=list',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '47.15.161.1',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '47.15.161.1',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2023-10-31T18:47:27+08:00] 47.15.161.1 GET gem-xtra.pro/public/witkey2022.php/
+[运行时间：0.007735s] [吞吐率：129.28req/s] [内存消耗：390.02kb] [文件加载：69]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81eb51ed9cd70769-MRS',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+  'accept-language' => 'en-GB,en;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'cookie' => 'PHPSESSID=2ee494b8855ccbf99828c12f0048b51a; SESSIONID=d4d18652-6e98-438a-9f95-7512b1b2d489.Sc5LTxSKmpRCaZP2FVBURvEdbJg; Path=/www/wwwroot/code/web.xstrataplc.net_zhnHMi; order=id%20desc; serverType=nginx; request_token=P51yMyB12XzrcpeJYweKkV8KfA7GJJyeJOPmLYbbpMOPrQLy; backup_path=/www/backup; memSize=3789; bt_user_info=%7B%22status%22%3Atrue%2C%22msg%22%3A%22%u83B7%u53D6%u6210%u529F%21%22%2C%22data%22%3A%7B%22username%22%3A%22139****9999%22%7D%7D; ltd_end=4086842076; pro_end=-1; sites_path=/www/wwwroot; rank=list',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '47.15.161.1',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '47.15.161.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /home/gemxpbra/public_html/thinkphp/tpl/dispatch_jump_zm.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+---------------------------------------------------------------
+[2023-10-31T18:47:34+08:00] 47.15.161.1 GET gem-xtra.pro/public/witkey2022.php/
+[运行时间：0.010965s] [吞吐率：91.20req/s] [内存消耗：390.02kb] [文件加载：69]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81eb5216fd990769-MRS',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+  'accept-language' => 'en-GB,en;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'cookie' => 'PHPSESSID=2ee494b8855ccbf99828c12f0048b51a; SESSIONID=d4d18652-6e98-438a-9f95-7512b1b2d489.Sc5LTxSKmpRCaZP2FVBURvEdbJg; Path=/www/wwwroot/code/web.xstrataplc.net_zhnHMi; order=id%20desc; serverType=nginx; request_token=P51yMyB12XzrcpeJYweKkV8KfA7GJJyeJOPmLYbbpMOPrQLy; backup_path=/www/backup; memSize=3789; bt_user_info=%7B%22status%22%3Atrue%2C%22msg%22%3A%22%u83B7%u53D6%u6210%u529F%21%22%2C%22data%22%3A%7B%22username%22%3A%22139****9999%22%7D%7D; ltd_end=4086842076; pro_end=-1; sites_path=/www/wwwroot; rank=list',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '47.15.161.1',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '47.15.161.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /home/gemxpbra/public_html/thinkphp/tpl/dispatch_jump_zm.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+---------------------------------------------------------------
+[2023-10-31T18:47:35+08:00] 47.15.161.1 GET gem-xtra.pro/public/witkey2022.php/login/do_login
+[运行时间：0.009851s] [吞吐率：101.51req/s] [内存消耗：385.63kb] [文件加载：65]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81eb521dba0c0769-MRS',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+  'accept-language' => 'en-GB,en;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'cookie' => 'PHPSESSID=2ee494b8855ccbf99828c12f0048b51a; SESSIONID=d4d18652-6e98-438a-9f95-7512b1b2d489.Sc5LTxSKmpRCaZP2FVBURvEdbJg; Path=/www/wwwroot/code/web.xstrataplc.net_zhnHMi; order=id%20desc; serverType=nginx; request_token=P51yMyB12XzrcpeJYweKkV8KfA7GJJyeJOPmLYbbpMOPrQLy; backup_path=/www/backup; memSize=3789; bt_user_info=%7B%22status%22%3Atrue%2C%22msg%22%3A%22%u83B7%u53D6%u6210%u529F%21%22%2C%22data%22%3A%7B%22username%22%3A%22139****9999%22%7D%7D; ltd_end=4086842076; pro_end=-1; sites_path=/www/wwwroot; rank=list',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '47.15.161.1',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '47.15.161.1',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2023-10-31T18:47:39+08:00] 47.15.161.1 POST gem-xtra.pro/public/witkey2022.php/login/do_login
+[运行时间：0.037493s] [吞吐率：26.67req/s] [内存消耗：779.95kb] [文件加载：83]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81eb5233f9930769-MRS',
+  'content-length' => '33',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'sec-fetch-site' => 'same-origin',
+  'accept-language' => 'en-GB,en;q=0.9',
+  'sec-fetch-mode' => 'navigate',
+  'origin' => 'https://gem-xtra.pro',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+  'referer' => 'https://gem-xtra.pro/public/witkey2022.php/login/login',
+  'sec-fetch-dest' => 'document',
+  'cookie' => 'PHPSESSID=2ee494b8855ccbf99828c12f0048b51a; SESSIONID=d4d18652-6e98-438a-9f95-7512b1b2d489.Sc5LTxSKmpRCaZP2FVBURvEdbJg; Path=/www/wwwroot/code/web.xstrataplc.net_zhnHMi; order=id%20desc; serverType=nginx; request_token=P51yMyB12XzrcpeJYweKkV8KfA7GJJyeJOPmLYbbpMOPrQLy; backup_path=/www/backup; memSize=3789; bt_user_info=%7B%22status%22%3Atrue%2C%22msg%22%3A%22%u83B7%u53D6%u6210%u529F%21%22%2C%22data%22%3A%7B%22username%22%3A%22139****9999%22%7D%7D; ltd_end=4086842076; pro_end=-1; sites_path=/www/wwwroot; rank=list',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '47.15.161.1',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '47.15.161.1',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456789',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001245s ] mysql:host=127.0.0.1;port=3306;dbname=gemxpbra_pro;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_user` [ RunTime:0.001815s ]
+[ sql ] [ SQL ] SELECT * FROM `zm_system_user` WHERE  `username` = 'admin' OR `phone` = 'admin' LIMIT 1 [ RunTime:0.000835s ]
+[ sql ] [ SQL ] UPDATE `zm_system_user`  SET `login_time` = 1698749258 , `login_ip` = '47.15.161.1'  WHERE  `id` = 1 [ RunTime:0.003190s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_user_role` [ RunTime:0.001322s ]
+[ sql ] [ SQL ] SELECT `role_id` FROM `zm_system_user_role` WHERE  `u_id` = 1 [ RunTime:0.000638s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_role` [ RunTime:0.001275s ]
+[ sql ] [ SQL ] SELECT `id` FROM `zm_system_role` WHERE  `id` IN (1)  AND `status` = 1 [ RunTime:0.000542s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_menu` [ RunTime:0.001164s ]
+[ sql ] [ SQL ] SELECT `id` FROM `zm_system_menu` WHERE  `status` = 1 [ RunTime:0.000683s ]
+[ sql ] [ SQL ] SELECT `id` FROM `zm_system_menu` WHERE  `id` IN (1,2,3,4,10000,10100,10101,10200,10201,10301,10302,10401,10500,10600,10700,10701,10800,10801,10802,10803,20000,20100,20101,20102,20103,20104,20105,20106,20107,20108,20200,20201,20202,20203,20204,20205,20206,20300,20301,20302,20303,20304,20305,20306,30000,30100,30101,30102,30103,30104,30105,30106,30107,30108,30109,30110,30111,30112,30113,30114,30200,30201,30202,30203,30700,30701,30800,30801,30900,31000,31001,31002,31003,31004,31005,31006,31100,31200,31201,31202,70000,70100,70101,70102,70103,70104,70105,70106,70300,70301,70302,70303,70304,80000,80100,80101,80102,80103,80104,80105,80201,80202,90100,90101,90102,90103,90104,90200,100000,100100,100101,100102,100103,100200,100201,100202,100203,100204,140001,140002,140003)  AND `status` = 1 [ RunTime:0.001615s ]
+[ sql ] [ SQL ] SELECT `action` FROM `zm_system_menu` WHERE  `id` IN (1,2,3,4,10000,10100,10101,10200,10201,10301,10302,10401,10500,10600,10700,10701,10800,10801,10802,10803,20000,20100,20101,20102,20103,20104,20105,20106,20107,20108,20200,20201,20202,20203,20204,20205,20206,20300,20301,20302,20303,20304,20305,20306,30000,30100,30101,30102,30103,30104,30105,30106,30107,30108,30109,30110,30111,30112,30113,30114,30200,30201,30202,30203,30700,30701,30800,30801,30900,31000,31001,31002,31003,31004,31005,31006,31100,31200,31201,31202,70000,70100,70101,70102,70103,70104,70105,70106,70300,70301,70302,70303,70304,80000,80100,80101,80102,80103,80104,80105,80201,80202,90100,90101,90102,90103,90104,90200,100000,100100,100101,100102,100103,100200,100201,100202,100203,100204,140001,140002,140003)  AND `status` = 1 [ RunTime:0.001563s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_login_log` [ RunTime:0.001468s ]
+[ sql ] [ SQL ] INSERT INTO `zm_system_login_log` (`u_id` , `res` , `ip` , `time` , `status`) VALUES (1 , '登录成功' , '47.15.161.1' , 1698749259 , 1) [ RunTime:0.001361s ]
+---------------------------------------------------------------
+[2023-10-31T18:47:43+08:00] 47.15.161.1 GET gem-xtra.pro/public/witkey2022.php/login/login
+[运行时间：0.009346s] [吞吐率：107.00req/s] [内存消耗：535.54kb] [文件加载：76]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81eb52513cac0769-MRS',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+  'accept-language' => 'en-GB,en;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'cookie' => 'PHPSESSID=2ee494b8855ccbf99828c12f0048b51a; SESSIONID=d4d18652-6e98-438a-9f95-7512b1b2d489.Sc5LTxSKmpRCaZP2FVBURvEdbJg; Path=/www/wwwroot/code/web.xstrataplc.net_zhnHMi; order=id%20desc; serverType=nginx; request_token=P51yMyB12XzrcpeJYweKkV8KfA7GJJyeJOPmLYbbpMOPrQLy; backup_path=/www/backup; memSize=3789; bt_user_info=%7B%22status%22%3Atrue%2C%22msg%22%3A%22%u83B7%u53D6%u6210%u529F%21%22%2C%22data%22%3A%7B%22username%22%3A%22139****9999%22%7D%7D; ltd_end=4086842076; pro_end=-1; sites_path=/www/wwwroot; rank=list',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '47.15.161.1',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '47.15.161.1',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2023-10-31T18:47:44+08:00] 47.15.161.1 GET gem-xtra.pro/public/witkey2022.php/index/index.html
+[运行时间：0.022062s] [吞吐率：45.33req/s] [内存消耗：835.87kb] [文件加载：89]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81eb5253c9580769-MRS',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+  'accept-language' => 'en-GB,en;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'cookie' => 'PHPSESSID=2ee494b8855ccbf99828c12f0048b51a; SESSIONID=d4d18652-6e98-438a-9f95-7512b1b2d489.Sc5LTxSKmpRCaZP2FVBURvEdbJg; Path=/www/wwwroot/code/web.xstrataplc.net_zhnHMi; order=id%20desc; serverType=nginx; request_token=P51yMyB12XzrcpeJYweKkV8KfA7GJJyeJOPmLYbbpMOPrQLy; backup_path=/www/backup; memSize=3789; bt_user_info=%7B%22status%22%3Atrue%2C%22msg%22%3A%22%u83B7%u53D6%u6210%u529F%21%22%2C%22data%22%3A%7B%22username%22%3A%22139****9999%22%7D%7D; ltd_end=4086842076; pro_end=-1; sites_path=/www/wwwroot; rank=list',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '47.15.161.1',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '47.15.161.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/gemxpbra/public_html/application/admin/view/index/indexs.html [ array (
+  0 => 'log_title',
+  1 => 'menus',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000773s ] mysql:host=127.0.0.1;port=3306;dbname=gemxpbra_pro;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_module` [ RunTime:0.003888s ]
+[ sql ] [ SQL ] SELECT * FROM `zm_system_module` WHERE  `status` = 1 [ RunTime:0.000587s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_menu` [ RunTime:0.001008s ]
+[ sql ] [ SQL ] SELECT * FROM `zm_system_menu` WHERE  `module_id` IN (1)  AND `type` IN (1,2)  AND `id` IN (1,2,3,4,10000,10100,10101,10200,10201,10301,10302,10401,10500,10600,10700,10701,10800,10801,10802,10803,20000,20100,20101,20102,20103,20104,20105,20106,20107,20108,20200,20201,20202,20203,20204,20205,20206,20300,20301,20302,20303,20304,20305,20306,30000,30100,30101,30102,30103,30104,30105,30106,30107,30108,30109,30110,30111,30112,30113,30114,30200,30201,30202,30203,30700,30701,30800,30801,30900,31000,31001,31002,31003,31004,31005,31006,31100,31200,31201,31202,70000,70100,70101,70102,70103,70104,70105,70106,70300,70301,70302,70303,70304,80000,80100,80101,80102,80103,80104,80105,80201,80202,90100,90101,90102,90103,90104,90200,100000,100100,100101,100102,100103,100200,100201,100202,100203,100204,140001,140002,140003) [ RunTime:0.001083s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_config` [ RunTime:0.001333s ]
+[ sql ] [ SQL ] SELECT `value` FROM `zm_system_config` WHERE  `key` = 'website' LIMIT 1 [ RunTime:0.000483s ]
+---------------------------------------------------------------
+[2023-10-31T16:17:47+05:30] 47.15.161.1 GET gem-xtra.pro/public/witkey2022.php/index/welcome.html
+[运行时间：2.119381s] [吞吐率：0.47req/s] [内存消耗：1,232.01kb] [文件加载：92]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81eb525daa360769-MRS',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-dest' => 'iframe',
+  'accept-language' => 'en-GB,en;q=0.9',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+  'referer' => 'https://gem-xtra.pro/public/witkey2022.php/index/index.html',
+  'cookie' => 'PHPSESSID=2ee494b8855ccbf99828c12f0048b51a; SESSIONID=d4d18652-6e98-438a-9f95-7512b1b2d489.Sc5LTxSKmpRCaZP2FVBURvEdbJg; Path=/www/wwwroot/code/web.xstrataplc.net_zhnHMi; order=id%20desc; serverType=nginx; request_token=P51yMyB12XzrcpeJYweKkV8KfA7GJJyeJOPmLYbbpMOPrQLy; backup_path=/www/backup; memSize=3789; bt_user_info=%7B%22status%22%3Atrue%2C%22msg%22%3A%22%u83B7%u53D6%u6210%u529F%21%22%2C%22data%22%3A%7B%22username%22%3A%22139****9999%22%7D%7D; ltd_end=4086842076; pro_end=-1; sites_path=/www/wwwroot; rank=list',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '47.15.161.1',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '47.15.161.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/gemxpbra/public_html/application/admin/view/index/welcome.html [ array (
+  0 => 'username',
+  1 => 'now_time',
+  2 => 'my_active_module',
+  3 => 'member',
+  4 => 'config_val',
+  5 => 'mutu_list',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000572s ] mysql:host=127.0.0.1;port=3306;dbname=gemxpbra_pro;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_member_list` [ RunTime:0.005185s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_list` WHERE  ( time > 1698681600 AND time < 1698767999 ) [ RunTime:0.027344s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_list` [ RunTime:0.005896s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_list` WHERE  ( real_name_status = 1 ) [ RunTime:0.007159s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_list` WHERE  ( status = 2 ) [ RunTime:0.007226s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_list` WHERE  ( status = 3 ) [ RunTime:0.007042s ]
+[ sql ] [ SQL ] SELECT SUM(`rechange_limit_total`) AS tp_sum FROM `zm_member_list` [ RunTime:0.007916s ]
+[ sql ] [ SQL ] SELECT SUM(`balance_total`) AS tp_sum FROM `zm_member_list` [ RunTime:0.007661s ]
+[ sql ] [ SQL ] SELECT SUM(`reward_census`) AS tp_sum FROM `zm_member_list` [ RunTime:0.009146s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_member_mutualaid` [ RunTime:0.011689s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 and status in (1,2,3) ) [ RunTime:0.028336s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` [ RunTime:0.016223s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0 [ RunTime:0.017867s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 and status = 1 and sta_time >= 1698681600 AND sta_time <= 1698767999 ) [ RunTime:0.019921s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 and status = 4 ) [ RunTime:0.019293s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 and status = 1 ) [ RunTime:0.017588s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 and status in (1,2,3) ) [ RunTime:0.016844s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_order_coin` [ RunTime:0.003995s ]
+[ sql ] [ SQL ] SELECT COUNT(`num`) AS tp_count FROM `zm_order_coin` WHERE  ( status != 7 ) [ RunTime:0.000522s ]
+[ sql ] [ SQL ] SELECT SUM(`num`) AS tp_sum FROM `zm_order_coin` WHERE  ( status = 3 ) [ RunTime:0.000359s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_jxb_log` [ RunTime:0.003635s ]
+[ sql ] [ SQL ] SELECT SUM(`num`) AS tp_sum FROM `zm_jxb_log` WHERE  ( is_look = 1 ) [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_member_balance_log` [ RunTime:0.005364s ]
+[ sql ] [ SQL ] SELECT SUM(`change_money`) AS tp_sum FROM `zm_member_balance_log` WHERE  ( status = 90 and bo_time >= 1698681600 AND bo_time <= 1698767999 ) [ RunTime:0.017297s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_member_bm_withdraw` [ RunTime:0.002621s ]
+[ sql ] [ SQL ] SELECT SUM(`num`) AS tp_sum FROM `zm_member_bm_withdraw` WHERE  ( status = 1 and update_time >= 1698681600 AND update_time <= 1698767999 ) [ RunTime:0.019111s ]
+[ sql ] [ SQL ] SELECT COUNT(`change_money`) AS tp_count FROM `zm_member_balance_log` WHERE  ( type = 2 AND status = 100 ) [ RunTime:0.015522s ]
+[ sql ] [ SQL ] SELECT COUNT(`change_money`) AS tp_count FROM `zm_member_balance_log` WHERE  ( type in(5,6) AND status = 100 ) [ RunTime:0.013261s ]
+[ sql ] [ SQL ] SELECT SUM(`change_money`) AS tp_sum FROM `zm_member_balance_log` WHERE  ( type in(5,6) AND status = 100 ) [ RunTime:0.011913s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_member_bm_recharge` [ RunTime:0.002505s ]
+[ sql ] [ SQL ] SELECT COUNT(`num`) AS tp_count FROM `zm_member_bm_recharge` WHERE  `update_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 1 and isfirstrecharge=1 ) [ RunTime:0.014625s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_config` [ RunTime:0.001444s ]
+[ sql ] [ SQL ] SELECT `value` FROM `zm_system_config` WHERE  `key` = 'mainCurrency'  AND ( is_hide = 0 ) LIMIT 1 [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SELECT `value` FROM `zm_system_config` WHERE  `key` = 'auxiliaryCurrency'  AND ( is_hide = 0 ) LIMIT 1 [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_mutualaid_list` [ RunTime:0.003284s ]
+[ sql ] [ SQL ] SELECT * FROM `zm_mutualaid_list` WHERE  ( status=1 ) [ RunTime:0.001794s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 91  AND `is_exist` = 1 [ RunTime:0.016057s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 91  AND `is_exist` = 1 [ RunTime:0.019630s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 91 [ RunTime:0.023256s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_mutualaid_log` [ RunTime:0.003686s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=91 ) [ RunTime:0.001013s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=91 ) [ RunTime:0.000529s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_mutualaid_order` [ RunTime:0.003770s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =91 ) [ RunTime:0.000635s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =91 ) [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =91 ) [ RunTime:0.000435s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_designated_transfer` [ RunTime:0.002920s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =91 ) [ RunTime:0.000838s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =91 ) [ RunTime:0.022750s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 92  AND `is_exist` = 1 [ RunTime:0.020532s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 92  AND `is_exist` = 1 [ RunTime:0.022125s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 92 [ RunTime:0.019352s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=92 ) [ RunTime:0.000727s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=92 ) [ RunTime:0.000543s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =92 ) [ RunTime:0.000526s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =92 ) [ RunTime:0.000513s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =92 ) [ RunTime:0.000473s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =92 ) [ RunTime:0.000539s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =92 ) [ RunTime:0.020066s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 93  AND `is_exist` = 1 [ RunTime:0.016674s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 93  AND `is_exist` = 1 [ RunTime:0.014667s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 93 [ RunTime:0.012293s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=93 ) [ RunTime:0.000706s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=93 ) [ RunTime:0.000425s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =93 ) [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =93 ) [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =93 ) [ RunTime:0.000359s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =93 ) [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =93 ) [ RunTime:0.014027s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 95  AND `is_exist` = 1 [ RunTime:0.016026s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 95  AND `is_exist` = 1 [ RunTime:0.016158s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 95 [ RunTime:0.017205s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=95 ) [ RunTime:0.000645s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=95 ) [ RunTime:0.000561s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =95 ) [ RunTime:0.000564s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =95 ) [ RunTime:0.000562s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =95 ) [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =95 ) [ RunTime:0.000568s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =95 ) [ RunTime:0.019815s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 96  AND `is_exist` = 1 [ RunTime:0.021183s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 96  AND `is_exist` = 1 [ RunTime:0.019243s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 96 [ RunTime:0.016344s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=96 ) [ RunTime:0.000492s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=96 ) [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =96 ) [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =96 ) [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =96 ) [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =96 ) [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =96 ) [ RunTime:0.014236s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 97  AND `is_exist` = 1 [ RunTime:0.016113s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 97  AND `is_exist` = 1 [ RunTime:0.016431s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 97 [ RunTime:0.015677s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=97 ) [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=97 ) [ RunTime:0.000413s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =97 ) [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =97 ) [ RunTime:0.000440s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =97 ) [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =97 ) [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =97 ) [ RunTime:0.014971s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 101  AND `is_exist` = 1 [ RunTime:0.016808s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 101  AND `is_exist` = 1 [ RunTime:0.016974s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 101 [ RunTime:0.014793s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=101 ) [ RunTime:0.000556s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=101 ) [ RunTime:0.000454s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =101 ) [ RunTime:0.000468s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =101 ) [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =101 ) [ RunTime:0.000445s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =101 ) [ RunTime:0.000758s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =101 ) [ RunTime:0.015842s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 102  AND `is_exist` = 1 [ RunTime:0.014249s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 102  AND `is_exist` = 1 [ RunTime:0.014831s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 102 [ RunTime:0.012421s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=102 ) [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=102 ) [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =102 ) [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =102 ) [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =102 ) [ RunTime:0.000327s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =102 ) [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =102 ) [ RunTime:0.013140s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 103  AND `is_exist` = 1 [ RunTime:0.014308s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 103  AND `is_exist` = 1 [ RunTime:0.014465s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 103 [ RunTime:0.012700s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=103 ) [ RunTime:0.000526s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=103 ) [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =103 ) [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =103 ) [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =103 ) [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =103 ) [ RunTime:0.000400s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =103 ) [ RunTime:0.015879s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 104  AND `is_exist` = 1 [ RunTime:0.016558s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 104  AND `is_exist` = 1 [ RunTime:0.014729s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 104 [ RunTime:0.013163s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=104 ) [ RunTime:0.000542s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=104 ) [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =104 ) [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =104 ) [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =104 ) [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =104 ) [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =104 ) [ RunTime:0.012915s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 153  AND `is_exist` = 1 [ RunTime:0.014021s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 153  AND `is_exist` = 1 [ RunTime:0.014534s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 153 [ RunTime:0.012430s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=153 ) [ RunTime:0.000448s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=153 ) [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =153 ) [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =153 ) [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =153 ) [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =153 ) [ RunTime:0.000379s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =153 ) [ RunTime:0.012690s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 154  AND `is_exist` = 1 [ RunTime:0.013996s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 154  AND `is_exist` = 1 [ RunTime:0.014644s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 154 [ RunTime:0.012313s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=154 ) [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=154 ) [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =154 ) [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =154 ) [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =154 ) [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =154 ) [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =154 ) [ RunTime:0.012856s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 155  AND `is_exist` = 1 [ RunTime:0.014005s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 155  AND `is_exist` = 1 [ RunTime:0.014749s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 155 [ RunTime:0.017539s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=155 ) [ RunTime:0.000674s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=155 ) [ RunTime:0.000520s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =155 ) [ RunTime:0.000487s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =155 ) [ RunTime:0.000505s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =155 ) [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =155 ) [ RunTime:0.000515s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =155 ) [ RunTime:0.017789s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 156  AND `is_exist` = 1 [ RunTime:0.013906s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 156  AND `is_exist` = 1 [ RunTime:0.013974s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 156 [ RunTime:0.012172s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=156 ) [ RunTime:0.000530s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=156 ) [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =156 ) [ RunTime:0.000379s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =156 ) [ RunTime:0.000515s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =156 ) [ RunTime:0.000405s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =156 ) [ RunTime:0.000545s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =156 ) [ RunTime:0.016952s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 157  AND `is_exist` = 1 [ RunTime:0.017850s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 157  AND `is_exist` = 1 [ RunTime:0.024074s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 157 [ RunTime:0.022700s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=157 ) [ RunTime:0.000680s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=157 ) [ RunTime:0.000523s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =157 ) [ RunTime:0.000524s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =157 ) [ RunTime:0.000521s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =157 ) [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =157 ) [ RunTime:0.000560s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =157 ) [ RunTime:0.022371s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 158  AND `is_exist` = 1 [ RunTime:0.024580s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 158  AND `is_exist` = 1 [ RunTime:0.024886s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 158 [ RunTime:0.022203s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=158 ) [ RunTime:0.000652s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=158 ) [ RunTime:0.000611s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =158 ) [ RunTime:0.000649s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =158 ) [ RunTime:0.000550s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =158 ) [ RunTime:0.000538s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =158 ) [ RunTime:0.000571s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =158 ) [ RunTime:0.020766s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 188  AND `is_exist` = 1 [ RunTime:0.025514s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 188  AND `is_exist` = 1 [ RunTime:0.027792s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 188 [ RunTime:0.024821s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=188 ) [ RunTime:0.000744s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=188 ) [ RunTime:0.000565s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =188 ) [ RunTime:0.000597s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =188 ) [ RunTime:0.000538s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =188 ) [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =188 ) [ RunTime:0.000557s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =188 ) [ RunTime:0.023155s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 189  AND `is_exist` = 1 [ RunTime:0.024239s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 189  AND `is_exist` = 1 [ RunTime:0.024498s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 189 [ RunTime:0.025408s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=189 ) [ RunTime:0.000647s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=189 ) [ RunTime:0.000532s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =189 ) [ RunTime:0.000541s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =189 ) [ RunTime:0.000545s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =189 ) [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =189 ) [ RunTime:0.000574s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =189 ) [ RunTime:0.023047s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 190  AND `is_exist` = 1 [ RunTime:0.026215s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 190  AND `is_exist` = 1 [ RunTime:0.024708s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 190 [ RunTime:0.021688s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=190 ) [ RunTime:0.000828s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=190 ) [ RunTime:0.000624s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =190 ) [ RunTime:0.000530s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =190 ) [ RunTime:0.000463s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =190 ) [ RunTime:0.000459s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =190 ) [ RunTime:0.000519s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =190 ) [ RunTime:0.017128s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 191  AND `is_exist` = 1 [ RunTime:0.018532s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 191  AND `is_exist` = 1 [ RunTime:0.017551s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 191 [ RunTime:0.017427s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=191 ) [ RunTime:0.000655s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=191 ) [ RunTime:0.000540s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =191 ) [ RunTime:0.000547s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =191 ) [ RunTime:0.000506s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =191 ) [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =191 ) [ RunTime:0.000554s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =191 ) [ RunTime:0.026706s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 198  AND `is_exist` = 1 [ RunTime:0.027475s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 198  AND `is_exist` = 1 [ RunTime:0.024628s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 198 [ RunTime:0.021777s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=198 ) [ RunTime:0.000730s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=198 ) [ RunTime:0.000529s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =198 ) [ RunTime:0.000581s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =198 ) [ RunTime:0.000578s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =198 ) [ RunTime:0.000482s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =198 ) [ RunTime:0.000538s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =198 ) [ RunTime:0.022418s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 199  AND `is_exist` = 1 [ RunTime:0.024134s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 199  AND `is_exist` = 1 [ RunTime:0.024595s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 199 [ RunTime:0.021614s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=199 ) [ RunTime:0.000637s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=199 ) [ RunTime:0.000552s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =199 ) [ RunTime:0.000512s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =199 ) [ RunTime:0.000526s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =199 ) [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =199 ) [ RunTime:0.000545s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =199 ) [ RunTime:0.025058s ]
+---------------------------------------------------------------
+[2023-10-31T18:48:07+08:00] 47.15.161.1 GET gem-xtra.pro/public/witkey2022.php/index/index.html
+[运行时间：0.025420s] [吞吐率：39.34req/s] [内存消耗：805.02kb] [文件加载：87]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81eb52e21f560769-MRS',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-dest' => 'document',
+  'accept-language' => 'en-GB,en;q=0.9',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+  'referer' => 'https://gem-xtra.pro/public/witkey2022.php/index/index.html',
+  'cookie' => 'PHPSESSID=2ee494b8855ccbf99828c12f0048b51a; SESSIONID=d4d18652-6e98-438a-9f95-7512b1b2d489.Sc5LTxSKmpRCaZP2FVBURvEdbJg; Path=/www/wwwroot/code/web.xstrataplc.net_zhnHMi; order=id%20desc; serverType=nginx; request_token=P51yMyB12XzrcpeJYweKkV8KfA7GJJyeJOPmLYbbpMOPrQLy; backup_path=/www/backup; memSize=3789; bt_user_info=%7B%22status%22%3Atrue%2C%22msg%22%3A%22%u83B7%u53D6%u6210%u529F%21%22%2C%22data%22%3A%7B%22username%22%3A%22139****9999%22%7D%7D; ltd_end=4086842076; pro_end=-1; sites_path=/www/wwwroot; rank=list',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '47.15.161.1',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '47.15.161.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/gemxpbra/public_html/application/admin/view/index/indexs.html [ array (
+  0 => 'log_title',
+  1 => 'menus',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001041s ] mysql:host=127.0.0.1;port=3306;dbname=gemxpbra_pro;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_module` [ RunTime:0.001448s ]
+[ sql ] [ SQL ] SELECT * FROM `zm_system_module` WHERE  `status` = 1 [ RunTime:0.000723s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_menu` [ RunTime:0.001263s ]
+[ sql ] [ SQL ] SELECT * FROM `zm_system_menu` WHERE  `module_id` IN (1)  AND `type` IN (1,2)  AND `id` IN (1,2,3,4,10000,10100,10101,10200,10201,10301,10302,10401,10500,10600,10700,10701,10800,10801,10802,10803,20000,20100,20101,20102,20103,20104,20105,20106,20107,20108,20200,20201,20202,20203,20204,20205,20206,20300,20301,20302,20303,20304,20305,20306,30000,30100,30101,30102,30103,30104,30105,30106,30107,30108,30109,30110,30111,30112,30113,30114,30200,30201,30202,30203,30700,30701,30800,30801,30900,31000,31001,31002,31003,31004,31005,31006,31100,31200,31201,31202,70000,70100,70101,70102,70103,70104,70105,70106,70300,70301,70302,70303,70304,80000,80100,80101,80102,80103,80104,80105,80201,80202,90100,90101,90102,90103,90104,90200,100000,100100,100101,100102,100103,100200,100201,100202,100203,100204,140001,140002,140003) [ RunTime:0.001644s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_config` [ RunTime:0.001559s ]
+[ sql ] [ SQL ] SELECT `value` FROM `zm_system_config` WHERE  `key` = 'website' LIMIT 1 [ RunTime:0.000763s ]
+---------------------------------------------------------------
+[2023-10-31T16:18:10+05:30] 47.15.161.1 GET gem-xtra.pro/public/witkey2022.php/index/welcome.html
+[运行时间：2.210884s] [吞吐率：0.45req/s] [内存消耗：1,149.23kb] [文件加载：90]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81eb52ee3e150769-MRS',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-dest' => 'iframe',
+  'accept-language' => 'en-GB,en;q=0.9',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+  'referer' => 'https://gem-xtra.pro/public/witkey2022.php/index/index.html',
+  'cookie' => 'PHPSESSID=2ee494b8855ccbf99828c12f0048b51a; SESSIONID=d4d18652-6e98-438a-9f95-7512b1b2d489.Sc5LTxSKmpRCaZP2FVBURvEdbJg; Path=/www/wwwroot/code/web.xstrataplc.net_zhnHMi; order=id%20desc; serverType=nginx; request_token=P51yMyB12XzrcpeJYweKkV8KfA7GJJyeJOPmLYbbpMOPrQLy; backup_path=/www/backup; memSize=3789; bt_user_info=%7B%22status%22%3Atrue%2C%22msg%22%3A%22%u83B7%u53D6%u6210%u529F%21%22%2C%22data%22%3A%7B%22username%22%3A%22139****9999%22%7D%7D; ltd_end=4086842076; pro_end=-1; sites_path=/www/wwwroot; rank=list',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '47.15.161.1',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '47.15.161.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/gemxpbra/public_html/application/admin/view/index/welcome.html [ array (
+  0 => 'username',
+  1 => 'now_time',
+  2 => 'my_active_module',
+  3 => 'member',
+  4 => 'config_val',
+  5 => 'mutu_list',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001035s ] mysql:host=127.0.0.1;port=3306;dbname=gemxpbra_pro;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_member_list` [ RunTime:0.001862s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_list` WHERE  ( time > 1698681600 AND time < 1698767999 ) [ RunTime:0.020902s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_list` [ RunTime:0.004522s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_list` WHERE  ( real_name_status = 1 ) [ RunTime:0.008388s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_list` WHERE  ( status = 2 ) [ RunTime:0.007516s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_list` WHERE  ( status = 3 ) [ RunTime:0.006453s ]
+[ sql ] [ SQL ] SELECT SUM(`rechange_limit_total`) AS tp_sum FROM `zm_member_list` [ RunTime:0.007316s ]
+[ sql ] [ SQL ] SELECT SUM(`balance_total`) AS tp_sum FROM `zm_member_list` [ RunTime:0.007354s ]
+[ sql ] [ SQL ] SELECT SUM(`reward_census`) AS tp_sum FROM `zm_member_list` [ RunTime:0.007402s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_member_mutualaid` [ RunTime:0.001274s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 and status in (1,2,3) ) [ RunTime:0.027339s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` [ RunTime:0.012207s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0 [ RunTime:0.018572s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 and status = 1 and sta_time >= 1698681600 AND sta_time <= 1698767999 ) [ RunTime:0.016041s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 and status = 4 ) [ RunTime:0.016368s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 and status = 1 ) [ RunTime:0.019229s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 and status in (1,2,3) ) [ RunTime:0.039768s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_order_coin` [ RunTime:0.002889s ]
+[ sql ] [ SQL ] SELECT COUNT(`num`) AS tp_count FROM `zm_order_coin` WHERE  ( status != 7 ) [ RunTime:0.000687s ]
+[ sql ] [ SQL ] SELECT SUM(`num`) AS tp_sum FROM `zm_order_coin` WHERE  ( status = 3 ) [ RunTime:0.001049s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_jxb_log` [ RunTime:0.001555s ]
+[ sql ] [ SQL ] SELECT SUM(`num`) AS tp_sum FROM `zm_jxb_log` WHERE  ( is_look = 1 ) [ RunTime:0.000722s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_member_balance_log` [ RunTime:0.001044s ]
+[ sql ] [ SQL ] SELECT SUM(`change_money`) AS tp_sum FROM `zm_member_balance_log` WHERE  ( status = 90 and bo_time >= 1698681600 AND bo_time <= 1698767999 ) [ RunTime:0.040788s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_member_bm_withdraw` [ RunTime:0.001838s ]
+[ sql ] [ SQL ] SELECT SUM(`num`) AS tp_sum FROM `zm_member_bm_withdraw` WHERE  ( status = 1 and update_time >= 1698681600 AND update_time <= 1698767999 ) [ RunTime:0.029757s ]
+[ sql ] [ SQL ] SELECT COUNT(`change_money`) AS tp_count FROM `zm_member_balance_log` WHERE  ( type = 2 AND status = 100 ) [ RunTime:0.017839s ]
+[ sql ] [ SQL ] SELECT COUNT(`change_money`) AS tp_count FROM `zm_member_balance_log` WHERE  ( type in(5,6) AND status = 100 ) [ RunTime:0.015351s ]
+[ sql ] [ SQL ] SELECT SUM(`change_money`) AS tp_sum FROM `zm_member_balance_log` WHERE  ( type in(5,6) AND status = 100 ) [ RunTime:0.013884s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_member_bm_recharge` [ RunTime:0.001311s ]
+[ sql ] [ SQL ] SELECT COUNT(`num`) AS tp_count FROM `zm_member_bm_recharge` WHERE  `update_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 1 and isfirstrecharge=1 ) [ RunTime:0.020314s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_config` [ RunTime:0.001187s ]
+[ sql ] [ SQL ] SELECT `value` FROM `zm_system_config` WHERE  `key` = 'mainCurrency'  AND ( is_hide = 0 ) LIMIT 1 [ RunTime:0.000585s ]
+[ sql ] [ SQL ] SELECT `value` FROM `zm_system_config` WHERE  `key` = 'auxiliaryCurrency'  AND ( is_hide = 0 ) LIMIT 1 [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_mutualaid_list` [ RunTime:0.001027s ]
+[ sql ] [ SQL ] SELECT * FROM `zm_mutualaid_list` WHERE  ( status=1 ) [ RunTime:0.001221s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 91  AND `is_exist` = 1 [ RunTime:0.028943s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 91  AND `is_exist` = 1 [ RunTime:0.014776s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 91 [ RunTime:0.015467s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_mutualaid_log` [ RunTime:0.001127s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=91 ) [ RunTime:0.000519s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=91 ) [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_mutualaid_order` [ RunTime:0.000986s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =91 ) [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =91 ) [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =91 ) [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_designated_transfer` [ RunTime:0.000981s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =91 ) [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =91 ) [ RunTime:0.017092s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 92  AND `is_exist` = 1 [ RunTime:0.014583s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 92  AND `is_exist` = 1 [ RunTime:0.015318s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 92 [ RunTime:0.013409s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=92 ) [ RunTime:0.000624s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=92 ) [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =92 ) [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =92 ) [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =92 ) [ RunTime:0.000368s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =92 ) [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =92 ) [ RunTime:0.024762s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 93  AND `is_exist` = 1 [ RunTime:0.014883s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 93  AND `is_exist` = 1 [ RunTime:0.015380s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 93 [ RunTime:0.013601s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=93 ) [ RunTime:0.000634s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=93 ) [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =93 ) [ RunTime:0.000488s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =93 ) [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =93 ) [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =93 ) [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =93 ) [ RunTime:0.014236s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 95  AND `is_exist` = 1 [ RunTime:0.015139s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 95  AND `is_exist` = 1 [ RunTime:0.015434s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 95 [ RunTime:0.013484s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=95 ) [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=95 ) [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =95 ) [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =95 ) [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =95 ) [ RunTime:0.000350s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =95 ) [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =95 ) [ RunTime:0.027248s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 96  AND `is_exist` = 1 [ RunTime:0.018672s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 96  AND `is_exist` = 1 [ RunTime:0.025132s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 96 [ RunTime:0.016615s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=96 ) [ RunTime:0.000710s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=96 ) [ RunTime:0.000413s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =96 ) [ RunTime:0.000564s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =96 ) [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =96 ) [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =96 ) [ RunTime:0.000571s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =96 ) [ RunTime:0.017076s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 97  AND `is_exist` = 1 [ RunTime:0.014591s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 97  AND `is_exist` = 1 [ RunTime:0.072387s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 97 [ RunTime:0.017388s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=97 ) [ RunTime:0.000490s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=97 ) [ RunTime:0.000477s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =97 ) [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =97 ) [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =97 ) [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =97 ) [ RunTime:0.000419s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =97 ) [ RunTime:0.013994s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 101  AND `is_exist` = 1 [ RunTime:0.016390s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 101  AND `is_exist` = 1 [ RunTime:0.021152s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 101 [ RunTime:0.044074s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=101 ) [ RunTime:0.000662s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=101 ) [ RunTime:0.000458s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =101 ) [ RunTime:0.000576s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =101 ) [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =101 ) [ RunTime:0.000542s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =101 ) [ RunTime:0.000548s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =101 ) [ RunTime:0.022713s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 102  AND `is_exist` = 1 [ RunTime:0.022919s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 102  AND `is_exist` = 1 [ RunTime:0.022969s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 102 [ RunTime:0.013192s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=102 ) [ RunTime:0.000586s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=102 ) [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =102 ) [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =102 ) [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =102 ) [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =102 ) [ RunTime:0.000390s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =102 ) [ RunTime:0.013538s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 103  AND `is_exist` = 1 [ RunTime:0.014583s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 103  AND `is_exist` = 1 [ RunTime:0.017727s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 103 [ RunTime:0.014925s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=103 ) [ RunTime:0.000563s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=103 ) [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =103 ) [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =103 ) [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =103 ) [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =103 ) [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =103 ) [ RunTime:0.023285s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 104  AND `is_exist` = 1 [ RunTime:0.016006s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 104  AND `is_exist` = 1 [ RunTime:0.017009s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 104 [ RunTime:0.022257s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=104 ) [ RunTime:0.000856s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=104 ) [ RunTime:0.000493s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =104 ) [ RunTime:0.000609s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =104 ) [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =104 ) [ RunTime:0.000453s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =104 ) [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =104 ) [ RunTime:0.025991s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 153  AND `is_exist` = 1 [ RunTime:0.024208s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 153  AND `is_exist` = 1 [ RunTime:0.024856s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 153 [ RunTime:0.030764s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=153 ) [ RunTime:0.000622s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=153 ) [ RunTime:0.001398s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =153 ) [ RunTime:0.000463s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =153 ) [ RunTime:0.000390s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =153 ) [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =153 ) [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =153 ) [ RunTime:0.013414s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 154  AND `is_exist` = 1 [ RunTime:0.015965s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 154  AND `is_exist` = 1 [ RunTime:0.017283s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 154 [ RunTime:0.022077s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=154 ) [ RunTime:0.000566s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=154 ) [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =154 ) [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =154 ) [ RunTime:0.000374s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =154 ) [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =154 ) [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =154 ) [ RunTime:0.015412s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 155  AND `is_exist` = 1 [ RunTime:0.014495s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 155  AND `is_exist` = 1 [ RunTime:0.016468s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 155 [ RunTime:0.018625s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=155 ) [ RunTime:0.000606s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=155 ) [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =155 ) [ RunTime:0.000488s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =155 ) [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =155 ) [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =155 ) [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =155 ) [ RunTime:0.014630s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 156  AND `is_exist` = 1 [ RunTime:0.014875s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 156  AND `is_exist` = 1 [ RunTime:0.015167s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 156 [ RunTime:0.013765s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=156 ) [ RunTime:0.000646s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=156 ) [ RunTime:0.000503s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =156 ) [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =156 ) [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =156 ) [ RunTime:0.000372s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =156 ) [ RunTime:0.000428s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =156 ) [ RunTime:0.014877s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 157  AND `is_exist` = 1 [ RunTime:0.019977s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 157  AND `is_exist` = 1 [ RunTime:0.016178s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 157 [ RunTime:0.013136s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=157 ) [ RunTime:0.001435s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=157 ) [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =157 ) [ RunTime:0.000579s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =157 ) [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =157 ) [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =157 ) [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =157 ) [ RunTime:0.013758s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 158  AND `is_exist` = 1 [ RunTime:0.014798s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 158  AND `is_exist` = 1 [ RunTime:0.021548s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 158 [ RunTime:0.017006s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=158 ) [ RunTime:0.000550s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=158 ) [ RunTime:0.000419s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =158 ) [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =158 ) [ RunTime:0.000434s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =158 ) [ RunTime:0.000438s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =158 ) [ RunTime:0.000472s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =158 ) [ RunTime:0.017129s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 188  AND `is_exist` = 1 [ RunTime:0.017498s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 188  AND `is_exist` = 1 [ RunTime:0.026917s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 188 [ RunTime:0.014594s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=188 ) [ RunTime:0.000589s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=188 ) [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =188 ) [ RunTime:0.000463s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =188 ) [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =188 ) [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =188 ) [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =188 ) [ RunTime:0.013922s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 189  AND `is_exist` = 1 [ RunTime:0.014860s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 189  AND `is_exist` = 1 [ RunTime:0.015862s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 189 [ RunTime:0.025193s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=189 ) [ RunTime:0.000681s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=189 ) [ RunTime:0.000428s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =189 ) [ RunTime:0.000498s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =189 ) [ RunTime:0.000396s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =189 ) [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =189 ) [ RunTime:0.000429s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =189 ) [ RunTime:0.015212s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 190  AND `is_exist` = 1 [ RunTime:0.021253s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 190  AND `is_exist` = 1 [ RunTime:0.023808s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 190 [ RunTime:0.029090s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=190 ) [ RunTime:0.000683s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=190 ) [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =190 ) [ RunTime:0.000576s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =190 ) [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =190 ) [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =190 ) [ RunTime:0.000448s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =190 ) [ RunTime:0.016599s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 191  AND `is_exist` = 1 [ RunTime:0.014760s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 191  AND `is_exist` = 1 [ RunTime:0.014915s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 191 [ RunTime:0.022203s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=191 ) [ RunTime:0.000626s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=191 ) [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =191 ) [ RunTime:0.000479s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =191 ) [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =191 ) [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =191 ) [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =191 ) [ RunTime:0.016921s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 198  AND `is_exist` = 1 [ RunTime:0.016667s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 198  AND `is_exist` = 1 [ RunTime:0.022002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 198 [ RunTime:0.026899s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=198 ) [ RunTime:0.000626s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=198 ) [ RunTime:0.000421s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =198 ) [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =198 ) [ RunTime:0.000428s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =198 ) [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =198 ) [ RunTime:0.000439s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =198 ) [ RunTime:0.016619s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 1  AND `purchase_id` = 199  AND `is_exist` = 1 [ RunTime:0.024963s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `status` = 2  AND `purchase_id` = 199  AND `is_exist` = 1 [ RunTime:0.018143s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_member_mutualaid` WHERE  `is_exist` = 0  AND `purchase_id` = 199 [ RunTime:0.020876s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( order_status = 1 AND p_id=199 ) [ RunTime:0.000769s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_log` WHERE  `time` BETWEEN 1698690600 AND 1698777000  AND ( purchase_status = 1 AND p_id=199 ) [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `end_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =199 ) [ RunTime:0.000545s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  `create_time` BETWEEN 1698690600 AND 1698777000  AND ( status = 3 AND purchase_id =199 ) [ RunTime:0.000424s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_mutualaid_order` WHERE  ( status = 9 AND purchase_id =199 ) [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zm_designated_transfer` `a` LEFT JOIN `zm_mutualaid_order` `b` ON `a`.`p_id`=`b`.`id` WHERE  `a`.`time` BETWEEN '1698690600' AND '1698777000'  AND ( a.status = 1 AND b.status = 3 AND b.purchase_id =199 ) [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SELECT SUM(`new_price`) AS tp_sum FROM `zm_member_mutualaid` WHERE  ( is_exist = 1 AND purchase_id =199 ) [ RunTime:0.031565s ]
+---------------------------------------------------------------
+[2023-10-31T18:48:48+08:00] 47.15.161.1 GET gem-xtra.pro/public/witkey2022.php/index/index.html
+[运行时间：0.010045s] [吞吐率：99.55req/s] [内存消耗：390.04kb] [文件加载：69]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81eb53e709560cf8-MRS',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'sec-ch-ua' => '"Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua-platform' => '"macOS"',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'accept-language' => 'en-GB,en-US;q=0.9,en;q=0.8',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '47.15.161.1',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '47.15.161.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /home/gemxpbra/public_html/thinkphp/tpl/dispatch_jump_zm.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+---------------------------------------------------------------
+[2023-10-31T18:48:58+08:00] 47.15.161.1 GET gem-xtra.pro/public/witkey2022.php/login/login
+[运行时间：0.016957s] [吞吐率：58.97req/s] [内存消耗：603.45kb] [文件加载：80]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81eb542268320cf8-MRS',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'sec-ch-ua' => '"Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua-platform' => '"macOS"',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'accept-language' => 'en-GB,en-US;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=142293c8dbf616886974379f372bf458',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '47.15.161.1',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '47.15.161.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/gemxpbra/public_html/application/admin/view/login/login.html [ array (
+  0 => 'log_title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001204s ] mysql:host=127.0.0.1;port=3306;dbname=gemxpbra_pro;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_config` [ RunTime:0.001307s ]
+[ sql ] [ SQL ] SELECT `value` FROM `zm_system_config` WHERE  `key` = 'website' LIMIT 1 [ RunTime:0.000716s ]

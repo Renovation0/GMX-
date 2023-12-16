@@ -1,0 +1,102 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}申诉内容{/block}
+{block name="style"}{/block}
+{block name="page"}
+<style>
+.layui-input-img{
+	flex-wrap:wrap;
+	width:380px !important;
+}
+.layui-input-img .input-img{
+		width:80px;
+ 		height:80px;
+	margin-right:10px;
+	}
+</style>
+<div class="layui-fluid" style="background: white;height: 500px;">
+    <div class="layui-row">
+        <form class="layui-form layui-form-pane">
+
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label">
+                    申诉图片
+                </label>
+                <div class="layui-input-inline layui-input-img">
+                	{volist name="$info['appeal_imgs']" id="img"}
+                	
+                    	<img src="{$img}" alt="" class="input-img">
+                	
+                	{/volist}
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label">
+        申诉内容
+                </label>
+                <div class="layui-input-inline">
+                	<textarea rows="5" cols="50" name="" readonly>{$info.appeal_content}</textarea>
+                </div>
+            </div>
+            
+            {if condition="$info['status'] == 4"}
+            <div class="layui-form-item" >
+                <label for="sta" class="layui-form-label">
+                    是否通过
+                </label>
+                <div class="layui-input-inline">
+                	<input type="checkbox" checked lay-filter="my_checkbox" name="sta" value="1" lay-skin="switch">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label">
+                    	拒绝理由
+                </label>
+                <div class="layui-input-inline">
+                	<textarea rows="5" cols="50" name="refusal_reason"> </textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+           	 	<label class="layui-form-label"></label>
+                <button class="layui-btn layui-btn-fluid" lay-submit lay-filter="role_add">提交</button>
+            </div>
+            {/if}
+            
+            
+        </form>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+
+$(function  () {
+    layui.use('form', function(){
+        let form = layui.form;
+        form.on('submit(role_add)', function(data){
+            $.ajax({
+                url: "{:url('mutualaid/mutualAidOrderAppealPost')}",//'/admin/mutualaid/mutualAidOrderAppealPost',
+                type: 'post',
+                data: {
+                    id: {$info['id']},
+                    sta: data.field.sta,
+                    refusal_reason: data.field.refusal_reason
+                },
+                success: function (data) {
+                    if(data.code === 1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            parent.location.reload();
+                        }, 500);
+                    }else {
+                        layer.msg(data.msg);
+                    }
+                }
+            }); 
+            return false;
+        });
+    });
+});
+
+</script>
+{/block}

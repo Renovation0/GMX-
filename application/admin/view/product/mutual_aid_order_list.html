@@ -1,0 +1,349 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}互助订单{/block}
+{block name="style"}
+<style>
+    .layui-table td, .layui-table th {
+        /* min-width: unset !important; */
+    }
+
+    .role_user {
+        display: inline-block;
+        margin-right: 5px;
+        padding: 5px;
+        background-color: #f0f0f0;
+    }
+    
+    
+        .node_item {
+        clear: both;
+        box-sizing: border-box;
+        height: 24px;
+        padding: 4px;
+        cursor:pointer
+    }
+    .node_item .select_box {
+        box-sizing: border-box;
+        float: left;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #cfcfcf;
+        margin-right: 10px;
+    }
+    .node_item .select_box.have {
+        background-color: grey;
+    }
+    .node_item .select_box.chose {
+        background-color: #22af22;
+    }
+    
+
+</style>
+{/block}
+{block name="page"}
+<div class="x-nav">
+    <span class="layui-breadcrumb">
+        <a href="javascript:;">互助管理</a>
+        <a><cite>互助订单</cite></a>
+    </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+       onclick="location.reload()" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+    </a>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                         <div class="layui-tab-content">
+                            <form class="layui-form layui-col-space5">
+                                <div class="layui-input-inline layui-show-xs-block">
+                                    <div class="input-lable">关键词搜索:</div>
+                                    <input type="text" name="serach" value="{$param_serach}" placeholder="订单编号/买家账号/卖家账号" autocomplete="off" class="layui-input">
+                                </div>
+                                <div class="layui-input-inline layui-show-xs-block">
+                                    <select name="status">
+                                        <option value="-3">状态</option>
+                                        <option value="0"<?php if($param_status == 0) echo 'selected';?>>挂单中</option>
+                                        <option value="1"<?php if($param_status == 1) echo 'selected';?>>已匹配</option>
+                                        <option value="2"<?php if($param_status == 2) echo 'selected';?>>已支付</option>
+                                        <option value="3"<?php if($param_status == 3) echo 'selected';?>>已完成</option>
+                                        <option value="4"<?php if($param_status == 4) echo 'selected';?>>申诉中</option>
+                                        <option value="5"<?php if($param_status == 5) echo 'selected';?>>申诉成功</option>
+                                        <option value="6"<?php if($param_status == 6) echo 'selected';?>>申诉失败</option>
+                                        <option value="-1"<?php if($param_status == -1) echo 'selected';?>>审核拒绝</option>
+                                        <option value="-2"<?php if($param_status == -2) echo 'selected';?>>待审核</option>
+                                        <option value="11"<?php if($param_status == 11) echo 'selected';?>>已分解</option>
+                                    </select>
+                                </div>
+                                <div class="layui-input-inline layui-show-xs-block">
+                                    <select name="name">
+                                        <option value="">选择宠物</option>
+                                        {volist name="info" id="aid"}
+				                        <option value="{$aid['id']}" <?php if($param_name == $aid['name']) echo 'selected';?>>{$aid['name']}</option>
+				                        {/volist}
+                                    </select>
+                                </div>
+                                <div class="layui-inline layui-show-xs-block">
+                                    <input class="layui-input" autocomplete="off" placeholder="创建时间" name="add_time_s"
+                                           value="{$param_add_time_s}" id="add_time_s">
+                                </div>
+                                <div class="layui-inline layui-show-xs-block">
+                                    <input class="layui-input" autocomplete="off" placeholder="完成时间" name="add_time_e"
+                                           value="{$param_add_time_e}" id="add_time_e">
+                                </div>
+                                <div class="layui-input-inline layui-show-xs-block">
+                                    <button class="layui-btn" lay-submit="" lay-filter="sreach">
+                                        <i class="layui-icon">&#xe615;</i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="layui-card-header">
+                        	{if in_array('/mutualaid/mutualaidorderappoint', (array)session('power_action'))}
+                            <button class="layui-btn layui-btn-radius" onclick="selAll()"><i class="layui-icon">&#xe6fc;</i>批量指定</button>
+                            {else/}
+                            <button class="layui-btn layui-btn-radius layui-btn-disabled"><i class="layui-icon">&#xe6fc;</i>批量指定</button>
+                            {/if}
+                        </div>
+                        
+                <div class="layui-card-body layui-card-table">
+                    <table class="layui-table layui-form">
+                        <thead>
+                        <tr>
+                            <th style="min-width: 10px;">
+                            <input type="checkbox" lay-filter="checkall" name="" lay-skin="primary">
+                            </th>
+                            <th style="min-width: 50px;"><b>ID</b></th>
+                            <th style="min-width: 100px;"><b>宠物</b></th>
+                            <th style="min-width: 120px;"><b>宠物编号</b></th>
+                            <th style="min-width: 150px;"><b>订单编号</b></th>
+                            <th><b>买家UID</b></th>
+                            <th><b>买家账号</b></th>
+                            <th><b>指定买家</b></th>
+                            <th><b>卖家UID</b></th>
+                            <th><b>卖家账号</b></th>
+                            <th ><b>实际价格</b></th>
+                            <th style="min-width: 40px;"><b>凭证</b></th>
+                            <th><b>查看申诉</b></th>
+                            <th style="min-width: 120px;"><b>创建时间</b></th>
+                            <th style="min-width: 120px;"><b>完成时间</b></th>
+                            <th><b>状态</b></th>
+                            <th><b>是否失效</b></th>
+                            <th style="min-width: 100px;"><b>操作</b></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {if !empty($list->items())}
+                        {volist name="list" id="user"}
+                        <tr>
+                        	{if $user['status'] == 0}
+                            <td><input type="checkbox" name="cbtd"  value="{$user['id']}" data-id="{$user['status']}" lay-skin="primary"></td>
+                            {else/}
+                            <td>--</td>
+                            {/if}
+                            <td>{$user['id']}</td>
+                            <td>{$user['name']}</td>
+                            <td>{$user['purchase_no']}</td>
+                            <td>{$user['orderNo']}</td>
+                            <td>{$user['buy_uid']}</td>
+                            <td>{$user['buy_user']} {if $user['buy_real_name'] != ''}({$user['buy_real_name']}){/if}</td>
+                            <td>{$user['appoint_user']}</td>
+                            <td>{$user['sell_uid']}</td>
+                            <td>{$user['sell_user']} {if $user['sell_real_name'] != ''}({$user['sell_real_name']}){/if}</td>
+                            <td>{$user['price']}</td>
+                            {if $user['voucher'] == ''}
+                            <td></td>
+                            {else/}
+                            <td onclick="confirm('{$user[\'voucher\']}')"><img src="{$user['voucher']}" style="width: 30px;height:30px"></td>
+                            {/if}
+                            {if $user['appeal_content'] == ''}
+                            <td></td>
+                            {else/}
+                            <td>																						<!-- '/admin/mutualaid/mutualAidOrderAppeal/id/{$user[\'id\']}' -->
+                                <button title="申诉内容" class="layui-btn layui-btn-radius" onclick="xadmin.open('申诉内容','{:url('mutualaid/mutualAidOrderAppeal')}?id='+{$user[\'id\']},600,600)">
+                                   <i class="iconfont">&#xe6fc;</i> 申诉
+                                </button>
+                            </td>
+                            {/if}
+                            <td>{:date('m-d H:i:s',$user['create_time'])}</td>
+                            
+                            {if $user['end_time'] == 0}
+                            <td> -- </td>
+                            {else/}
+                            <td>{$user['end_time']|date='m-d H:i:s'}</td>
+                            {/if}                           
+                                                        
+                            {switch $user['status']}
+                            {case -1}<td style="color: orange"><span style="font-size:20px">●</span>审核拒绝</td>{/case}
+                            {case -2}<td style="color: blue"><span style="font-size:20px">●</span>待审核</td>{/case}
+                            {case 0}<td style="color: black"><span style="font-size:20px">●</span>挂单中</td>{/case}
+                            {case 1}<td style="color: green"><span style="font-size:20px">●</span>已匹配</td>{/case}
+                            {case 2}<td style="color: red"><span style="font-size:20px">●</span>已支付</td>{/case}
+                            {case 3}<td style="color: orange"><span style="font-size:20px">●</span>已完成</td>{/case}
+                            {case 4}<td style="color: blue"><span style="font-size:20px">●</span>申诉中</td>{/case}
+                            {case 5}<td style="color: grey"><span style="font-size:20px">●</span>申诉成功</td>{/case}
+                            {case 6}<td style="color: red"><span style="font-size:20px">●</span>申诉失败</td>{/case}
+                            {case 9}<td style="color: red"><span style="font-size:20px">●</span>已冻结</td>{/case}
+                            {case 11}<td style="color: red"><span style="font-size:20px">●</span>已分解</td>{/case}
+                            {default /}
+                            {/switch}
+                            
+                            {switch $user['is_exist']}
+                            {case 1}<td style="color: green"><span style="font-size:20px">●</span>正常</td>{/case}
+                            {case 0}<td><span style="font-size:20px">●</span>失效</td>{/case}
+                            {default /}
+                            {/switch}
+                            <td>
+ 
+                                {if in_array('/mutualaid/mutualaidorderappoint', (array)session('power_action'))} <!-- '/admin/mutualaid/mutualAidOrderAppoint/id/{$user[\'id\']}' -->
+                                <button title="指定" class="layui-btn layui-btn-radius" onclick="xadmin.open('指定','{:url('mutualaid/mutualAidOrderAppoint')}?id='+{$user[\'id\']},1200,600)">
+                                   <i class="iconfont">&#xe6bf;</i>
+                                </button>
+                                {else /}
+                                <button title="指定" class="layui-btn layui-btn-disabled" onclick="return false">
+                                    <i class="iconfont">&#xe6bf;</i>
+                                </button>
+                                {/if}
+
+                                {if in_array('/mutualaid/mutualaidedit', (array)session('power_action'))}	<!-- '/admin/mutualaid/mutualaidOrderEdit/id/{$user[\'id\']}' -->
+                                <button title="编辑" class="layui-btn layui-btn-normal" onclick="xadmin.open('编辑','{:url('mutualaid/mutualaidOrderEdit')}?id='+{$user[\'id\']},500,700)">
+                                    <i class="iconfont">&#xe69e;</i>
+                                </button>
+                                {else /}
+                                <button title="编辑" class="layui-btn layui-btn-disabled" onclick="return false">
+                                    <i class="iconfont">&#xe69e;</i>
+                                </button>
+                                {/if}
+
+                            </td>
+                        </tr>
+                        {/volist}
+                        {else /}
+                        <tr>
+                            <td colspan="17" class="nodata_td">无记录</td>
+                        </tr>
+                        {/if}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="layui-card-body ">
+                    <div class="page">
+                        {$list|raw}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+
+layui.use('form', function () {
+    let form = layui.form;
+    form.render();
+    
+	
+    // 监听全选
+    form.on('checkbox(checkall)', function(data){
+
+      if(data.elem.checked){
+        $('tbody input').prop('checked',true);
+      }else{
+        $('tbody input').prop('checked',false);
+      }
+      form.render('checkbox');
+    });
+
+});
+//日期选择
+layui.use(['laydate', 'form'], function () {
+    var laydate = layui.laydate;
+    laydate.render({
+        elem: '#add_time_s',
+        type: 'datetime',
+        range: '~',
+        format: 'yyyy-MM-dd HH:mm:ss'
+    });
+    laydate.render({
+        elem: '#add_time_e',
+        type: 'datetime',
+        range: '~',
+        format: 'yyyy-MM-dd HH:mm:ss'
+    });
+});
+
+	
+function confirm(url) {   	
+    $("#displayImg").attr("src", url);
+    var width = 'auto';
+    var height = 'auto';
+    
+    layer.open({
+        type: 1,
+        title: false,
+        closeBtn: 0,
+        shadeClose: true,
+        area: [width + 'px', height + 'px'], //宽高
+        content: "<img src=" + url + " />"
+    });
+}
+	
+	function selAll (argument) {
+	    var ids = [];
+	    var data_ids = [];	
+	    // 获取选中的id 
+	    $('tbody input').each(function(index, el) {
+	        if($(this).prop('checked')){
+	           ids.push($(this).val());
+	           data_ids.push(el.getAttribute('data-id'));
+	        }
+	    });
+	    if(data_ids == '1'){
+			layer.alert('请选择挂单中的指定', {
+				  icon: 5,
+				  skin: 'layer-ext-demo' //见：扩展说明
+				})
+          return false;
+	    }
+	    
+		if(ids == '' || ids == null){
+			layer.alert('请先选择数据再批量指定', {
+				  icon: 5,
+				  skin: 'layer-ext-demo' //见：扩展说明
+				})
+            return false;
+		}
+
+		//xadmin.open('批量替换','/admin/mutualaid/mutualAidOrderbatch?ids='+ids,1000,600);
+		xadmin.open('批量替换','{:url("mutualaid/mutualAidOrderbatch")}?ids='+ids,1200,600);
+		
+	  }
+
+
+    //删除
+    function delete_confirm(obj, id) {
+        layer.confirm('是否同意删除？', function(index) {
+            $.ajax({
+                url: "{:url('mutualaid/mutualaiddelete')}",//'/admin/mutualaid/mutualaiddelete',
+                type: 'post',
+                data: {
+                	mu_id: id,
+                },
+                success: function (data) {
+                    if(data.code === 1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            window.location.reload();
+                        }, 500);
+                    }else {
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+        });
+    }
+</script>
+{/block}

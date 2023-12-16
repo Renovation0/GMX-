@@ -1,0 +1,214 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}直通车活动{/block}
+{block name="style"}
+<style>
+    .layui-table td, .layui-table th {
+        min-width: unset !important;
+    }
+
+    .role_user {
+        display: inline-block;
+        margin-right: 5px;
+        padding: 5px;
+        background-color: #f0f0f0;
+    }
+</style>
+{/block}
+{block name="page"}
+<div class="x-nav">
+    <span class="layui-breadcrumb">
+        <a href="javascript:;">用户</a>
+        <a href="javascript:;">活动中心</a>
+        <a><cite>直通车活动</cite></a>
+    </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+       onclick="location.reload()" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+    </a>
+</div>
+<div class="layui-fluid">
+    <div class="layui-card-header">
+        {if in_array('/index/activity/extensionaddpost', (array)session('power_action'))}
+        <button class="layui-btn layui-btn-normal" onclick="xadmin.open('添加活动','/index/activity/directAdd',600,800)">
+            <i class="layui-icon"></i>添加活动
+        </button>
+        {else /}
+        <button class="layui-btn layui-btn-disabled" onclick="return false">
+            <i class="layui-icon"></i>添加活动
+        </button>
+        {/if}
+    </div>
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body ">
+                    <table class="layui-table layui-form">
+                        <thead>
+                        <tr>
+                            <th style="width: 20px;">活动ID</th>
+                            <th style="width: 20px;">有效直推</th>
+                            <th style="width: 20px;">赠送可售余额</th>
+                            <th style="width: 20px;">赠送资产</th>
+                            <th style="width: 20px;">活动状态</th>
+                            <th style="width: 50px;">活动开始时间</th>
+                            <th style="width: 50px;">活动结束时间</th>
+                            <th style="width: 50px;">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {if !empty($list->items())}
+                        {volist name="list" id="user"}
+                        <tr>
+                            <td>{$user['id']}</td>
+                            <td>{$user['zt_num']}</td>
+                            <td>{$user['mac_num']}</td>
+                            <td>{$user['assets']}</td>
+                            <td>
+                                {if in_array('/index/activity/updataactivitystatus', (array)session('power_action'))}
+
+                                {switch $user['status']}
+                                {case 1}
+                                <button class="layui-btn layui-btn" onclick="updata_status(this, '{$user[\'id\']}', 103, 2)">
+                                已开启
+                                </button>
+                                {/case}
+                                {case 2}
+                                <button class="layui-btn layui-btn-warm" onclick="updata_status(this, '{$user[\'id\']}', 103, 1)">
+                                已关闭
+                                </button>
+                                {/case}
+                                {default /}<span style="color: grey;">未知</span>
+                                {/switch}
+
+                                {else /}
+
+                                {switch $user['status']}
+                                {case 1}
+                                <button class="layui-btn layui-btn-disabled" onclick="return false">
+                                    已开启
+                                </button>
+                                {/case}
+                                {case 2}
+                                <button class="layui-btn layui-btn-disabled" onclick="return false">
+                                    已关闭
+                                </button>
+                                {/case}
+                                {default /}<span style="color: grey;">未知</span>
+                                {/switch}
+
+                                {/if}
+                            </td>
+                            <td>{$user['begin_time']|date='Y-m-d H:i:s'}</td>
+                            <td>{$user['end_time']|date='Y-m-d H:i:s'}</td>
+                            <td>
+                                {if in_array('/index/activity/extensioneditpost', (array)session('power_action'))}
+                                <button class="layui-btn layui-btn-normal" onclick="xadmin.open('修改活动','/index/activity/directEdit/id/{$user[\'id\']}',600,800)">
+                                    <i class="iconfont">&#xe69e;</i> 编辑
+                                </button>
+                                {else /}
+                                <button class="layui-btn layui-btn-disabled" onclick="return false">
+                                    <i class="iconfont">&#xe69e;</i> 编辑
+                                </button>
+                                {/if}
+                                {if in_array('/index/activity/deleteactivity', (array)session('power_action'))}
+                                <button class="layui-btn layui-btn-warm" onclick="delete_activity(this, '{$user[\'id\']}', 205)">
+                                    <i class="iconfont">&#xe69d;</i> 删除
+                                </button>
+                                {else /}
+                                <button class="layui-btn layui-btn-disabled" onclick="return false">
+                                    <i class="iconfont">&#xe69d;</i> 删除
+                                </button>
+                                {/if}
+                            </td>
+                        </tr>
+                        {/volist}
+                        {else /}
+                        <tr>
+                            <td colspan="11" class="nodata_td">无记录</td>
+                        </tr>
+                        {/if}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="layui-card-body ">
+                    <div class="page">
+                        {$list|raw}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+
+    //日期选择
+    layui.use(['laydate','form'], function(){
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#add_time_s',
+            type: 'datetime'
+        });
+        laydate.render({
+            elem: '#add_time_e',
+            type: 'datetime'
+        });
+
+    });
+
+    layui.use('form', function () {
+        let form = layui.form;
+        form.render();
+    });
+
+    // 修改状态
+    function updata_status(obj, id, a_id,status) {
+        layer.confirm('请确认操作', function(index) {
+            $.ajax({
+                url: '/index/activity/updataActivitystatus',
+                type: 'post',
+                data: {
+                    id: id,
+                    status: status,
+                    a_id: a_id
+                },
+                success: function (data) {
+                    if(data.code === 1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            window.location.reload();
+                        }, 500);
+                    }else {
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+        });
+    }
+
+    // 删除活动
+    function delete_activity(obj, id, a_id) {
+        layer.confirm('请确认操作', function(index) {
+            $.ajax({
+                url: '/index/activity/deleteActivity',
+                type: 'post',
+                data: {
+                    id: id,
+                    a_id: a_id
+                },
+                success: function (data) {
+                    if(data.code === 1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            window.location.reload();
+                        }, 500);
+                    }else {
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+        });
+    }
+</script>
+{/block}

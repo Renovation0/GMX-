@@ -1,0 +1,85 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}管理员编辑{/block}
+{block name="style"}{/block}
+{block name="page"}
+<div class="layui-fluid">
+    <div class="layui-row">
+        <form class="layui-form" action="{:url('wallet/tmtypecheck')}">
+            <input type="hidden" name="id" value="{$member['id']}">
+
+            <div class="layui-form-item">
+                <label for="tel" class="layui-form-label">
+                    提现金额
+                </label>
+                <div class="layui-input-inline">
+                    <input type="num" id="num" name="num" value="{$member['num']}"  disabled autocomplete="off" class="layui-input" style="background:#E0E0E0;">
+                </div>
+                <div class="layui-form-mid layui-word-aux">
+                    
+                </div>
+            </div>
+            
+            <div class="layui-form-item">
+                <label class="layui-form-label">选择支付通道<span class="x-red">*</span></label>
+                <div class="layui-input-inline">
+                    <select name="type" id="type">
+                        <option value="0">无</option>
+                        {volist name="channelList" id="channel"}
+                            <option value="{$channel['id']}" <?php if($member['type'] == $channel['id']){echo "selected";}?> >{$channel['name']}</option>
+                        {/volist}
+                        <!--<option value="1"<?php if($member['type'] == 1){echo "selected";}?>>{$pay1}</option>-->
+                        <!--<option value="2"<?php if($member['type'] == 2){echo "selected";}?>>{$pay2}</option>-->
+                        <!--<option value="3"<?php if($member['type'] == 3){echo "selected";}?>>{$pay3}</option>-->
+                        <!--<option value="4"<?php if($member['type'] == 4){echo "selected";}?>>{$pay4}</option>-->
+                    </select>
+                </div>
+            </div>         
+            
+            
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                </label>
+                <button  class="layui-btn" lay-filter="user_edit" lay-submit="">
+                    提交
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+
+
+
+    layui.use(['form', 'layer'], function() {
+        $ = layui.jquery;
+        let form = layui.form,
+            layer = layui.layer;
+
+		
+        //监听提交
+        form.on('submit(user_edit)', function(data) {	
+            $.ajax({
+                url: data.form.action,
+                type: 'post',
+                data: {
+                    id: data.field.id,
+                    type: data.field.type
+                },
+                success: function (data) {
+                    if(data.code === 1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            parent.location.reload();
+                        }, 500);
+                    }else {
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+            return false;
+        });
+    });
+</script>
+{/block}

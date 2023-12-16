@@ -1,0 +1,110 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}添加{/block}
+{block name="style"}
+<style>
+    .thumbnail_box {
+        display: none;
+    }
+	.layui-laydate-content>.layui-laydate-list {
+	    padding-bottom: 0px;
+	    overflow: hidden;
+	}
+	.layui-laydate-content>.layui-laydate-list>li{
+	    width:50%
+	}
+	.merge-box .scrollbox .merge-list {
+	    padding-bottom: 5px;
+	}
+</style>
+{/block}
+{block name="page"}
+<div class="layui-fluid">
+    <div class="layui-row">
+        <form action="" method="post" class="layui-form layui-form-pane">
+                    
+            <div class="layui-form-item">
+                <label for="up_appoint" class="layui-form-label" style="width: 150px">
+                    产品
+                </label>
+                <div class="layui-input-inline layui-show-xs-block">
+                    <select name="purchase_id" id="purchase_id">
+                        <option value="">请选择产品</option>
+                        {volist name="list" id="aid"}
+                        <option value="{$aid['id']}">{$aid['name']}</option>
+                        {/volist}
+                    </select>
+                </div>
+            </div>
+        
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" style="width: 150px">
+                    会员账号
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="tel" name="tel" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            
+            <div class="layui-form-item">
+                <label for="price" class="layui-form-label" style="width: 150px">
+                    价格
+                </label>
+                <div class="layui-input-inline">
+                    <input type="number" id="price" name="price"  lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="give_balance" class="layui-form-label" style="width: 150px">
+                    数量
+                </label>
+                <div class="layui-input-inline">
+                    <input type="number" id="num" name="num" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+
+            {if in_array('/mutualaid/mutualaidmemberadd', (array)session('power_action'))}
+            <div class="layui-form-item">
+                <label class="layui-form-label"></label>
+                <button class="layui-btn" lay-submit lay-filter="role_add">增加</button>
+            </div>
+            {/if}
+        </form>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+
+    $(function  () {
+        layui.use('form', function(){
+            let form = layui.form;
+            form.on('submit(role_add)', function(data){
+                $.ajax({
+                    url: "{:url('mutualaid/mutualaidMemberAdd')}",//'/admin/mutualaid/mutualaidMemberAdd',
+                    type: 'post',
+                    data: {
+                    	purchase_id: data.field.purchase_id,
+                    	tel: data.field.tel,
+                    	price: data.field.price,
+                        max_price: data.field.max_price,
+                        num: data.field.num
+                    },
+                    success: function (data) {
+                        if(data.code === 1){
+                            layer.msg(data.msg);
+                            setTimeout(function(){
+                                parent.location.reload();
+                            }, 500);
+                        }else {
+                            layer.msg(data.msg);
+                        }
+                    }
+                });
+                return false;
+            });
+        });
+    });
+</script>
+{/block}

@@ -1,0 +1,4 @@
+---------------------------------------------------------------
+[2023-10-27T10:05:49+08:00] 2409:4089:a188:2cc2::6f4:b0a5 GET www.gem-xtra.pro/public/h5/
+[运行时间：0.069920s] [吞吐率：14.30req/s] [内存消耗：451.86kb] [文件加载：53]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php

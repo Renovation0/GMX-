@@ -1,0 +1,138 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}K线图{/block}
+{block name="style"}
+<style>
+    .layui-form-item{
+        display:flex;
+        align-items:center;
+    }
+</style>
+{/block}
+{block name="page"}
+<div class="x-nav">
+    <span class="layui-breadcrumb">
+        <a href="javascript:;">系统</a>
+        <a href="javascript:;">系统设置</a>
+        <a><cite>K线图</cite></a>
+    </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+       onclick="location.reload()" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+    </a>
+</div>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">K线趋势图</div>
+                <div class="layui-card-body" style="min-height: 280px;">
+                    <div id="k_line" class="layui-col-sm12" style="height: 300px;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body ">
+                    <div class="layui-row layui-col-space15">
+                        {if !empty($k_line_datas)}
+                        {volist name="$k_line_datas" id="k_line_data"}
+                        <div class="layui-col-xs12 layui-col-sm6 layui-col-md6 layui-col-lg4">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">{$k_line_data['time']|date='m-d'}</label>
+                                <div class="layui-input-inline">
+                                    <input type="number" name="{$k_line_data['time']}" placeholder="请输入k线值" value="{$k_line_data['value']}" class="layui-input">
+                                </div>
+                                <div class="layui-form-mid ">
+                                    {if in_array('/admin/system/klineset', (array)session('power_action'))}
+                                    <button onclick="change_value('{$k_line_data[\'time\']}')" class="layui-btn">修改</button>
+                                    {else /}
+                                    <button onclick="return false" class="layui-btn layui-btn-disabled">修改</button>
+                                    {/if}
+                                </div>
+                            </div>
+                        </div>
+                        {/volist}
+                        {/if}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.min.js"></script>
+<script>
+    // 基于准备好的dom，初始化echarts实例
+    let myChart = echarts.init(document.getElementById('k_line'));
+    // 指定图表的配置项和数据
+    let option = {
+        grid: {
+            top: '5%',
+            right: '1%',
+            left: '1%',
+            bottom: '10%',
+            containLabel: true
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        xAxis: {
+            type: 'category',
+            data: [
+                {if !empty($k_line_datas)}
+                {volist name="$k_line_datas" id="k_line_data"}
+                '{$k_line_data[\'time\']|date=\'m-d\'}',
+                {/volist}
+                {/if}
+            ]
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            name:'单价',
+            data: [
+                {if !empty($k_line_datas)}
+                {volist name="$k_line_datas" id="k_line_data"}
+                '{$k_line_data[\'value\']}',
+                {/volist}
+                {/if}
+            ],
+            type: 'line',
+            smooth: true
+        }]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+
+    function change_value(key) {
+        let value = $("input[name='"+key+"']").val();
+        if(value == ''){
+            layer.msg('请输入K线值');
+            return false;
+        }else {
+            $.ajax({
+                url: '/admin/system/kLineSet',
+                type: 'post',
+                data: {
+                    time: key,
+                    value: value,
+                },
+                success: function (data) {
+                    if(data.code === 1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            window.location.reload();
+                        }, 500);
+                    }else {
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+        }
+        // console.log(value);
+    }
+
+</script>
+{/block}

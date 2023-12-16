@@ -1,0 +1,130 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}合伙人管理{/block}
+{block name="style"}
+<style>
+    .layui-table td, .layui-table th {
+        min-width: unset !important;
+    }
+
+    .role_user {
+        display: inline-block;
+        margin-right: 5px;
+        padding: 5px;
+        background-color: #f0f0f0;
+    }
+</style>
+{/block}
+{block name="page"}
+<div class="x-nav">
+    <span class="layui-breadcrumb">
+        <a href="javascript:;">系统</a>
+        <a href="javascript:;">会员管理</a>
+        <a><cite>合伙人分红列表</cite></a>
+    </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+       onclick="location.reload()" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+    </a>
+</div>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body ">
+                    <table class="layui-table layui-form">
+                        <thead>
+                        <tr>
+                            <th style="width: 20px;">会员ID</th>
+                            <th style="width: 50px;height: 50px">手机号</th>
+                            <th style="width: 20px;">金额</th>
+                            <th style="width: 80px;">时间</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {if !empty($list->items())}
+                        {volist name="list" id="user"}
+                        <tr>
+                            <td>{$user['u_id']}</td>
+                            <td>{$user['u_tel']}</td>
+                            <td>{$user['money']}</td>
+                            <td>{:date('Y-m-d H:i:s',$user['time'])}</td>
+                        </tr>
+                        {/volist}
+                        {else /}
+                        <tr>
+                            <td colspan="11" class="nodata_td">暂无记录</td>
+                        </tr>
+                        {/if}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="layui-card-body ">
+                    <div class="page">
+                        {$list|raw}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    layui.use('form', function () {
+        let form = layui.form;
+        form.render();
+    });
+    function fenhongorder() {
+        layer.prompt({
+            value: '',
+            title: '发送交易分红',
+        }, function(value, index, elem){
+            $.ajax({
+                url: '/admin/member/partnerSendorder',
+                type: 'post',
+                data: {
+                    money: value,
+                },
+                success: function (data) {
+                    if(data.code === 1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            window.location.reload();
+                        }, 500);
+                    }else {
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+            layer.close(index);
+        });
+    }
+
+    function fenhonggame() {
+        layer.prompt({
+            value: '',
+            title: '发送游戏分红',
+        }, function(value, index, elem){
+            $.ajax({
+                url: '/admin/member/partnerSendgame',
+                type: 'post',
+                data: {
+                    money: value,
+                },
+                success: function (data) {
+                    if(data.code === 1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            window.location.reload();
+                        }, 500);
+                    }else {
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+            layer.close(index);
+        });
+    }
+
+</script>
+{/block}

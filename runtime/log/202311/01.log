@@ -1,0 +1,361 @@
+---------------------------------------------------------------
+[2023-11-01T00:38:07+08:00] 2409:4089:ac8e:f5a1:f85e:bed3:2af7:8ea9 GET gem-xtra.pro/public/
+[运行时间：0.069008s] [吞吐率：14.49req/s] [内存消耗：576.31kb] [文件加载：64]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81ed53961dff41be-MRS',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+  'accept-language' => 'en-GB,en;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'cookie' => 'SESSIONID=d4d18652-6e98-438a-9f95-7512b1b2d489.Sc5LTxSKmpRCaZP2FVBURvEdbJg; Path=/www/wwwroot/code/web.xstrataplc.net_zhnHMi; order=id%20desc; serverType=nginx; request_token=P51yMyB12XzrcpeJYweKkV8KfA7GJJyeJOPmLYbbpMOPrQLy; backup_path=/www/backup; memSize=3789; bt_user_info=%7B%22status%22%3Atrue%2C%22msg%22%3A%22%u83B7%u53D6%u6210%u529F%21%22%2C%22data%22%3A%7B%22username%22%3A%22139****9999%22%7D%7D; ltd_end=4086842076; pro_end=-1; sites_path=/www/wwwroot; rank=list',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '2409:4089:ac8e:f5a1:f85e:bed3:2af7:8ea9',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '2409:4089:ac8e:f5a1:f85e:bed3:2af7:8ea9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /home/gemxpbra/public_html/application/index/view/index/index.html [ array (
+) ]
+---------------------------------------------------------------
+[2023-11-01T00:38:15+08:00] 2409:4089:ac8e:f5a1:f85e:bed3:2af7:8ea9 GET gem-xtra.pro/public/witkey2022.php
+[运行时间：0.011606s] [吞吐率：86.16req/s] [内存消耗：391.84kb] [文件加载：69]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81ed53ca5dad41be-MRS',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+  'accept-language' => 'en-GB,en;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'cookie' => 'SESSIONID=d4d18652-6e98-438a-9f95-7512b1b2d489.Sc5LTxSKmpRCaZP2FVBURvEdbJg; Path=/www/wwwroot/code/web.xstrataplc.net_zhnHMi; order=id%20desc; serverType=nginx; request_token=P51yMyB12XzrcpeJYweKkV8KfA7GJJyeJOPmLYbbpMOPrQLy; backup_path=/www/backup; memSize=3789; bt_user_info=%7B%22status%22%3Atrue%2C%22msg%22%3A%22%u83B7%u53D6%u6210%u529F%21%22%2C%22data%22%3A%7B%22username%22%3A%22139****9999%22%7D%7D; ltd_end=4086842076; pro_end=-1; sites_path=/www/wwwroot; rank=list',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '2409:4089:ac8e:f5a1:f85e:bed3:2af7:8ea9',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '2409:4089:ac8e:f5a1:f85e:bed3:2af7:8ea9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /home/gemxpbra/public_html/thinkphp/tpl/dispatch_jump_zm.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+---------------------------------------------------------------
+[2023-11-01T00:38:37+08:00] 2409:4089:ac8e:f5a1:f85e:bed3:2af7:8ea9 GET gem-xtra.pro/public/witkey2022.php/login/login
+[运行时间：0.060657s] [吞吐率：16.49req/s] [内存消耗：734.14kb] [文件加载：80]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81ed54542ee041be-MRS',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+  'accept-language' => 'en-GB,en;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'cookie' => 'PHPSESSID=136036fc98f9808b3b1491e0ea7c9cb2; SESSIONID=d4d18652-6e98-438a-9f95-7512b1b2d489.Sc5LTxSKmpRCaZP2FVBURvEdbJg; Path=/www/wwwroot/code/web.xstrataplc.net_zhnHMi; order=id%20desc; serverType=nginx; request_token=P51yMyB12XzrcpeJYweKkV8KfA7GJJyeJOPmLYbbpMOPrQLy; backup_path=/www/backup; memSize=3789; bt_user_info=%7B%22status%22%3Atrue%2C%22msg%22%3A%22%u83B7%u53D6%u6210%u529F%21%22%2C%22data%22%3A%7B%22username%22%3A%22139****9999%22%7D%7D; ltd_end=4086842076; pro_end=-1; sites_path=/www/wwwroot; rank=list',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '2409:4089:ac8e:f5a1:f85e:bed3:2af7:8ea9',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '2409:4089:ac8e:f5a1:f85e:bed3:2af7:8ea9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/gemxpbra/public_html/application/admin/view/login/login.html [ array (
+  0 => 'log_title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000861s ] mysql:host=127.0.0.1;port=3306;dbname=gemxpbra_pro;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_config` [ RunTime:0.006252s ]
+[ sql ] [ SQL ] SELECT `value` FROM `zm_system_config` WHERE  `key` = 'website' LIMIT 1 [ RunTime:0.000569s ]
+---------------------------------------------------------------
+[2023-11-01T00:39:16+08:00] 103.120.176.238 GET gem-xtra.pro/public/witkey2022.php/
+[运行时间：0.007453s] [吞吐率：134.17req/s] [内存消耗：390.49kb] [文件加载：69]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81ed554189b740b2-SIN',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'sec-ch-ua' => '"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"',
+  'sec-ch-ua-mobile' => '?1',
+  'sec-ch-ua-platform' => '"Android"',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'sec-fetch-site' => 'cross-site',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-dest' => 'document',
+  'accept-language' => 'hi-IN,hi;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => '__gsas=ID=7ede8409cb10601d:T=1697021424:RT=1697021424:S=ALNI_MYDGC9c1L0ZMIMdP_t_pIM6hvtiYw',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '103.120.176.238',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '103.120.176.238',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /home/gemxpbra/public_html/thinkphp/tpl/dispatch_jump_zm.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+---------------------------------------------------------------
+[2023-11-01T00:39:40+08:00] 103.120.176.238 GET gem-xtra.pro/public/witkey2022.php/login/login
+[运行时间：0.012859s] [吞吐率：77.77req/s] [内存消耗：603.19kb] [文件加载：80]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81ed55e05bf2895c-SIN',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'sec-ch-ua' => '"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"',
+  'sec-ch-ua-mobile' => '?1',
+  'sec-ch-ua-platform' => '"Android"',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'accept-language' => 'hi-IN,hi;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => '__gsas=ID=7ede8409cb10601d:T=1697021424:RT=1697021424:S=ALNI_MYDGC9c1L0ZMIMdP_t_pIM6hvtiYw; PHPSESSID=210482ea5f4fd4848bd1d57279127fe4',
+  'priority' => 'u=0, i',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '103.120.176.238',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '103.120.176.238',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/gemxpbra/public_html/application/admin/view/login/login.html [ array (
+  0 => 'log_title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000908s ] mysql:host=127.0.0.1;port=3306;dbname=gemxpbra_pro;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_config` [ RunTime:0.001216s ]
+[ sql ] [ SQL ] SELECT `value` FROM `zm_system_config` WHERE  `key` = 'website' LIMIT 1 [ RunTime:0.000620s ]
+---------------------------------------------------------------
+[2023-11-01T00:40:53+08:00] 2409:4089:ac8e:f5a1:f85e:bed3:2af7:8ea9 GET gem-xtra.pro/public/witkey2022.php/login/login
+[运行时间：0.017520s] [吞吐率：57.08req/s] [内存消耗：603.22kb] [文件加载：80]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81ed57a6dd3741be-MRS',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+  'accept-language' => 'en-GB,en;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'cookie' => 'PHPSESSID=136036fc98f9808b3b1491e0ea7c9cb2; SESSIONID=d4d18652-6e98-438a-9f95-7512b1b2d489.Sc5LTxSKmpRCaZP2FVBURvEdbJg; Path=/www/wwwroot/code/web.xstrataplc.net_zhnHMi; order=id%20desc; serverType=nginx; request_token=P51yMyB12XzrcpeJYweKkV8KfA7GJJyeJOPmLYbbpMOPrQLy; backup_path=/www/backup; memSize=3789; bt_user_info=%7B%22status%22%3Atrue%2C%22msg%22%3A%22%u83B7%u53D6%u6210%u529F%21%22%2C%22data%22%3A%7B%22username%22%3A%22139****9999%22%7D%7D; ltd_end=4086842076; pro_end=-1; sites_path=/www/wwwroot; rank=list',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '2409:4089:ac8e:f5a1:f85e:bed3:2af7:8ea9',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '2409:4089:ac8e:f5a1:f85e:bed3:2af7:8ea9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/gemxpbra/public_html/application/admin/view/login/login.html [ array (
+  0 => 'log_title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001116s ] mysql:host=127.0.0.1;port=3306;dbname=gemxpbra_pro;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_config` [ RunTime:0.001620s ]
+[ sql ] [ SQL ] SELECT `value` FROM `zm_system_config` WHERE  `key` = 'website' LIMIT 1 [ RunTime:0.000636s ]
+---------------------------------------------------------------
+[2023-11-01T00:41:13+08:00] 2409:4089:ac8e:f5a1:f85e:bed3:2af7:8ea9 GET gem-xtra.pro/public/witkey2022.php/login/login
+[运行时间：0.011885s] [吞吐率：84.14req/s] [内存消耗：603.15kb] [文件加载：80]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81ed5821fe4a12ab-MRS',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'cache-control' => 'max-age=0',
+  'sec-ch-ua' => '"Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua-platform' => '"macOS"',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'accept-language' => 'en-GB,en-US;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=142293c8dbf616886974379f372bf458',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '2409:4089:ac8e:f5a1:f85e:bed3:2af7:8ea9',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '2409:4089:ac8e:f5a1:f85e:bed3:2af7:8ea9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/gemxpbra/public_html/application/admin/view/login/login.html [ array (
+  0 => 'log_title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000827s ] mysql:host=127.0.0.1;port=3306;dbname=gemxpbra_pro;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_config` [ RunTime:0.001142s ]
+[ sql ] [ SQL ] SELECT `value` FROM `zm_system_config` WHERE  `key` = 'website' LIMIT 1 [ RunTime:0.000506s ]
+---------------------------------------------------------------
+[2023-11-01T00:41:17+08:00] 2409:4089:ac8e:f5a1:f85e:bed3:2af7:8ea9 POST gem-xtra.pro/public/witkey2022.php/login/do_login
+[运行时间：0.006833s] [吞吐率：146.35req/s] [内存消耗：387.84kb] [文件加载：65]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81ed583d496711c1-MRS',
+  'content-length' => '19',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'cache-control' => 'max-age=0',
+  'sec-ch-ua' => '"Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua-platform' => '"macOS"',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'https://gem-xtra.pro',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'https://gem-xtra.pro/public/witkey2022.php/login/login',
+  'accept-language' => 'en-GB,en-US;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=142293c8dbf616886974379f372bf458',
+  'priority' => 'u=0, i',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '2409:4089:ac8e:f5a1:f85e:bed3:2af7:8ea9',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '2409:4089:ac8e:f5a1:f85e:bed3:2af7:8ea9',
+)
+[ info ] [ PARAM ] array (
+  'username' => '',
+  'password' => '',
+)
+---------------------------------------------------------------
+[2023-11-01T00:41:29+08:00] 2409:4089:ac8e:f5a1:f85e:bed3:2af7:8ea9 GET gem-xtra.pro/public/witkey2022.php/login/login
+[运行时间：0.013940s] [吞吐率：71.74req/s] [内存消耗：600.80kb] [文件加载：80]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81ed5883e947129a-MRS',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+  'accept-language' => 'en-GB,en;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '2409:4089:ac8e:f5a1:f85e:bed3:2af7:8ea9',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '2409:4089:ac8e:f5a1:f85e:bed3:2af7:8ea9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/gemxpbra/public_html/application/admin/view/login/login.html [ array (
+  0 => 'log_title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000891s ] mysql:host=127.0.0.1;port=3306;dbname=gemxpbra_pro;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_config` [ RunTime:0.001966s ]
+[ sql ] [ SQL ] SELECT `value` FROM `zm_system_config` WHERE  `key` = 'website' LIMIT 1 [ RunTime:0.000610s ]
+---------------------------------------------------------------
+[2023-11-01T00:51:54+08:00] 103.120.176.238 GET gem-xtra.pro/public/witkey2022.php/login/login
+[运行时间：0.088555s] [吞吐率：11.29req/s] [内存消耗：937.64kb] [文件加载：80]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81ed67c6bb9d4002-SIN',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'sec-ch-ua' => '"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"',
+  'sec-ch-ua-mobile' => '?1',
+  'sec-ch-ua-platform' => '"Android"',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'accept-language' => 'hi-IN,hi;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => '__gsas=ID=7ede8409cb10601d:T=1697021424:RT=1697021424:S=ALNI_MYDGC9c1L0ZMIMdP_t_pIM6hvtiYw; PHPSESSID=210482ea5f4fd4848bd1d57279127fe4',
+  'priority' => 'u=0, i',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '103.120.176.238',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '103.120.176.238',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/gemxpbra/public_html/application/admin/view/login/login.html [ array (
+  0 => 'log_title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001022s ] mysql:host=127.0.0.1;port=3306;dbname=gemxpbra_pro;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zm_system_config` [ RunTime:0.002580s ]
+[ sql ] [ SQL ] SELECT `value` FROM `zm_system_config` WHERE  `key` = 'website' LIMIT 1 [ RunTime:0.000687s ]

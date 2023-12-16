@@ -1,0 +1,115 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}资讯添加{/block}
+{block name="style"}
+<style>
+    .thumbnail_box {
+        display: none;
+    }
+    .layui-form-selected dl{
+        z-index: 99999;
+    }
+</style>
+{/block}
+{block name="page"}
+<div class="layui-fluid">
+    <div class="layui-row">
+        <form action="" method="post" class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+             <input type="num" name="id" hidden  value="{$user['id']}" >
+                <label for="status" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>父级
+                </label>
+                <div class="layui-input-inline layui-show-xs-block">
+                    <select name="pid" id="pid">
+                        <option value="0">无</option>
+                        {volist name="list" id="menu"}
+                        <option value="{$menu['id']}"<?php if($user['pid'] == $menu['id']) {echo "selected";}?>>{$menu['name']}</option>
+                        {/volist}
+                    </select>
+                </div>
+            </div>
+            
+            <div class="layui-form-item">
+                <label for="status" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>标题
+                </label>
+                <div class="layui-input-inline layui-show-xs-block">
+                    <input type="text" name="name" value="{$user['name']}" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            
+            <div class="layui-form-item">
+                <!-- <label class="layui-form-label">排序</label> -->
+                <label for="status" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>排序
+                </label>
+                <div class="layui-input-inline layui-show-xs-block">
+                    <input type="text" name="sort"  value="{$user['sort']}"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            
+            <div class="layui-form-item">
+                <label for="status" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>是否启用
+                </label>
+                <div class="layui-input-inline layui-show-xs-block">
+                    <select name="status" id="status">
+                        <option value="">请选择</option>
+                        <option value="1"<?php if($user['status'] == 1) echo 'selected';?>>开启</option>
+                        <option value="2"<?php if($user['status'] == 2) echo 'selected';?>>关闭</option>
+                    </select>
+                </div>
+            </div>
+            
+            
+
+            <div class="layui-form-item">
+                <label for="status" class="layui-form-label"></label>
+                    <button  class="layui-btn" lay-filter="menu_add" lay-submit="">提交</button>
+                <!-- <div class="layui-input-block">
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div> -->
+            </div>
+        </form>
+    </div>
+</div>
+{/block}
+{block name="js"}
+
+<script>
+
+
+$(function  () {
+    layui.use('form', function(){
+        let form = layui.form;
+        form.on('submit(menu_add)', function(data){
+        	var pid=$("#pid").val();
+
+            $.ajax({
+                url: "{:url('goods/categoryedit')}",//'/admin/goods/categoryedit',
+                type: 'post',
+                data: {
+                    id: data.field.id,
+                    name: data.field.name,
+                    pid: data.field.pid,
+                    sort: data.field.sort,
+                    status: data.field.status
+                },
+                success: function (data) {
+                    if(data.code === 1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            parent.location.reload();
+                        }, 500);
+                    }else {
+                        layer.msg(data.msg);
+                    }
+                }
+            }); 
+            return false;
+        });
+    });
+});
+
+</script>
+{/block}

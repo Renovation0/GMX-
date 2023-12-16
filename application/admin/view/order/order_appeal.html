@@ -1,0 +1,40 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}订单详情{/block}
+{block name="style"}{/block}
+{block name="page"}
+<div class="layui-fluid">
+<h3 ><font color="#FF0000">申诉留言：{$order['reply_content']}</font></h3><br/><br/>
+    <div class="layui-row">
+        <form class="layui-form layui-form-pane">
+        	<h3 >申诉图片：</h3>
+        	{volist name="$order['img']" id="img"}
+            <div class="layui-form-item">
+                <div class="layui-input-inline"  onclick="confirm('{$img}')">
+                    <img src="{$img}" alt="" style="width: 80px;">
+                </div>
+            </div>
+            {/volist}
+        </form>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+
+function confirm(url) {   	
+    $("#displayImg").attr("src", url);
+    var width = 'auto';
+    var height = 'auto';
+    
+    layer.open({
+        type: 1,
+        title: false,
+        closeBtn: 0,
+        shadeClose: true,
+        area: [width + 'px', height + 'px'], //宽高
+        content: "<img src=" + url + " />"
+    });
+}
+
+</script>
+{/block}

@@ -1,0 +1,112 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}用户资金记录{/block}
+{block name="style"}
+
+<!-- 		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+		先引入 Vue
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+		引入组件库
+		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+		<link rel="stylesheet" href="__STATIC__/index.css"> -->
+		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+		<script src="__STATIC__/vue.js"></script>
+		<script src="__STATIC__/index.js"></script>
+{/block}
+{block name="page"}
+<div class="x-nav">
+    <span class="layui-breadcrumb">
+        <a href="javascript:;">用户</a>
+        <a href="javascript:;">用户管理</a>
+        <a><cite>资金记录</cite></a>
+    </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+       onclick="location.reload()" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+    </a>
+</div>
+
+		<div id="treePage">
+			<el-tree :props="props" :load="loadNode" lazy>
+				<span class="custom-tree-node" slot-scope="{ node, data }"> 
+					<span style="font-size:16px;">Id:{{ node.id }}--<span style="margin-right:16px">名称:{{data.user}}</span>(
+					<span style="margin-right:16px">电话：<span>{{data.tel}}</span></span>
+					<span style="margin-right:16px">有效团队：<span style="color:red;">{{data.yx_team}}</span></span>
+					<span style="margin-right:16px">个人资产：<span style="color:orange;">{{data.personAssets}}</span></span>
+					<span style="margin-right:16px">团队资产：<span style="color:green;">{{data.teamAssets}}</span></span>
+					<span>今日团队资产：<span style="color:blue;">{{data.teamAssetsToday}}</span></span>
+					)</span>					
+				 </span>
+			</el-tree>
+		</div>
+		
+{/block}
+{block name="js"}
+<script>
+
+new Vue({
+	el: "#treePage",
+	data() {
+		return {
+			props: {
+				label:'text',
+				children: 'zones',
+				isLeaf: 'leaf'
+			},
+		}
+	},
+	methods: {
+		loadNode(node, resolve) {
+			//console.log(node);
+			let data = {};
+			if(node.data){
+				data.id = node.data.id;
+			}
+			$.ajax({
+				type : "post",
+				url : "{:url('member/memberteam')}",
+				async : false,
+				data  : data,
+				success : function(data) {
+					//console.log(data)
+					resolve(data);
+					
+		
+				},
+				error : function(){
+					layer.msg("网络异常,请稍后刷新重试~",{icon:5,time:3000},function(){
+						layer.close(index);
+					});
+				}
+			})
+			/*			console.log(node)
+ 			if (node.level === 0) {
+				return resolve([{
+					id:111,
+					name: 'region'
+				},{
+					id:2,
+					name:'tree2'
+				}]);
+			}
+			if (node.level == 1) return resolve([{id:3,name:'tree3'}]);
+			if (node.level > 2) return resolve([]);
+
+			setTimeout(() => {
+				const data = [{
+					id:4,
+					name: 'leaf',
+					leaf: true
+				}, {
+					id:5,
+					name: 'zone'
+				}];
+
+				resolve(data);
+			}, 500); */
+		}
+	}
+})
+
+
+</script>
+{/block}

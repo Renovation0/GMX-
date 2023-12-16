@@ -1,0 +1,104 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}管理员编辑{/block}
+{block name="style"}{/block}
+{block name="page"}
+<div class="layui-fluid">
+    <div class="layui-row">
+        <form class="layui-form" action="{:url('bing/channelEditPost')}">
+            <input type="hidden" name="id" value="{$bind['id']}">
+            <div class="layui-form-item">
+                <label for="tel" class="layui-form-label">
+                    收款人姓名
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="name" name="name" value="{$bind['name']}"  autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-word-aux">
+                    
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="tel" class="layui-form-label">
+                    所属银行
+                </label>
+                <div class="layui-input-inline layui-show-xs-block">
+                    <select name="bankid">
+                        {volist name="banklist" id="bank"}
+                            <option value="{$bank['id']}" <?php if($bind['bank_code'] == $bank['code']){echo "selected";}?> >{$bank['bankname']}</option>
+                        {/volist}
+                    </select>
+                </div>
+            </div>
+            
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label">
+                    <span class="x-red"></span>银行卡号
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="bank_num" name="bank_num" value="{$bind['bank_num']}"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label">
+                    <span class="x-red"></span>手机号
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="tel" name="tel" value="{$bind['tel']}"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" >
+                    <span class="x-red"></span>IFSC
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="ifsc" name="ifsc" value="{$bind['ifsc']}"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                </label>
+                <button  class="layui-btn" lay-filter="channel_edit" lay-submit="">
+                    提交
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+
+    layui.use(['form', 'layer'], function() {
+        $ = layui.jquery;
+        let form = layui.form,
+            layer = layui.layer;
+        //监听提交
+        form.on('submit(channel_edit)', function(data) {
+            $.ajax({
+                url: data.form.action,
+                type: 'post',
+                data: {
+                    id: data.field.id,
+                    name: data.field.name,
+                    bname: data.field.bname,
+                    bankid: data.field.bankid,
+                    bank_num: data.field.bank_num,
+                    tel: data.field.tel,
+                    ifsc: data.field.ifsc,
+                },
+                success: function (data) {
+                    if(data.code === 1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            parent.location.reload();
+                        }, 500);
+                    }else {
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+            return false;
+        });
+    });
+</script>
+{/block}

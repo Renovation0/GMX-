@@ -1,0 +1,377 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}统计历史中心{/block}
+{block name="style"}
+
+{/block}
+{block name="page"}
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">可售余额统计历史</div>
+                <div class="layui-card-body">
+                    <ul class="layui-row layui-col-space10 layui-this x-admin-carousel x-admin-backlog">
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>三天前统计</h3>
+                                <p><cite>{$list[2]['balance']}</cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>波动</h3>
+                                <p><cite>
+                                {if $list[2]['balance']/$list[3]['balance']-1 >0}
+                                    <font color="#FF0000">+{$list[2]['balance']/$list[3]['balance']-1|round=###,4}%</font> 
+                                {else/}
+                                    <font color="#28FF28">{$list[2]['balance']/$list[3]['balance']-1|round=###,4}%</font> 
+                                {/if}
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>二天前统计</h3>
+                                <p><cite>{$list[1]['balance']}</cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>波动</h3>
+                                <p><cite>
+                                {if $list[1]['balance']/$list[2]['balance']-1 >0}
+                                    <font color="#FF0000">+{$list[1]['balance']/$list[2]['balance']-1|round=###,4}%</font> 
+                                {else/}
+                                    <font color="#28FF28">{$list[1]['balance']/$list[2]['balance']-1|round=###,4}%</font> 
+                                {/if}
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>一天前统计</h3>
+                                <p><cite>{$list[0]['balance']}</cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6 ">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>波动</h3>
+                                <p><cite>
+                                {if $list[0]['balance']/$list[1]['balance']-1 >0}
+                                    <font color="#FF0000">+{$list[0]['balance']/$list[1]['balance']-1|round=###,4}%</font> 
+                                {else/}
+                                    <font color="#28FF28">{$list[0]['balance']/$list[1]['balance']-1|round=###,4}%</font> 
+                                {/if}
+                                </cite></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        <div class="layui-card">
+                <div class="layui-card-header">可售额度统计历史</div>
+                <div class="layui-card-body">
+                    <ul class="layui-row layui-col-space10 layui-this x-admin-carousel x-admin-backlog">
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>三天前统计</h3>
+                                <p><cite>{$list[2]['sell_limit']}</cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>波动</h3>
+                                <p><cite>
+                                {if $list[2]['sell_limit']/$list[3]['sell_limit']-1 >0}
+                                    <font color="#FF0000">+{$list[2]['sell_limit']/$list[3]['sell_limit']-1|round=###,4}%</font> 
+                                {else/}
+                                    <font color="#28FF28">{$list[2]['sell_limit']/$list[3]['sell_limit']-1|round=###,4}%</font> 
+                                {/if}
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>二天前统计</h3>
+                                <p><cite>{$list[1]['sell_limit']}</cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>波动</h3>
+                                <p><cite>
+                                {if $list[1]['sell_limit']/$list[2]['sell_limit']-1 >0}
+                                    <font color="#FF0000">+{$list[1]['sell_limit']/$list[2]['sell_limit']-1|round=###,4}%</font> 
+                                {else/}
+                                    <font color="#28FF28">{$list[1]['sell_limit']/$list[2]['sell_limit']-1|round=###,4}%</font> 
+                                {/if}
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>一天前统计</h3>
+                                <p><cite>{$list[0]['sell_limit']}</cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6 ">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>波动</h3>
+                                <p><cite>
+                                {if $list[0]['sell_limit']/$list[1]['sell_limit']-1 >0}
+                                    <font color="#FF0000">+{$list[0]['sell_limit']/$list[1]['sell_limit']-1|round=###,4}%</font> 
+                                {else/}
+                                    <font color="#28FF28">{$list[0]['sell_limit']/$list[1]['sell_limit']-1|round=###,4}%</font> 
+                                {/if}
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>交易赠送总额</h3>
+                                <p><cite>{$sell_buy_money}</cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>三级认筹赠送总额</h3>
+                                <p><cite>{$sell_rain_money}</cite></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="layui-card">
+                <div class="layui-card-header">矿池钱包统计历史</div>
+                <div class="layui-card-body">
+                    <ul class="layui-row layui-col-space10 layui-this x-admin-carousel x-admin-backlog">
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>三天前统计</h3>
+                                <p><cite>{$list[2]['mac_wallet']}</cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>波动</h3>
+                                <p><cite>
+                                {if $list[2]['mac_wallet']/$list[3]['mac_wallet']-1 >0}
+                                    <font color="#FF0000">+{$list[2]['mac_wallet']/$list[3]['mac_wallet']-1|round=###,4}%</font> 
+                                {else/}
+                                    <font color="#28FF28">{$list[2]['mac_wallet']/$list[3]['mac_wallet']-1|round=###,4}%</font> 
+                                {/if}
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>二天前统计</h3>
+                                <p><cite>{$list[1]['mac_wallet']}</cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>波动</h3>
+                                <p><cite>
+                                {if $list[1]['mac_wallet']/$list[2]['mac_wallet']-1 >0}
+                                    <font color="#FF0000">+{$list[1]['mac_wallet']/$list[2]['mac_wallet']-1|round=###,4}%</font> 
+                                {else/}
+                                    <font color="#28FF28">{$list[1]['mac_wallet']/$list[2]['mac_wallet']-1|round=###,4}%</font> 
+                                {/if}
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>一天前统计</h3>
+                                <p><cite>{$list[0]['mac_wallet']}</cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6 ">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>波动</h3>
+                                <p><cite>
+                                {if $list[0]['mac_wallet']/$list[1]['mac_wallet']-1 >0}
+                                    <font color="#FF0000">+{$list[0]['mac_wallet']/$list[1]['mac_wallet']-1|round=###,4}%</font> 
+                                {else/}
+                                    <font color="#28FF28">{$list[0]['mac_wallet']/$list[1]['mac_wallet']-1|round=###,4}%</font> 
+                                {/if}
+                                </cite></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            <div class="layui-card">
+                <div class="layui-card-header">矿池资产统计历史</div>
+                <div class="layui-card-body">
+                    <ul class="layui-row layui-col-space10 layui-this x-admin-carousel x-admin-backlog">
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>三天前统计</h3>
+                                <p><cite>{$list[2]['mac_assets']}</cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>波动</h3>
+                                <p><cite>
+                                {if $list[2]['mac_assets']/$list[3]['mac_assets']-1 >0}
+                                    <font color="#FF0000">+{$list[2]['mac_assets']/$list[3]['mac_assets']-1|round=###,4}%</font> 
+                                {else/}
+                                    <font color="#28FF28">{$list[2]['mac_assets']/$list[3]['mac_assets']-1|round=###,4}%</font> 
+                                {/if}
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>二天前统计</h3>
+                                <p><cite>{$list[1]['mac_assets']}</cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>波动</h3>
+                                <p><cite>
+                                {if $list[1]['mac_assets']/$list[2]['mac_assets']-1 >0}
+                                    <font color="#FF0000">+{$list[1]['mac_assets']/$list[2]['mac_assets']-1|round=###,4}%</font> 
+                                {else/}
+                                    <font color="#28FF28">{$list[1]['mac_assets']/$list[2]['mac_assets']-1|round=###,4}%</font> 
+                                {/if}
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>一天前统计</h3>
+                                <p><cite>{$list[0]['mac_assets']}</cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6 ">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>波动</h3>
+                                <p><cite>
+                                {if $list[0]['mac_assets']/$list[1]['mac_assets']-1 >0}
+                                    <font color="#FF0000">+{$list[0]['mac_assets']/$list[1]['mac_assets']-1|round=###,4}%</font> 
+                                {else/}
+                                    <font color="#28FF28">{$list[0]['mac_assets']/$list[1]['mac_assets']-1|round=###,4}%</font> 
+                                {/if}
+                                </cite></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+           
+            
+            
+       <div class="layui-card">
+                <div class="layui-card-header">coin钱包历史</div>
+                <div class="layui-card-body">
+                    <ul class="layui-row layui-col-space10 layui-this x-admin-carousel x-admin-backlog">
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>三天前统计</h3>
+                                <p><cite>{$list[2]['coin']}</cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>波动</h3>
+                                <p><cite>
+                                {if $list[2]['coin']/$list[3]['coin']-1 >0}
+                                    <font color="#FF0000">+{$list[2]['coin']/$list[3]['coin']-1|round=###,4}%</font> 
+                                {else/}
+                                    <font color="#28FF28">{$list[2]['coin']/$list[3]['coin']-1|round=###,4}%</font> 
+                                {/if}
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>二天前统计</h3>
+                                <p><cite>{$list[1]['coin']}</cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>波动</h3>
+                                <p><cite>
+                                {if $list[1]['coin']/$list[2]['coin']-1 >0}
+                                    <font color="#FF0000">+{$list[1]['coin']/$list[2]['coin']-1|round=###,4}%</font> 
+                                {else/}
+                                    <font color="#28FF28">{$list[1]['coin']/$list[2]['coin']-1|round=###,4}%</font> 
+                                {/if}
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>一天前统计</h3>
+                                <p><cite>{$list[0]['coin']}</cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6 ">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>波动</h3>
+                                <p><cite>
+                                {if $list[0]['coin']/$list[1]['coin']-1 >0}
+                                    <font color="#FF0000">+{$list[0]['coin']/$list[1]['coin']-1|round=###,4}%</font> 
+                                {else/}
+                                    <font color="#28FF28">{$list[0]['coin']/$list[1]['coin']-1|round=###,4}%</font> 
+                                {/if}
+                                </cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>赠送总额</h3>
+                                <p><cite>{$coin_give}</cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>今日赠送额度</h3>
+                                <p><cite>{$coin_give_today}</cite></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            <div class="layui-card">
+            	<div class="layui-card-header">其他统计</div>
+                <div class="layui-card-body">
+                    <ul class="layui-row layui-col-space10 layui-this x-admin-carousel x-admin-backlog">
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>代理认筹总数</h3>
+                                <p><cite>{$member_agent}</cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>三级直通车总数</h3>
+                                <p><cite>{$rain_num}</cite></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+        </div>
+                
+     
+        <style id="welcome_style"></style>
+    </div>
+</div>
+{/block}
+{block name="js"}
+
+{/block}

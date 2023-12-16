@@ -1,0 +1,168 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}猜单双{/block}
+{block name="style"}
+<style>
+    .layui-table td, .layui-table th {
+        min-width: unset !important;
+    }
+    .aaa {
+        color: red;
+    }
+    .bbb{
+        color: blue;
+    }
+</style>
+{/block}
+{block name="page"}
+<div class="x-nav">
+    <span class="layui-breadcrumb">
+        <a href="javascript:;">系统</a>
+        <a href="javascript:;">游戏管理</a>
+        <a><cite>猜单双</cite></a>
+    </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+       onclick="location.reload()" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+    </a>
+</div>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <ul class="layui-tab-title">
+                        <li id="module_1" onclick="changeModule('1')">可售余额猜单双</li>
+                        <li id="module_2" onclick="changeModule('2')">子币猜单双</li>
+                    </ul>
+                    <div class="layui-tab-item" id="module_menus_box_{$my_active_module}">
+                        <div class="layui-tab-content">
+                            <form class="layui-form layui-col-space5">
+                                <div class="layui-input-inline layui-show-xs-block">
+                                    <select name="type">
+                                        <option value="0">开奖状态</option>
+                                        <option value="1"<?php if($param_type == 1) echo 'selected';?>>已开奖</option>
+                                        <option value="2"<?php if($param_type == 2) echo 'selected';?>>未开奖</option>
+                                    </select>
+                                </div>
+                                <div class="layui-input-inline layui-show-xs-block">
+                                    <input type="text" name="per_num" value="{$per_num}" placeholder="期号" autocomplete="off"
+                                           class="layui-input">
+                                </div>
+                                <div class="layui-inline layui-show-xs-block">
+                                    <input class="layui-input" autocomplete="off" placeholder="添加开始时间" name="add_time_s"
+                                           value="{$param_add_time_s}" id="add_time_s">
+                                </div>
+                                <div class="layui-inline layui-show-xs-block">
+                                    <input class="layui-input" autocomplete="off" placeholder="添加截至时间" name="add_time_e"
+                                           value="{$param_add_time_e}" id="add_time_e">
+                                </div>
+                                <div class="layui-input-inline layui-show-xs-block">
+                                    <button class="layui-btn" lay-submit="" lay-filter="sreach">
+                                        <i class="layui-icon">&#xe615;</i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="layui-card-body ">
+                            <table class="layui-table layui-form">
+                                <thead>
+                                <tr>
+                                    <th style="width: 20px;">期号</th>
+                                    <th style="width: 20px;">初始开奖数据</th>
+                                    <th style="width: 20px;">实际开奖数据</th>
+                                    <th style="width: 20px;">猜单人数</th>
+                                    <th style="width: 20px;">猜单总金额</th>
+                                    <th style="width: 20px;">猜双人数</th>
+                                    <th style="width: 20px;">猜双总金额</th>
+                                    <th style="width: 20px;">开奖时间</th>
+                                    <th style="width: 20px;">状态</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {if !empty($orderList->items())}
+                                {volist name="orderList" id="member"}
+                                <tr>
+                                    <td>{$member['per_num']}</td>
+                                    <?php if($my_active_module==1){?>
+                                    <td>{$member['btc']}</td>
+                                    <td>{$member['js_btc']}</td>
+                                    <td>{$member['js_btc_big_member_num']}</td>
+                                    <td>{$member['js_btc_big_num']}</td>
+                                    <td>{$member['js_btc_small_member_num']}</td>
+                                    <td>{$member['js_btc_small_num']}</td>
+                                    <?php }else{?>
+                                    <td>{$member['eth']}</td>
+                                    <td>{$member['js_eth']}</td>
+                                    <td>{$member['js_eth_big_member_num']}</td>
+                                    <td>{$member['js_eth_big_num']}</td>
+                                    <td>{$member['js_eth_small_member_num']}</td>
+                                    <td>{$member['js_eth_small_num']}</td>
+                                    <?php }?>
+                                    {if $member['create_time'] == 0}
+                                    <td> -- </td>
+                                    {else/}
+                                    <td>{$member['create_time']|date='Y-m-d H:i:s'}</td>
+                                    {/if}
+                                    <td>
+                                        {switch $member['status']}
+                                        {case 0}<span style="color: blue;">未开奖</span>{/case}
+                                        {case 1}<span style="color: green;">已开奖</span>{/case}
+                                        {default /}<span style="color: red;">异常</span>
+                                        {/switch}
+                                    </td>
+                                </tr>
+                                {/volist}
+                                {else /}
+                                <tr>
+                                    <td colspan="11" class="nodata_td">无记录</td>
+                                </tr>
+                                {/if}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="layui-card-body ">
+                            <div class="page">
+                                {$orderList|raw}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    var active_module = '{$my_active_module}'; // 当前模块
+    $("#module_" + active_module).addClass('layui-this'); // 初始化系统模块
+    $("#module_menus_box_" + active_module).addClass('layui-show'); // 初始化系统模块菜单
+
+    // 切换模块
+    function changeModule(module_id) {
+        if (module_id != active_module) {
+            window.location.href = "/admin/game/gameList/my_active_module/" + module_id;
+        }
+    }
+
+
+    layui.use('form', function () {
+        let form = layui.form;
+        form.render();
+    });
+    //日期选择
+    layui.use(['laydate', 'form'], function () {
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#add_time_s',
+            type: 'datetime'
+        });
+        laydate.render({
+            elem: '#add_time_e',
+            type: 'datetime'
+        });
+
+    });
+
+</script>
+{/block}

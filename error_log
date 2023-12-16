@@ -1,0 +1,154 @@
+[07-Nov-2023 19:47:34 Asia/Shanghai] PHP Warning:  Uncaught think\exception\ErrorException: require_once(../vendor/phpoffice/phpexcel/Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/gemxpbra/public_html/application/admin/controller/Member.php:29
+Stack trace:
+#0 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): think\Error::appError(2, 'require_once(.....', '/home/gemxpbra/...', 29, Array)
+#1 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): require_once()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(411): include('/home/gemxpbra/...')
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(132): think\__include_file('/home/gemxpbra/...')
+#4 [internal function]: think\Loader::autoload('app\\admin\\contr...')
+#5 [internal function]: spl_autoload_call('app\\admin\\contr...')
+#6 /home/gemxpbra/public_html/thinkphp/library/think/App.php(724): class_exists('app\\admin\\contr...')
+#7 /home/gemxpbra/public_html/thinkphp/library/think/route/dispatch/Module.php(95):  in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 19:47:34 Asia/Shanghai] PHP Fatal error:  main(): Failed opening required '../vendor/phpoffice/phpexcel/Classes/PHPExcel.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 19:54:11 Asia/Shanghai] PHP Warning:  Uncaught think\exception\ErrorException: require_once(../vendor/phpoffice/phpexcel/Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/gemxpbra/public_html/application/admin/controller/Member.php:29
+Stack trace:
+#0 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): think\Error::appError(2, 'require_once(.....', '/home/gemxpbra/...', 29, Array)
+#1 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): require_once()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(411): include('/home/gemxpbra/...')
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(132): think\__include_file('/home/gemxpbra/...')
+#4 [internal function]: think\Loader::autoload('app\\admin\\contr...')
+#5 [internal function]: spl_autoload_call('app\\admin\\contr...')
+#6 /home/gemxpbra/public_html/thinkphp/library/think/App.php(724): class_exists('app\\admin\\contr...')
+#7 /home/gemxpbra/public_html/thinkphp/library/think/route/dispatch/Module.php(95):  in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 19:54:11 Asia/Shanghai] PHP Fatal error:  main(): Failed opening required '../vendor/phpoffice/phpexcel/Classes/PHPExcel.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 19:54:55 Asia/Shanghai] PHP Warning:  Uncaught think\exception\ErrorException: require_once(../vendor/phpoffice/phpexcel/Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/gemxpbra/public_html/application/admin/controller/Member.php:29
+Stack trace:
+#0 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): think\Error::appError(2, 'require_once(.....', '/home/gemxpbra/...', 29, Array)
+#1 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): require_once()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(411): include('/home/gemxpbra/...')
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(132): think\__include_file('/home/gemxpbra/...')
+#4 [internal function]: think\Loader::autoload('app\\admin\\contr...')
+#5 [internal function]: spl_autoload_call('app\\admin\\contr...')
+#6 /home/gemxpbra/public_html/thinkphp/library/think/App.php(724): class_exists('app\\admin\\contr...')
+#7 /home/gemxpbra/public_html/thinkphp/library/think/route/dispatch/Module.php(95):  in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 19:54:55 Asia/Shanghai] PHP Fatal error:  main(): Failed opening required '../vendor/phpoffice/phpexcel/Classes/PHPExcel.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 20:31:14 Asia/Shanghai] PHP Warning:  Uncaught think\exception\ErrorException: require_once(../vendor/phpoffice/phpexcel/Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/gemxpbra/public_html/application/admin/controller/Member.php:29
+Stack trace:
+#0 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): think\Error::appError(2, 'require_once(.....', '/home/gemxpbra/...', 29, Array)
+#1 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): require_once()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(411): include('/home/gemxpbra/...')
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(132): think\__include_file('/home/gemxpbra/...')
+#4 [internal function]: think\Loader::autoload('app\\admin\\contr...')
+#5 [internal function]: spl_autoload_call('app\\admin\\contr...')
+#6 /home/gemxpbra/public_html/thinkphp/library/think/App.php(724): class_exists('app\\admin\\contr...')
+#7 /home/gemxpbra/public_html/thinkphp/library/think/route/dispatch/Module.php(95):  in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 20:31:14 Asia/Shanghai] PHP Fatal error:  main(): Failed opening required '../vendor/phpoffice/phpexcel/Classes/PHPExcel.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 20:32:31 Asia/Shanghai] PHP Warning:  Uncaught think\exception\ErrorException: require_once(../vendor/phpoffice/phpexcel/Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/gemxpbra/public_html/application/admin/controller/Member.php:29
+Stack trace:
+#0 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): think\Error::appError(2, 'require_once(.....', '/home/gemxpbra/...', 29, Array)
+#1 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): require_once()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(411): include('/home/gemxpbra/...')
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(132): think\__include_file('/home/gemxpbra/...')
+#4 [internal function]: think\Loader::autoload('app\\admin\\contr...')
+#5 [internal function]: spl_autoload_call('app\\admin\\contr...')
+#6 /home/gemxpbra/public_html/thinkphp/library/think/App.php(724): class_exists('app\\admin\\contr...')
+#7 /home/gemxpbra/public_html/thinkphp/library/think/route/dispatch/Module.php(95):  in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 20:32:31 Asia/Shanghai] PHP Fatal error:  main(): Failed opening required '../vendor/phpoffice/phpexcel/Classes/PHPExcel.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 20:35:24 Asia/Shanghai] PHP Warning:  Uncaught think\exception\ErrorException: require_once(../vendor/phpoffice/phpexcel/Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/gemxpbra/public_html/application/admin/controller/Member.php:29
+Stack trace:
+#0 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): think\Error::appError(2, 'require_once(.....', '/home/gemxpbra/...', 29, Array)
+#1 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): require_once()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(411): include('/home/gemxpbra/...')
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(132): think\__include_file('/home/gemxpbra/...')
+#4 [internal function]: think\Loader::autoload('app\\admin\\contr...')
+#5 [internal function]: spl_autoload_call('app\\admin\\contr...')
+#6 /home/gemxpbra/public_html/thinkphp/library/think/App.php(724): class_exists('app\\admin\\contr...')
+#7 /home/gemxpbra/public_html/thinkphp/library/think/route/dispatch/Module.php(95):  in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 20:35:24 Asia/Shanghai] PHP Fatal error:  main(): Failed opening required '../vendor/phpoffice/phpexcel/Classes/PHPExcel.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 20:36:12 Asia/Shanghai] PHP Warning:  Uncaught think\exception\ErrorException: require_once(../vendor/phpoffice/phpexcel/Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/gemxpbra/public_html/application/admin/controller/Member.php:29
+Stack trace:
+#0 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): think\Error::appError(2, 'require_once(.....', '/home/gemxpbra/...', 29, Array)
+#1 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): require_once()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(411): include('/home/gemxpbra/...')
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(132): think\__include_file('/home/gemxpbra/...')
+#4 [internal function]: think\Loader::autoload('app\\admin\\contr...')
+#5 [internal function]: spl_autoload_call('app\\admin\\contr...')
+#6 /home/gemxpbra/public_html/thinkphp/library/think/App.php(724): class_exists('app\\admin\\contr...')
+#7 /home/gemxpbra/public_html/thinkphp/library/think/route/dispatch/Module.php(95):  in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 20:36:12 Asia/Shanghai] PHP Fatal error:  main(): Failed opening required '../vendor/phpoffice/phpexcel/Classes/PHPExcel.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 20:39:44 Asia/Shanghai] PHP Warning:  Uncaught think\exception\ErrorException: require_once(../vendor/phpoffice/phpexcel/Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/gemxpbra/public_html/application/admin/controller/Member.php:29
+Stack trace:
+#0 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): think\Error::appError(2, 'require_once(.....', '/home/gemxpbra/...', 29, Array)
+#1 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): require_once()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(411): include('/home/gemxpbra/...')
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(132): think\__include_file('/home/gemxpbra/...')
+#4 [internal function]: think\Loader::autoload('app\\admin\\contr...')
+#5 [internal function]: spl_autoload_call('app\\admin\\contr...')
+#6 /home/gemxpbra/public_html/thinkphp/library/think/App.php(724): class_exists('app\\admin\\contr...')
+#7 /home/gemxpbra/public_html/thinkphp/library/think/route/dispatch/Module.php(95):  in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 20:39:44 Asia/Shanghai] PHP Fatal error:  main(): Failed opening required '../vendor/phpoffice/phpexcel/Classes/PHPExcel.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 20:50:04 Asia/Shanghai] PHP Warning:  Uncaught think\exception\ErrorException: require_once(../vendor/phpoffice/phpexcel/Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/gemxpbra/public_html/application/admin/controller/Member.php:29
+Stack trace:
+#0 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): think\Error::appError(2, 'require_once(.....', '/home/gemxpbra/...', 29, Array)
+#1 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): require_once()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(411): include('/home/gemxpbra/...')
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(132): think\__include_file('/home/gemxpbra/...')
+#4 [internal function]: think\Loader::autoload('app\\admin\\contr...')
+#5 [internal function]: spl_autoload_call('app\\admin\\contr...')
+#6 /home/gemxpbra/public_html/thinkphp/library/think/App.php(724): class_exists('app\\admin\\contr...')
+#7 /home/gemxpbra/public_html/thinkphp/library/think/route/dispatch/Module.php(95):  in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 20:50:04 Asia/Shanghai] PHP Fatal error:  main(): Failed opening required '../vendor/phpoffice/phpexcel/Classes/PHPExcel.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 21:10:53 Asia/Shanghai] PHP Warning:  Uncaught think\exception\ErrorException: require_once(../vendor/phpoffice/phpexcel/Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/gemxpbra/public_html/application/admin/controller/Member.php:29
+Stack trace:
+#0 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): think\Error::appError(2, 'require_once(.....', '/home/gemxpbra/...', 29, Array)
+#1 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): require_once()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(411): include('/home/gemxpbra/...')
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(132): think\__include_file('/home/gemxpbra/...')
+#4 [internal function]: think\Loader::autoload('app\\admin\\contr...')
+#5 [internal function]: spl_autoload_call('app\\admin\\contr...')
+#6 /home/gemxpbra/public_html/thinkphp/library/think/App.php(724): class_exists('app\\admin\\contr...')
+#7 /home/gemxpbra/public_html/thinkphp/library/think/route/dispatch/Module.php(95):  in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 21:10:53 Asia/Shanghai] PHP Fatal error:  main(): Failed opening required '../vendor/phpoffice/phpexcel/Classes/PHPExcel.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 21:18:25 Asia/Shanghai] PHP Warning:  Uncaught think\exception\ErrorException: require_once(../vendor/phpoffice/phpexcel/Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/gemxpbra/public_html/application/admin/controller/Member.php:29
+Stack trace:
+#0 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): think\Error::appError(2, 'require_once(.....', '/home/gemxpbra/...', 29, Array)
+#1 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): require_once()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(411): include('/home/gemxpbra/...')
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(132): think\__include_file('/home/gemxpbra/...')
+#4 [internal function]: think\Loader::autoload('app\\admin\\contr...')
+#5 [internal function]: spl_autoload_call('app\\admin\\contr...')
+#6 /home/gemxpbra/public_html/thinkphp/library/think/App.php(724): class_exists('app\\admin\\contr...')
+#7 /home/gemxpbra/public_html/thinkphp/library/think/route/dispatch/Module.php(95):  in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 21:18:25 Asia/Shanghai] PHP Fatal error:  main(): Failed opening required '../vendor/phpoffice/phpexcel/Classes/PHPExcel.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 21:23:51 Asia/Shanghai] PHP Warning:  Uncaught think\exception\ErrorException: require_once(../vendor/phpoffice/phpexcel/Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/gemxpbra/public_html/application/admin/controller/Member.php:29
+Stack trace:
+#0 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): think\Error::appError(2, 'require_once(.....', '/home/gemxpbra/...', 29, Array)
+#1 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): require_once()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(411): include('/home/gemxpbra/...')
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(132): think\__include_file('/home/gemxpbra/...')
+#4 [internal function]: think\Loader::autoload('app\\admin\\contr...')
+#5 [internal function]: spl_autoload_call('app\\admin\\contr...')
+#6 /home/gemxpbra/public_html/thinkphp/library/think/App.php(724): class_exists('app\\admin\\contr...')
+#7 /home/gemxpbra/public_html/thinkphp/library/think/route/dispatch/Module.php(95):  in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 21:23:51 Asia/Shanghai] PHP Fatal error:  main(): Failed opening required '../vendor/phpoffice/phpexcel/Classes/PHPExcel.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 21:34:37 Asia/Shanghai] PHP Warning:  Uncaught think\exception\ErrorException: require_once(/vendor/phpoffice/phpexcel/Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/gemxpbra/public_html/application/admin/controller/Member.php:29
+Stack trace:
+#0 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): think\Error::appError(2, 'require_once(/v...', '/home/gemxpbra/...', 29, Array)
+#1 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): require_once()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(411): include('/home/gemxpbra/...')
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(132): think\__include_file('/home/gemxpbra/...')
+#4 [internal function]: think\Loader::autoload('app\\admin\\contr...')
+#5 [internal function]: spl_autoload_call('app\\admin\\contr...')
+#6 /home/gemxpbra/public_html/thinkphp/library/think/App.php(724): class_exists('app\\admin\\contr...')
+#7 /home/gemxpbra/public_html/thinkphp/library/think/route/dispatch/Module.php(95): th in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 21:34:37 Asia/Shanghai] PHP Fatal error:  main(): Failed opening required '/vendor/phpoffice/phpexcel/Classes/PHPExcel.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 21:34:51 Asia/Shanghai] PHP Warning:  Uncaught think\exception\ErrorException: require_once(/vendor/phpoffice/phpexcel/Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/gemxpbra/public_html/application/admin/controller/Member.php:29
+Stack trace:
+#0 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): think\Error::appError(2, 'require_once(/v...', '/home/gemxpbra/...', 29, Array)
+#1 /home/gemxpbra/public_html/application/admin/controller/Member.php(29): require_once()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(411): include('/home/gemxpbra/...')
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Loader.php(132): think\__include_file('/home/gemxpbra/...')
+#4 [internal function]: think\Loader::autoload('app\\admin\\contr...')
+#5 [internal function]: spl_autoload_call('app\\admin\\contr...')
+#6 /home/gemxpbra/public_html/thinkphp/library/think/App.php(724): class_exists('app\\admin\\contr...')
+#7 /home/gemxpbra/public_html/thinkphp/library/think/route/dispatch/Module.php(95): th in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29
+[07-Nov-2023 21:34:51 Asia/Shanghai] PHP Fatal error:  main(): Failed opening required '/vendor/phpoffice/phpexcel/Classes/PHPExcel.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/gemxpbra/public_html/application/admin/controller/Member.php on line 29

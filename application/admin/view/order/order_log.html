@@ -1,0 +1,138 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}用户交易记录{/block}
+{block name="style"}
+<style>
+    .layui-table td, .layui-table th {
+        /* min-width: unset !important; */
+    }
+    .aaa {
+        color: red;
+    }
+    .bbb{
+        color: blue;
+    }
+</style>
+{/block}
+{block name="page"}
+<div class="x-nav">
+    <span class="layui-breadcrumb">
+        <a href="javascript:;">用户</a>
+        <a href="javascript:;">交易管理</a>
+        <a><cite>交易日志</cite></a>
+    </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+       onclick="location.reload()" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+    </a>
+</div>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body ">
+                    <ul class="layui-tab-title">
+                        <li id="module_2" onclick="changeModule('2')">YKB交易日志</li>
+                    </ul>
+                    <div class="layui-tab-item" id="module_menus_box_2">
+                        <div class="layui-row layui-col-space15">
+                            <div class="layui-col-md12">
+                                <div class="layui-card">
+                                    <div class="layui-tab-content ">
+                                        <form class="layui-form layui-col-space5">
+                                            <div class="layui-input-inline layui-show-xs-block">
+                                                <input type="text" name="user_tel" value="{$user_tel}" placeholder="手机号" autocomplete="off" class="layui-input">
+                                            </div>
+                                            <div class="layui-inline layui-show-xs-block">
+                                                <input class="layui-input" autocomplete="off" placeholder="添加开始时间" name="add_time_s" value="{$param_add_time_s}" id="add_time_s">
+                                            </div>
+                                            <div class="layui-inline layui-show-xs-block">
+                                                <input class="layui-input" autocomplete="off" placeholder="添加截至时间" name="add_time_e" value="{$param_add_time_e}" id="add_time_e">
+                                            </div>
+                                            <div class="layui-input-inline layui-show-xs-block">
+                                                <button class="layui-btn" lay-submit="" lay-filter="sreach">
+                                                    <i class="layui-icon">&#xe615;</i>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="layui-card-body layui-card-table">
+                                        <table class="layui-table layui-form">
+                                            <thead>
+                                            <tr>
+                                            <tr>
+                                                <th style="min-width: 50px;">ID<br>   <a class="<?php echo $sort == 'id asc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/order/orderLog/sort/id asc'"><i class="layui-icon">&#xe619;</i></a> <a class="<?php echo $sort == 'id desc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/order/orderLog/sort/id desc'"><i class="layui-icon">&#xe61a;</i></a></th>
+                                                <th>用户</th>
+                                                <th style="min-width: 140px;">订单编号<br>   <a class="<?php echo $sort == 'id asc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/order/orderLog/sort/id asc'"><i class="layui-icon">&#xe619;</i></a> <a class="<?php echo $sort == 'id desc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/order/orderLog/sort/id desc'"><i class="layui-icon">&#xe61a;</i></a></th>
+                                                <th style="min-width: 140px;">说明</th>
+                                                <th style="min-width: 120px;">时间<br>   <a class="<?php echo $sort == 'time asc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/order/orderLog/sort/time asc'"><i class="layui-icon">&#xe619;</i></a> <a class="<?php echo $sort == 'time desc' ? 'aaa' : 'bbb';?>" href="javascript:window.location.href='/admin/order/orderLog/sort/time desc'"><i class="layui-icon">&#xe61a;</i></a></th>
+                                            </tr>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {if !empty($list['list']->items())}
+                                            {volist name="list['list']" id="user"}
+                                            <tr>
+                                                <td>{$user['id']}</td>
+                                                <td>{$user['phone']}</td>
+                                                <td>{$user['orderNo']}</td>
+                                                <td>{$user['message']}</td>
+                                                <td>{$user['time']|date='Y-m-d H:i:s'}</td>
+                                            </tr>
+                                            {/volist}
+                                            {else /}
+                                            <tr>
+                                                <td colspan="11" class="nodata_td">无记录</td>
+                                            </tr>
+                                            {/if}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="layui-card-body ">
+                                        <div class="page">
+                                            {$list['list']|raw}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    var active_module = '{$my_active_module}'; // 当前模块
+    $("#module_" + active_module).addClass('layui-this'); // 初始化系统模块
+    $("#module_menus_box_" + active_module).addClass('layui-show'); // 初始化系统模块菜单
+
+    // 切换模块
+    function changeModule(module_id) {
+        if (module_id != active_module) {
+            window.location.href = "/admin/order/orderLog/my_active_module/" + module_id;
+        }
+    }
+
+    //日期选择
+    layui.use(['laydate', 'form'], function () {
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#add_time_s',
+            type: 'datetime'
+        });
+        laydate.render({
+            elem: '#add_time_e',
+            type: 'datetime'
+        });
+
+    });
+
+    layui.use('form', function () {
+        let form = layui.form;
+        form.render();
+    });
+</script>
+{/block}

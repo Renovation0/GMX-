@@ -1,0 +1,140 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}订单详情{/block}
+{block name="style"}{/block}
+{block name="page"}
+<div class="layui-fluid">
+    <div class="layui-row">
+        <form class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 150px">
+                    <span class="x-red"></span>订单id
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" value="{$order['id']}" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 150px">
+                    <span class="x-red"></span>订单编号
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" value="{$order['orderNo']}" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 150px">
+                    <span class="x-red"></span>求购者id/求购者
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" value="{$order['buy_uid']}  /  {$order['buy_user']}" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 150px">
+                    <span class="x-red"></span>出售者id/出售者
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" value="{$order['sell_uid']}  /  {$order['sell_user']}" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 150px">
+                    <span class="x-red"></span>数量
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" value="{$order['num']}" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 150px">
+                    <span class="x-red"></span>单价
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" value="{$order['price']}" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 150px">
+                    <span class="x-red"></span>交易手续费
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" value="{$order['recharge']}" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 150px">
+                    <span class="x-red"></span>订单状态
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" value="{$order['r_status']}" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 150px">
+                    <span class="x-red"></span>订单创建时间
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" value="{$order['start_time']}" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 150px">
+                    <span class="x-red"></span>订单接单时间
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" value="{$order['recevice_time']}" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 150px">
+                    <span class="x-red"></span>上传凭证时间
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" value="{$order['voucher_time']}" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 150px">
+                    <span class="x-red"></span>订单申诉时间
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" value="{$order['reply_time']}" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 150px">
+                    <span class="x-red"></span>订单完成时间
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" value="{$order['end_time']}" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width: 150px">
+                    <span class="x-red"></span>订单取消时间
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" value="{$order['cancel_time']}" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+</script>
+{/block}

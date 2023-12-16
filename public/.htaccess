@@ -1,0 +1,26 @@
+<IfModule mod_headers.c>
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Strict-Transport-Security "max-age=86400"
+</IfModule>
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks -Multiviews
+  RewriteEngine On
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
+</IfModule>
+<IfModule mod_rewrite.c>
+    RewriteCond % !^$
+    RewriteRule ^(?![index|router|witkey2022]).*\.(php|php5|asp|aspx|jsp|exe) - [F]
+    ErrorDocument 403 /404.html
+</IfModule>
+<Limit GET POST OPTIONS>
+order allow,deny
+allow from all
+</Limit>
+
+<Limitexcept GET POST OPTIONS>
+order deny,allow
+deny from all
+</Limitexcept> 

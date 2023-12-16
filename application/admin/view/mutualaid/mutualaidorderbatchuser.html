@@ -1,0 +1,144 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}预约记录{/block}
+{block name="style"}
+<style>
+    .layui-table td, .layui-table th {
+        /* min-width: unset !important; */
+    }
+
+    .role_user {
+        display: inline-block;
+        margin-right: 5px;
+        padding: 5px;
+        background-color: #f0f0f0;
+    }
+</style>
+{/block}
+{block name="page"}
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body layui-card-table">
+                    <table class="layui-table layui-form">
+                        <thead>
+                        <tr align="center">
+                            <th style="min-width: 50px;"><b>ID</b></th>
+                            <th><b>账号</b></th>
+                            <th><b>宠物</b></th>
+                            <th style="min-width: 120px;"><b>宠物编号</b></th>
+                            <th style="min-width: 50px;"><b>预约金额</b></th>
+                            <th style="min-width: 120px;"><b>记录时间</b></th>
+                            <th><b>指定订单ID</b></th>
+                            <th style="min-width: 60px;"><b>匹配状态</b></th>
+                            <th style="min-width: 60px;"><b>抢购状态</b></th>
+                            <th style="min-width: 60px;"><b>预约状态</b></th>
+                            <th><b>交易状态</b></th>
+                            <th><b>交易订单ID</b></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {if !empty($list->items())}
+                        {volist name="list" id="user"}
+                        <tr align="center">
+                            <td>{$user['id']}</td>
+                            <td>{$user['tel']} {if $user['real_name_log'] != ''}({$user['real_name_log']}){/if}</td>
+                            <td>{$user['name']}</td>
+                            <td>{$user['purchase_no']}</td>
+                            <td style="color:red;">{$user['num']}</td>
+                            <!-- <td>{$user['message']}</td> -->
+                            <td>{:date('m-d H:i:s',$user['time'])}</td>
+                            <td>{$user['appoint_order']}</td>
+                            
+                            {switch $user['status']}
+                            {case 0}<td style="color: green"><span style="font-size:20px">●</span>匹配中</td>{/case}
+                            {case 1}<td style="color: #00BFFF"><span style="font-size:20px">●</span>匹配成功</td>{/case}
+                            {default /}
+                            	<td style="color: #DCDCDC"><span style="font-size:20px">●</span>匹配失败</td>
+                            {/switch}
+                            
+                            {switch $user['purchase_status']}
+                            {case 1}<td style="color: green"><span style="font-size:20px">●</span>已抢购</td>{/case}
+                            {default /}
+                            	<td style="color: #D3D3D3"><span style="font-size:20px">●</span>未抢购</td>
+                            	
+                            {/switch}
+                            
+                            {switch $user['order_status']}
+                            {case 1}<td style="color: green"><span style="font-size:20px">●</span>已预约</td>{/case}
+                            {default /}
+                           	 	<td style="color: #D3D3D3"><span style="font-size:20px">●</span>未预约</td>
+                            {/switch}
+
+                            {switch $user['jy_status']}
+                            {case 0}<td style="color: #D3D3D3"><span style="font-size:20px">●</span>未匹配</td>{/case}
+                            {case 1}<td style="color: green"><span style="font-size:20px">●</span>已匹配</td>{/case}
+                            {case 2}<td style="color: blue"><span style="font-size:20px">●</span>交易成功</td>{/case}
+                            {case 3}<td style="color: red"><span style="font-size:20px">●</span>交易失败</td>{/case}
+                            {/switch}
+                            
+                            <td>{$user['jy_id']}</td>
+                        </tr>
+                        {/volist}
+                        {else /}
+                        <tr>
+                            <td colspan="13" class="nodata_td">无记录</td>
+                        </tr>
+                        {/if}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="layui-card-body ">
+                    <div class="page">
+                        {$list|raw}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+
+layui.use('form', function () {
+    let form = layui.form;
+    form.render();
+});
+//日期选择
+layui.use(['laydate', 'form'], function () {
+    var laydate = layui.laydate;
+    laydate.render({
+        elem: '#add_time_s',
+        type: 'datetime'
+    });
+    laydate.render({
+        elem: '#add_time_e',
+        type: 'datetime'
+    });
+});
+
+    //删除
+    function delete_confirm(obj, id) {
+        layer.confirm('是否同意删除？', function(index) {
+            $.ajax({
+                url: "{:url('mutualaid/mutualaidmemberdelete')}",//'/admin/mutualaid/mutualaidmemberdelete',
+                type: 'post',
+                data: {
+                	mu_id: id,
+                },
+                success: function (data) {
+                    if(data.code === 1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            window.location.reload();
+                        }, 500);
+                    }else {
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+        });
+    }
+</script>
+{/block}

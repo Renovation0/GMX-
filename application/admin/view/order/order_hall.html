@@ -1,0 +1,308 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}订单大厅{/block}
+{block name="style"}
+<style>
+    .layui-table td, .layui-table th {
+        min-width: unset !important;
+    }
+</style>
+{/block}
+{block name="page"}
+<div class="x-nav">
+    <span class="layui-breadcrumb">
+        <a href="javascript:;">系统</a>
+        <a href="javascript:;">订单</a>
+        <a><cite>订单大厅</cite></a>
+    </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+       onclick="location.reload()" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+    </a>
+</div>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body ">
+                    <table class="layui-table layui-form">
+                        <thead>
+                        <tr>
+                            <th style="width: 20px;">序列号</th>
+                            <th style="width: 20px;">订单id</th>
+                            <th style="width: 20px;">订单编号</th>
+                            <th style="width: 20px;">收购者</th>
+                            <th style="width: 20px;">出售者</th>
+                            <th style="width: 20px;">数量</th>
+                            <th style="width: 20px;">创建时间</th>
+                            <th style="width: 20px;">完成时间</th>
+                            <th style="width: 20px;">状态</th>
+                            <th style="width: 20px;">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {if !empty($orderList)}
+                        {volist name="orderList" id="member"}
+                        <tr>
+                            <td>{$member['xl_id']}</td>
+                            <td>{$member['id']}</td>
+                            <td>{$member['orderNo']}</td>
+                            <td>{$member['b_tel']}</td>
+                            <td>{$member['s_tel']}</td>
+                            <td>{$member['num']}</td>
+                            <td>{$member['s_time']|date='Y-m-d H:i'}</td>
+                            {if $member['e_time'] == 0}
+                            <td></td>
+                            {else/}
+                            <td>{$member['e_time']|date='Y-m-d H:i'}</td>
+                            {/if}
+                            <td>
+                                {switch $member['status']}
+                                {case 0}<span style="color: orange;">挂单中</span>{/case}
+                                {case 1}<span style="color: orange;">交易中</span>{/case}
+                                {case 3}<span style="color: orange;">已付款</span>{/case}
+                                {case 5}<span style="color: darkgreen;">交易成功</span>{/case}
+                                {case 7}<span style="color: grey;">已取消</span>{/case}
+                                {case 9}<span style="color: darkgreen;">申诉成功</span>{/case}
+                                {case 11}<span style="color: red;">申诉中</span>{/case}
+                                {case 13}<span style="color: grey;">申诉失败</span>{/case}
+                                {case 15}<span style="color: grey;">强制取消</span>{/case}
+                                {case 17}<span style="color: grey;">超时取消</span>{/case}
+                                {default /}<span style="color: grey;">异常</span>
+                                {/switch}
+                            </td>
+                            <td>
+                                <!-- 所有订单状态都可以查看详情-->
+                                {if in_array('/admin/order/orderinformation', (array)session('power_action'))}
+                                <button class="layui-btn layui-btn-normal" onclick="xadmin.open('查看详情','/admin/order/orderInformation/id/{$member[\'id\']}/type/1',900,700)">
+                                    <i class="iconfont">&#xe699;</i> 查看详情
+                                </button>
+                                {else /}
+                                <button class="layui-btn layui-btn-disabled" onclick="return false">
+                                    <i class="iconfont">&#xe699;</i> 查看详情
+                                </button>
+                                {/if}
+                                <!-- 匹配中的订单才可以强制取消-->
+                                {if $member['status'] == 0}
+                                {if in_array('/admin/order/forcecancel', (array)session('power_action'))}
+                                <button class="layui-btn layui-btn-danger"
+                                        onclick="cancel(this, '{$member[\'id\']}', 1)">
+                                    <i class="iconfont">&#xe69c;</i> 强制取消
+                                </button>
+                                {else /}
+                                <button class="layui-btn layui-btn-disabled" onclick="return false">
+                                    <i class="iconfont">&#xe69c;</i> 强制取消
+                                </button>
+                                {/if}
+                                {/if}
+
+                                <!-- 上传凭证后才可以查看凭证-->
+                                {if in_array($member['status'],array(3,5,9,11,13))}
+                                {if in_array('/admin/order/ordervoucher', (array)session('power_action'))}
+                                <button class="layui-btn layui-btn-warm"
+                                        onclick="xadmin.open('查看凭证','/admin/order/orderVoucher/id/{$member[\'id\']}/type/1',900,700)">
+                                    <i class="iconfont">&#xe6a8;</i> 查看凭证
+                                </button>
+                                {else /}
+                                <button class="layui-btn layui-btn-disabled" onclick="return false">
+                                    <i class="iconfont">&#xe699;</i> 查看凭证
+                                </button>
+                                {/if}
+                                {/if}
+                                <!-- 申诉中或者申诉结果出来之后才可以查看申诉-->
+                                {if in_array($member['status'],array(9,11,13))}
+                                {if in_array('/admin/order/orderappeal', (array)session('power_action'))}
+                                <button class="layui-btn layui-btn-warm"
+                                        onclick="xadmin.open('查看申诉','/admin/order/orderAppeal/id/{$member[\'id\']}/type/1',900,700)">
+                                    <i class="iconfont">&#xe6a8;</i> 查看申诉
+                                </button>
+                                {else /}
+                                <button class="layui-btn layui-btn-disabled" onclick="return false">
+                                    <i class="iconfont">&#xe699;</i> 查看申诉
+                                </button>
+                                {/if}
+                                {/if}
+                                <!-- 申诉中才能同意申诉-->
+                                {if $member['status'] == 11}
+                                {if in_array('/admin/order/agreeappeal', (array)session('power_action'))}
+                                <button class="layui-btn layui-btn"
+                                        onclick="agree_apply(this, '{$member[\'id\']}',1)">
+                                    <i class="iconfont">&#xe69c;</i> 同意申诉
+                                </button>
+                                {else /}
+                                <button class="layui-btn layui-btn-disabled" onclick="return false">
+                                    <i class="iconfont">&#xe69c;</i> 同意申诉
+                                </button>
+                                {/if}
+                                {/if}
+                                <!-- 申诉中才可以拒绝申诉-->
+                                {if $member['status'] == 11}
+                                {if in_array('/admin/order/refuseappeal', (array)session('power_action'))}
+                                <button class="layui-btn layui-btn-danger"
+                                        onclick="refuse_apply(this, '{$member[\'id\']}',1)">
+                                    <i class="iconfont">&#xe69c;</i> 拒绝申诉
+                                </button>
+                                {else /}
+                                <button class="layui-btn layui-btn-disabled" onclick="return false">
+                                    <i class="iconfont">&#xe69c;</i> 拒绝申诉
+                                </button>
+                                {/if}
+                                {/if}
+                                <!-- 显示在交易大厅的订单才有隐藏功能-->
+                                {if $member['status'] == 0}
+                                {if in_array('/admin/order/forcedisplay', (array)session('power_action'))}
+                                {switch $member['display']}
+                                {case 0}
+                                <button class="layui-btn layui-btn"
+                                        onclick="display(this, '{$member[\'id\']}',1,1)">
+                                    隐藏订单
+                                </button>
+                                {/case}
+                                {case 1}
+                                <button class="layui-btn layui-btn-danger"
+                                        onclick="display(this, '{$member[\'id\']}',0,1)">
+                                    显示订单
+                                </button>
+                                {/case}
+                                {default /}<span style="color: grey;">异常</span>
+                                {/switch}
+                                {else /}
+                                {switch $member['display']}
+                                {case 0}
+                                <button class="layui-btn layui-btn-disabled" onclick="return false">
+                                    显示中
+                                </button>
+                                {/case}
+                                {case 1}
+                                <button class="layui-btn layui-btn-disabled" onclick="return false">
+                                    隐藏中
+                                </button>
+                                {/case}
+                                {default /}<span style="color: grey;">异常</span>
+                                {/switch}
+                                {/if}
+                                {/if}
+
+                                {if $member['new'] == 1}
+                                <span style="color: red">new</span>
+                                {/if}
+                            </td>
+                        </tr>
+                        {/volist}
+                        {else /}
+                        <tr>
+                            <td colspan="9" class="nodata_td">无记录</td>
+                        </tr>
+                        {/if}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    layui.use('form', function () {
+        let form = layui.form;
+        form.render();
+    });
+
+    // 取消订单
+    function cancel(obj, id, type) {
+        layer.confirm('确认要取消订单？', function (index) {
+            $.ajax({
+                url: '/admin/order/forceCancel',
+                type: 'post',
+                data: {
+                    id: id,
+                    type: type
+                },
+                success: function (data) {
+                    if (data.code === 1) {
+                        layer.msg(data.msg);
+                        setTimeout(function () {
+                            window.location.reload();
+                        }, 500);
+                    } else {
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+        });
+    }
+
+    // 同意申诉
+    function agree_apply(obj, id, type) {
+        layer.confirm('同意申诉订单交易失败', function (index) {
+            $.ajax({
+                url: '/admin/order/agreeAppeal',
+                type: 'post',
+                data: {
+                    id: id,
+                    type: type
+                },
+                success: function (data) {
+                    if (data.code === 1) {
+                        layer.msg(data.msg);
+                        setTimeout(function () {
+                            window.location.reload();
+                        }, 500);
+                    } else {
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+        });
+    }
+
+    // 拒绝申诉
+    function refuse_apply(obj, id, type) {
+        layer.confirm('拒绝申诉订单交易完成？', function (index) {
+            $.ajax({
+                url: '/admin/order/refuseAppeal',
+                type: 'post',
+                data: {
+                    id: id,
+                    type: type
+                },
+                success: function (data) {
+                    if (data.code === 1) {
+                        layer.msg(data.msg);
+                        setTimeout(function () {
+                            window.location.reload();
+                        }, 500);
+                    } else {
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+        });
+    }
+
+    // 显示订单
+    function display(obj, id, status, type) {
+        layer.confirm('请再次确认', function (index) {
+            $.ajax({
+                url: '/admin/order/forceDisplay',
+                type: 'post',
+                data: {
+                    id: id,
+                    status: status,
+                    type:type
+                },
+                success: function (data) {
+                    if (data.code === 1) {
+                        layer.msg(data.msg);
+                        setTimeout(function () {
+                            window.location.reload();
+                        }, 500);
+                    } else {
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+        });
+    }
+</script>
+{/block}

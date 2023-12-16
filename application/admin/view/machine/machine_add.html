@@ -1,0 +1,159 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}矿机添加{/block}
+{block name="style"}
+<style>
+    .thumbnail_box {
+        display: none;
+    }
+</style>
+{/block}
+{block name="page"}
+<div class="layui-fluid">
+    <div class="layui-row">
+        <form action="/admin/admin/roleAddPost" method="post" class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                <label for="thumbnail" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>矿机logo
+                </label>
+                <div class="layui-input-block">
+                    <button type="button" class="layui-btn" id="thumbnail">
+                        <i class="layui-icon">&#xe67c;</i>上传图片1
+                    </button>
+                    <div class="thumbnail_box" id="thumbnail_box">
+                        <img id="thumbnail_img" src="" alt="" width="100" onclick="$('#thumbnail').click()">
+                        <input type="button" class="layui-btn layui-btn-danger" onclick="delete_thumbnail()" value="删除">
+                    </div>
+                    <input type="hidden" name="thumbnail" value="" id="thumbnail_value">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>矿机名称
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="name" name="name" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="price" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>矿机价格
+                </label>
+                <div class="layui-input-inline">
+                    <input type="number" id="price" name="price"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="power" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>算力
+                </label>
+                <div class="layui-input-inline">
+                    <input type="number" id="power" name="power" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="hour_output" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>天产量
+                </label>
+                <div class="layui-input-inline">
+                    <input type="number" id="hour_output" name="hour_output" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="cycle" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>矿机周期(天)
+                </label>
+                <div class="layui-input-inline">
+                    <input type="number" id="cycle" name="cycle" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            {if in_array('/admin/machine/machineadd', (array)session('power_action'))}
+            <div class="layui-form-item">
+                <button class="layui-btn" lay-submit lay-filter="role_add">增加</button>
+            </div>
+            {else /}
+                                  无权限
+            {/if}
+        </form>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    // 图片上传
+    layui.use('upload', function(){
+        var upload = layui.upload;
+        var uploadInst = upload.render({
+            elem: '#thumbnail',
+            field: 'image',
+            accept: 'images',
+            url: '/admin/base/uploadImage',
+            data: {module: 'machine', folder: '/machine/thumbnail'},
+            done: function(res){
+            	console.log(res);
+            	
+                if(res.code == 1){
+                    layer.msg(res.msg);
+                    $("#thumbnail_img").attr('src',res.url);
+                    $("#thumbnail_value").val(res.url);
+                    $("#thumbnail").hide();
+                    $("#thumbnail_box").show();
+                }else {
+                    layer.msg(res.msg);
+                }
+            },
+            error: function(){
+                //请求异常回调
+            }
+        });
+    });
+
+    // 删除缩略图
+    function delete_thumbnail()
+    {
+        $("#thumbnail_box").hide();
+        $("#thumbnail").show();
+        $("#thumbnail_img").attr('src', '');
+        $("#thumbnail_value").val('');
+        return false;
+    }
+
+
+
+    $(function  () {
+        layui.use('form', function(){
+            let form = layui.form;
+            form.on('submit(role_add)', function(data){
+                $.ajax({
+                    url: '/admin/machine/newmachineAdd',
+                    type: 'post',
+                    data: {
+                        thumbnail: data.field.thumbnail,
+                        name: data.field.name,
+                        price: data.field.price,
+                        power: data.field.power,
+                        hour_output: data.field.hour_output,
+                        cycle: data.field.cycle,
+                    },
+                    success: function (data) {
+                        if(data.code === 1){
+                            layer.msg(data.msg);
+                            setTimeout(function(){
+                                parent.location.reload();
+                            }, 500);
+                        }else {
+                            layer.msg(data.msg);
+                        }
+                    }
+                });
+                return false;
+            });
+        });
+    });
+</script>
+{/block}

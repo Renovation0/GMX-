@@ -1,0 +1,100 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}角色添加{/block}
+{block name="style"}{/block}
+{block name="page"}
+<div class="layui-fluid">
+    <div class="layui-row">
+        <form action="/admin/language/configAdd" method="post" class="layui-form layui-form-pane">
+        
+<!--             <div class="layui-form-item">
+                <label class="layui-form-label">类别<span class="x-red">*</span></label>
+                <div class="layui-input-block">
+                    <select name="type" id="type">
+                        <option value="0">请选择类别</option>
+                        <option value="1">简体中文</option>
+                        <option value="2">繁体中文</option>
+                        <option value="3">英文</option>
+                    </select>
+                </div>
+            </div> -->
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label">
+                    <span class="x-red">*</span>参数索引
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="key" name="key" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label">
+                    <span class="x-red">*</span>参数名
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="name" name="name" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label">
+                    <span class="x-red">*</span>简体中文参数值
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="zh_cn" name="zh_cn" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label">
+                    <span class="x-red">*</span>繁体中文参数值
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="zh_cn_tw" name="zh_cn_tw" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label">
+                    <span class="x-red">*</span>英文参数值
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="en_us" name="en_us" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <button class="layui-btn" lay-submit lay-filter="role_add">增加</button>
+            </div>
+        </form>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    $(function  () {
+        layui.use('form', function(){
+            let form = layui.form;
+            form.on('submit(role_add)', function(data){
+                $.ajax({
+                    url: data.form.action,
+                    type: 'post',
+                    data: {
+                    	key: data.field.key,
+                    	name: data.field.name,
+                    	zh_cn: data.field.zh_cn,
+                    	zh_cn_tw: data.field.zh_cn_tw,
+                    	en_us: data.field.en_us
+                    },
+                    success: function (data) {
+                        if(data.code === 1){
+                            layer.msg(data.msg);
+                            setTimeout(function(){
+                                parent.location.reload();
+                            }, 500);
+                        }else {
+                            layer.msg(data.msg);
+                        }
+                    }
+                });
+                return false;
+            });
+        });
+    });
+</script>
+{/block}

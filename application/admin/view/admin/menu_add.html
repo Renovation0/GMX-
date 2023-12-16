@@ -1,0 +1,90 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}资讯添加{/block}
+{block name="style"}
+<style>
+    .thumbnail_box {
+        display: none;
+    }
+    .layui-form-selected dl{
+        z-index: 99999;
+    }
+</style>
+{/block}
+{block name="page"}
+<div class="layui-fluid">
+    <div class="layui-row">
+        <form action="" method="post" class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                <label class="layui-form-label">父级<span class="x-red">*</span></label>
+                <div class="layui-input-block">
+                    <select name="p_id" id="p_id">
+                        <option value="0">无</option>
+                        {volist name="list" id="menu"}
+                        <option value="{$menu['id']}">{$menu['name']}</option>
+                        {/volist}
+                    </select>
+                </div>
+            </div>
+            
+            <div class="layui-form-item">
+                <label class="layui-form-label">规则></label>
+                <div class="layui-input-block">
+                    <input type="text" name="action"  placeholder="父级菜单无需匹配控制器和方法,子级菜单请使用控制器名" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            
+            <div class="layui-form-item">
+                <label class="layui-form-label">标题</label>
+                <div class="layui-input-block">
+                    <input type="text" name="name" required  lay-verify="required|name placeholder="请输入标题" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            
+
+            <div class="layui-form-item">
+                    <button  class="layui-btn" lay-filter="menu_add" lay-submit="">提交</button>
+                <!-- <div class="layui-input-block">
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div> -->
+            </div>
+        </form>
+    </div>
+</div>
+{/block}
+{block name="js"}
+
+<script>
+
+
+$(function  () {
+    layui.use('form', function(){
+        let form = layui.form;
+        form.on('submit(menu_add)', function(data){
+        	var p_id=$("#p_id").val();
+
+            $.ajax({
+                url: '/admin/admin/menuAdd',
+                type: 'post',
+                data: {
+                    name: data.field.name,
+                    p_id: data.field.p_id,
+                    action: data.field.action
+                },
+                success: function (data) {
+                    if(data.code === 1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            parent.location.reload();
+                        }, 500);
+                    }else {
+                        layer.msg(data.msg);
+                    }
+                }
+            }); 
+            return false;
+        });
+    });
+});
+
+</script>
+{/block}

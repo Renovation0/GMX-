@@ -1,0 +1,122 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}系统参数配置{/block}
+{block name="style"}
+<style>
+    .x-admin-sm .layui-form-pane .layui-form-label {
+        height: 38px;
+        line-height: 20px;
+    }
+    .x-admin-sm .layui-input, .x-admin-sm .layui-select, .x-admin-sm .layui-textarea {
+        height: 38px;
+        border-radius: 2px;
+    }
+    .layui-form-pane .layui-form-item[pane] {
+        border-style: unset;
+    }
+    .layui-form-pane .layui-form-label {
+        width: 250px !important;
+    }
+    .layui-form-pane .layui-form-item[pane] .layui-input-inline {
+        margin-left: 250px !important;
+    }
+    .layui-form-pane .layui-input-block {
+        margin-left: 250px !important;
+    }
+</style>
+{/block}
+{block name="page"}
+<div class="x-nav">
+    <span class="layui-breadcrumb">
+        <a href="javascript:;">系统</a>
+        <a href="javascript:;">系统设置</a>
+        <a><cite>参数配置</cite></a>
+    </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" onclick="location.reload()" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+    </a>
+</div>
+<div class="layui-card-header">
+
+    <button class="layui-btn layui-btn-normal" onclick="xadmin.open('添加资讯', '/admin/Language/configAdd',600,400)">
+        <i class="layui-icon"></i>添加
+    </button>
+
+</div>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15" >
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body ">
+                    <form class="layui-form layui-form-pane" method="post" action="/admin/language/configEdit">
+                    <div class="layui-tab-content">
+						<label class="layui-form-label">&nbsp;</label>
+                        <label class="layui-form-label">简体中文</label>
+                        <label class="layui-form-label">繁体中文</label>
+                        <label class="layui-form-label">英文</label>
+
+
+                        <div class="layui-tab-item" id="module_menus_box_{$my_active_module}">
+                            {volist name="configs"  id="config"}
+                            <div class="layui-form-item" pane>
+                                <label class="layui-form-label">{$config['name']}</label>
+
+                                <div class="layui-input-inline">
+                                    <input type="text" name="{$config['key']}[]" value="{$config['zh_cn']}" lay-verify="required" placeholder="请输入{$config['name']}" autocomplete="off" class="layui-input" style="width:250px;">
+                                </div>
+                                
+                                <div class="layui-input-inline" style="left:-200px;">
+                                    <input type="text" name="{$config['key']}[]" value="{$config['zh_cn_tw']}" lay-verify="required" placeholder="请输入{$config['name']}" autocomplete="off" class="layui-input" style="width:250px;">
+                                </div>
+                                
+                                <div class="layui-input-inline" style="left:-400px;">
+                                    <input type="text" name="{$config['key']}[]" value="{$config['en_us']}" lay-verify="required" placeholder="请输入{$config['name']}" autocomplete="off" class="layui-input" style="width:250px;">
+                                </div>
+                                
+                            </div>
+                            {/volist}
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                {if in_array('/admin/system/configedit', (array)session('power_action'))}
+                                <button class="layui-btn" lay-submit lay-filter="formDemo">提交</button>
+                                {else /}
+                                <button class="layui-btn layui-btn-disabled" disabled>提交</button>
+                                {/if}
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    var active_module = '{$my_active_module}'; // 当前模块
+    $("#module_"+active_module).addClass('layui-this'); // 初始化系统模块
+    $("#module_menus_box_"+active_module).addClass('layui-show'); // 初始化系统模块菜单
+
+    // 切换模块
+    function changeModule(module_id) {
+        if(module_id != active_module){
+            window.location.href="/admin/language/l_list/my_active_module/"+module_id;
+        }
+    }
+
+    layui.use('form', function () {
+        let form = layui.form;
+        form.render();
+        form.on('switch', function(data){
+            let data_id = $(data.elem).attr('data-id');
+            if(data.elem.checked){
+                $("#"+data_id).val(1);
+            }else {
+                $("#"+data_id).val(2);
+            }
+        });
+    });
+
+</script>
+{/block}

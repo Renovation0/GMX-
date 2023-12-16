@@ -1,0 +1,38 @@
+---------------------------------------------------------------
+[2023-10-26T20:12:09+08:00] 2409:4089:a18e:4759::5d3:a5 GET gem-xtra.pro/public/witkey2022.php/index/index.html
+[运行时间：0.079431s] [吞吐率：12.59req/s] [内存消耗：618.01kb] [文件加载：71]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip, br',
+  'cf-ray' => '81c29b1acd820dba-MRS',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'sec-ch-ua' => '"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"',
+  'sec-ch-ua-mobile' => '?1',
+  'sec-ch-ua-platform' => '"Android"',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'accept-language' => 'hi-IN,hi;q=0.9',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '2409:4089:a18e:4759::5d3:a5',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '2409:4089:a18e:4759::5d3:a5',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /home/gemxpbra/public_html/thinkphp/tpl/dispatch_jump_zm.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]

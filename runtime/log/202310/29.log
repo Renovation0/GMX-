@@ -1,0 +1,38 @@
+---------------------------------------------------------------
+[2023-10-29T10:35:34+08:00] 103.171.44.194 GET gem-xtra.pro/public/witkey2022.php/
+[运行时间：0.118846s] [吞吐率：8.41req/s] [内存消耗：595.83kb] [文件加载：69]
+[ info ] [ LANG ] /home/gemxpbra/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gem-xtra.pro',
+  'accept-encoding' => 'gzip',
+  'cf-ray' => '81d806a18c3339d3-FRA',
+  'x-forwarded-proto' => 'https',
+  'cf-visitor' => '{"scheme":"https"}',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'sec-fetch-site' => 'cross-site',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-dest' => 'document',
+  'sec-ch-ua' => '"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"',
+  'sec-ch-ua-mobile' => '?1',
+  'sec-ch-ua-platform' => '"Android"',
+  'accept-language' => 'hi-IN,hi;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => '__gsas=ID=7ede8409cb10601d:T=1697021424:RT=1697021424:S=ALNI_MYDGC9c1L0ZMIMdP_t_pIM6hvtiYw',
+  'cdn-loop' => 'cloudflare',
+  'cf-connecting-ip' => '103.171.44.194',
+  'cf-ipcountry' => 'IN',
+  'x-forwarded-for' => '103.171.44.194',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /home/gemxpbra/public_html/thinkphp/tpl/dispatch_jump_zm.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]

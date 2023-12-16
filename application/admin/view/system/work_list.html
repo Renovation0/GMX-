@@ -1,0 +1,131 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}工单记录{/block}
+{block name="style"}
+<style>
+    .layui-table td, .layui-table th {
+        min-width: unset !important;
+    }
+
+    .role_user {
+        display: inline-block;
+        margin-right: 5px;
+        padding: 5px;
+        background-color: #f0f0f0;
+    }
+</style>
+{/block}
+{block name="page"}
+<div class="x-nav">
+    <span class="layui-breadcrumb">
+        <a href="javascript:;">系统</a>
+        <a href="javascript:;">系统设置</a>
+        <a><cite>工单记录</cite></a>
+    </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+       onclick="location.reload()" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+    </a>
+</div>
+<div class="layui-fluid">
+
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+
+                <div class="layui-card-body ">
+                    <table class="layui-table layui-form">
+                        <thead>
+                        <tr>
+                            <th style="min-width: 20px;">ID</th>
+                            <th style="min-width: 20px;">用户ID</th>
+                            <th style="min-width: 30px;">用户电话</th>
+                            <th style="min-width: 100px;">内容</th>
+                            <th style="min-width: 30px;">图片1</th>
+                            <th style="min-width: 30px;">图片2</th>
+                            <th style="min-width: 30px;">图片3</th>
+                            <th style="min-width: 30px;">时间</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {if !empty($list['list']->items())}
+                        {volist name="list['list']" id="user"}
+                        <tr>
+                            <td>{$user['id']}</td>
+                            <td>{$user['u_id']}</td>
+                            <td>{$user['tel']}</td>
+                            <td>{$user['msg']}</td>
+                            {if $list['img_list'][$user['id']]['img1'] != ''}
+                                <td onclick="confirm('{$list[\'img_list\'][$user[\'id\']][\'img1\']}')"><img src="<?php echo $list['img_list'][$user['id']]['img1'];?>" style="width: 30px;height:30px"></td>
+                            {else/}
+                            	<td>--</td>
+                            {/if}
+                            {if $list['img_list'][$user['id']]['img2'] != ''}
+                            	<td onclick="confirm('{$list[\'img_list\'][$user[\'id\']][\'img2\']}')"><img src="<?php echo $list['img_list'][$user['id']]['img2'];?>" style="width: 30px;height:30px"></td>
+                            {else/}
+                            	<td>--</td>
+                            {/if}
+                            {if $list['img_list'][$user['id']]['img3'] != ''}
+                            	<td onclick="confirm('{$list[\'img_list\'][$user[\'id\']][\'img3\']}')"><img src="<?php echo $list['img_list'][$user['id']]['img3'];?>" style="width: 30px;height:30px"></td>
+                            {else/}
+                            	<td>--</td>
+                            {/if}
+                            <td>{$user['add_time']|date='Y-m-d H:i:s'}</td>
+                        </tr>
+                        {/volist}
+                        {else /}
+                        <tr>
+                            <td colspan="11" class="nodata_td">无记录</td>
+                        </tr>
+                        {/if}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="layui-card-body ">
+                    <div class="page">
+                        {$list['list']|raw}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+
+    //日期选择
+    layui.use(['laydate','form'], function(){
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#add_time_s',
+            type: 'datetime'
+        });
+        laydate.render({
+            elem: '#add_time_e',
+            type: 'datetime'
+        });
+
+    });
+    
+    function confirm(url) {   	
+        $("#displayImg").attr("src", url);
+        var width = 500;//'auto';
+        var height = 500;//'auto';
+        
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            shadeClose: true,
+            area: [width + 'px', height + 'px'], //宽高
+            content: "<img src=" + url + " />"
+        });
+    }
+	
+
+    layui.use('form', function () {
+        let form = layui.form;
+        form.render();
+    });
+</script>
+{/block}

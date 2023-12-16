@@ -1,0 +1,63 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}角色添加{/block}
+{block name="style"}{/block}
+{block name="page"}
+<div class="layui-fluid">
+    <div class="layui-row">
+        <form action="{:url('admin/roleAddPost')}" method="post" class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label">
+                    <span class="x-red">*</span>角色名
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="name" name="name" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="message" class="layui-form-label">
+                    描述
+                </label>
+                <div class="layui-input-inline layui-input-textarea">
+                    <textarea placeholder="请输入内容" id="message" name="message" class="layui-textarea"></textarea>
+                </div>
+            </div>
+            {if in_array('/admin/roleadd', (array)session('power_action'))}
+            <div class="layui-form-item">
+                <label class="layui-form-label"></label>
+                <button class="layui-btn" lay-submit lay-filter="role_add">增加</button>
+            </div>
+            {/if}
+        </form>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    $(function  () {
+        layui.use('form', function(){
+            let form = layui.form;
+            form.on('submit(role_add)', function(data){
+                $.ajax({
+                    url: data.form.action,
+                    type: 'post',
+                    data: {
+                        name: data.field.name,
+                        message: data.field.message
+                    },
+                    success: function (data) {
+                        if(data.code === 1){
+                            layer.msg(data.msg);
+                            setTimeout(function(){
+                                parent.location.reload();
+                            }, 500);
+                        }else {
+                            layer.msg(data.msg);
+                        }
+                    }
+                });
+                return false;
+            });
+        });
+    });
+</script>
+{/block}

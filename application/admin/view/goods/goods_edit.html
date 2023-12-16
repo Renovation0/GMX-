@@ -1,0 +1,345 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}商品添加{/block}
+{block name="style"}
+<style>
+    .thumbnail_box {
+        display: none;
+    }
+    .layui-form-selected dl{
+        z-index: 99999;
+    }
+	.img{
+		width:100%;
+	}
+	.img .img-list{
+		width:120px;height:120px;margin:3px;border:1px solid #cccccc;float:left;position:relative;
+	}
+	.img .add_img{
+		width:120px;height:120px;margin:3px;border:1px solid #cccccc;float:left;position:relative;background:url('/static/sc.png') no-repeat;background-size:100% 100%;
+	}
+	.img .add_img input[type=file]{
+		display:block;width:100%;height:100%;opacity:0;
+	}
+	.img .img-list .imgc{
+		width:100px;height:100px;margin:10px;
+	}
+	.img .img-list .closee{
+		position:absolute;top:3px;right:3px;width:25px;height:25px;text-align:center;line-height:25px;background:red;color:#ffffff;font-size:16px;border-radius:40%;
+	}
+</style>
+{/block}
+{block name="page"}
+<div class="layui-fluid">
+    <div class="layui-row">
+        <form class="layui-form" action="" method="post"> <!-- {:url('goods/goodsEditPost')} -->
+            <div class="layui-form-item">
+                <label class="layui-form-label">分类<span class="x-red">*</span></label>
+                <div class="layui-input-block">
+                    <select name="type" id="type">
+                        <option value="0">请选择类型</option>
+                        {volist name="list" id="cat"}
+                        <option value="{$cat['id']}"{if $user['class_id'] == $cat['id']} selected {/if}>{$cat['name']}</option>
+                        {/volist}
+                    </select>
+                </div>
+            </div>
+            
+            <div class="layui-form-item">
+                <label class="layui-form-label">商品名称<span class="x-red">*</span></label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" value="{$user['goods_name']}" required  lay-verify="required|title" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            
+            <div class="layui-form-item">
+                <label class="layui-form-label">商品图片<span class="x-red">*</span></label>
+                <div class="layui-input-block">
+                    <button type="button" class="layui-btn" id="thumbnail">
+                        <i class="layui-icon">&#xe67c;</i>上传图片
+                    </button>
+                    <div class="thumbnail_box" id="thumbnail_box">
+                        <img id="thumbnail_img" src="{$user['logo']}" alt="" width="100" onclick="$('#thumbnail').click()">
+                        <input type="button" class="layui-btn layui-btn-danger" onclick="delete_thumbnail()" value="删除">
+                    </div>
+                    <input type="hidden" name="thumbnail" value="{$user['logo']}" id="thumbnail_value">
+                </div>
+            </div>
+       		<div class="layui-form-item">
+				<label class="layui-form-label"><span class="x-red">*</span>轮播图：</label>
+				<div class="layui-input-block">
+					<div class="img" style="width:100%;">
+						{foreach name="user['lunbo_logo']" item="vo"}
+							<div class="img-list">
+								<input name="lunbo_logo[]" value="{$vo}" type="hidden">
+								<img class="imgc" src="{$vo}">
+								<span class="closee" onclick="removeimg(this,4)" style="">X</span>
+								</div>
+						{/foreach}
+						<div class="add_img" id="thumbnail2" {if condition="count($user['lunbo_logo']) >= 4"} style="display:none;"{/if} >
+							<!-- <input type="file"  id="thumbnail2" />    -->               
+						</div>
+						<div class="clear" style="clear:both;"></div>
+					</div>
+				</div>
+			</div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">价格<span class="x-red">*</span></label>
+                <div class="layui-input-block">
+                    <input type="num" name="price" value="{$user['price']}" required  lay-verify="required|price" placeholder="请输入价格" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            
+            <div class="layui-form-item">
+                <label class="layui-form-label">库存<span class="x-red">*</span></label>
+                <div class="layui-input-block">
+                    <input type="num" name="stock" value="{$user['stock']}" required  lay-verify="required|stock" placeholder="请输入库存" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            
+            <div class="layui-form-item">
+                <label class="layui-form-label">权重<span class="x-red">*</span></label>
+                <div class="layui-input-block">
+                    <input type="num" name="sort" value="{$user['sort']}" required  lay-verify="required|sort" placeholder="请输入权重" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            
+            <div class="layui-form-item">
+                <label class="layui-form-label">商品销量<span class="x-red">*</span></label>
+                <div class="layui-input-block">
+                    <input type="num" name="pay_user" value="{$user['pay_user']}" required  lay-verify="required|pay_user" placeholder="请输入商品销量" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            
+            <div class="layui-form-item">
+                <label class="layui-form-label">商品规格<span class="x-red">*</span></label>
+                <div class="layui-input-block">
+                    <input type="num" name="specification" value="{$user['specification']}" required  lay-verify="required|specification" placeholder="请输入商品规格" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            
+            <div class="layui-form-item">
+                <label class="layui-form-label">邮费<span class="x-red">*</span></label>
+                <div class="layui-input-block">
+                    <input type="num" name="postage_money" value="{$user['postage_money']}" required  lay-verify="required|postage_money" placeholder="请输入邮费" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            
+            <div class="layui-form-item">
+                <label for="status" class="layui-form-label">
+            	 商品标签
+                </label>
+                <div class="layui-input-inline layui-show-xs-block">
+                    <select name="label" id="label">
+                        <option value="">请选择</option>
+                        <option value="1"<?php if($user['label'] == 1) echo 'selected';?>>热销</option>
+                    </select>
+                </div>
+            </div>
+            
+           <div class="layui-form-item">
+                <label for="status" class="layui-form-label">
+                    <span class="x-red">*</span>是否启用
+                </label>
+                <div class="layui-input-inline layui-show-xs-block">
+                    <select name="status" id="status">
+                        <option value="">请选择</option>
+                        <option value="1"<?php if($user['status'] == 1) echo 'selected';?>>上架</option>
+                        <option value="2"<?php if($user['status'] == 2) echo 'selected';?>>下架</option>
+                    </select>
+                </div>
+            </div>
+            
+<!--             <div class="layui-form-item layui-form-text">
+                <label for="message" class="layui-form-label">
+                    商品描述
+                </label>
+                <div class="layui-input-block">
+                    <textarea id="description" name="description" class="layui-textarea" required lay-verify="required|description" placeholder="请输入标题"></textarea>
+                </div>
+            </div> -->
+            
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">正文<span class="x-red">*</span></label>
+                <div class="layui-input-block">
+                    <textarea name="content" placeholder="请输入正文" id="content" lay-verify="content">{$user['content']}</textarea>
+                </div>
+            </div>
+            
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <!-- <button  class="layui-btn" lay-filter="news_add" lay-submit="">提交</button> -->
+                    <button  class="layui-btn" lay-filter="news_add" type="submit" lay-submit="">提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<!-- uedit配置文件 -->
+<script type="text/javascript" src="__STATIC__/ueditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="__STATIC__/ueditor/ueditor.all.js"></script>
+<script>
+    var ue = UE.getEditor('content');
+    // 初始化图片
+    $(function () {
+        if($("#thumbnail_value").val() != ''){
+            $("#thumbnail").hide();
+            $("#thumbnail_box").show();
+        }
+    });
+
+    // 图片上传
+    layui.use('upload', function(){
+        var upload = layui.upload;
+        var uploadInst = upload.render({
+            elem: '#thumbnail',
+            field: 'image',
+            accept: 'images',
+            url: "{:url('base/uploadImage')}",//'/admin/base/uploadImage',
+            data: {module: 'news', folder: '/news/thumbnail'},
+            done: function(res){
+                if(res.code == 1){
+                    layer.msg(res.msg);
+                    $("#thumbnail_img").attr('src', res.url);
+                    $("#thumbnail_value").val(res.url);
+                    $("#thumbnail").hide();
+                    $("#thumbnail_box").show();
+                }else {
+                    layer.msg(res.msg);
+                }
+            },
+            error: function(){
+                //请求异常回调
+            }
+        });
+    });
+
+    // 删除缩略图
+    function delete_thumbnail()
+    {
+        $("#thumbnail_box").hide();
+        $("#thumbnail").show();
+        $("#thumbnail_img").attr('src', '');
+        $("#thumbnail_value").val('');
+        return false;
+    }
+
+    //日期选择
+    layui.use(['laydate','form'], function(){
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#show_time',
+            type: 'datetime'
+        });
+
+    });
+    // 图片上传
+    layui.use('upload', function(){
+        var upload = layui.upload;
+        var uploadInst = upload.render({
+            elem: '#thumbnail2',
+            field: 'image',
+            accept: 'images',
+            url: "{:url('base/uploadImage')}",//'/admin/base/uploadImage',
+            data: {module: 'news', folder: '/news/thumbnail'},
+            done: function(res){
+                if(res.code == 1){
+                    layer.msg(res.msg);
+/*                     $("#thumbnail_img").attr('src', res.url);
+                    $("#thumbnail_value").val(res.url);
+                    $("#thumbnail").hide();
+                    $("#thumbnail_box").show(); */
+        			var img = $('.add_img')
+        			var html = '';
+        			html += '<div class="img-list">';
+        			html += '<input type="hidden" name="lunbo_logo[]" value="'+res.url+'"  />';
+        			html += '<img class="imgc"  src="'+res.url+'" />';
+        			html += '<span class="closee" onclick="removeimg(this,4)" style="">X</span>';
+        			html += '</div>';
+        			img.before(html);
+        			var imglist = img.children('.img-list').length;
+        			if(imglist >= 4){
+        				addimg.hide();
+        			}
+                }else {
+                    layer.msg(res.msg);
+                }
+            },
+            error: function(){
+                //请求异常回调
+            }
+        });
+    });
+    
+	function removeimg(obj,list){
+		var addimg = $(obj).parent().siblings('.add_img');
+		var img= addimg.parent();
+		$(obj).parent().remove();
+		var imglist = img.children('.img-list').length;
+		if(imglist < list){
+			addimg.show();
+		}
+	}
+
+    // 表单提交
+    layui.use(['form', 'layer'], function() {
+        $ = layui.jquery;
+        let form = layui.form,
+            layer = layui.layer;
+
+        //自定义验证规则
+        form.verify({
+            title: function(value) {
+                if (value.length < 2) {
+                    return '标题至少2个字符';
+                }
+            },
+            content: function(value) {
+                if (value.length < 2) {
+                    return '正文至少2个字符';
+                }
+            },
+        });
+
+        //监听提交
+        form.on('submit(news_add)', function(data) {
+        	//console.log(data.field);return false;
+        	let cat = [];
+            $("input:checkbox[name='cat']:checked").each(function(i){
+                cat[i] = $(this).val();
+            });
+            $.ajax({
+                url: data.form.action,//"{:url('goods/goodsEditPost')}",//
+                type: 'post',
+                data: data.field,//{
+                	/* goods_id: {$user['id']},
+                	title: data.field.title,
+                    type:data.field.type,
+                    img: data.field.thumbnail,
+                    lunbo_logo: data.field.lunbo_logo,
+                    content: data.field.content,
+                    price: data.field.price,
+                    stock: data.field.stock,
+                    sort: data.field.sort,
+                    pay_user: data.field.pay_user,
+                    status: data.field.status */
+                //},
+                success: function (data) {
+                    if(data.code === 1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            parent.location.reload();
+                        }, 500);
+                    }else {
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+            return false;
+        });
+    });
+</script>
+{/block}

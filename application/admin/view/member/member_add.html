@@ -1,0 +1,92 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}角色添加{/block}
+{block name="style"}{/block}
+{block name="page"}
+<div class="layui-fluid">
+    <div class="layui-row">
+        <form action="" method="post" class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>用户名
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="name" name="name" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>手机号
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="tel" name="tel" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>推荐人(留空无推荐)
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="parent_tel" name="parent_tel"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>密码
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="pass" name="pass" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" style="width: 150px">
+                    <span class="x-red">*</span>支付密码(6位数字)
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="pay_pass" name="pay_pass" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <button class="layui-btn" lay-submit lay-filter="role_add">增加</button>
+            </div>
+        </form>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    $(function  () {
+        layui.use('form', function(){
+            let form = layui.form;
+            form.on('submit(role_add)', function(data){
+                $.ajax({
+                    url: "{:url('member/roleAddPost')}",//'/admin/member/roleAddPost',
+                    type: 'post',
+                    data: {
+                        name: data.field.name,
+                        tel: data.field.tel,
+                        parent_tel: data.field.parent_tel,
+                        pass: data.field.pass,
+                        pay_pass: data.field.pay_pass,
+                    },
+                    success: function (data) {
+                        if(data.code === 1){
+                            layer.msg(data.msg);
+                            setTimeout(function(){
+                                parent.location.reload();
+                            }, 500);
+                        }else {
+                            layer.msg(data.msg);
+                        }
+                    }
+                });
+                return false;
+            });
+        });
+    });
+</script>
+{/block}

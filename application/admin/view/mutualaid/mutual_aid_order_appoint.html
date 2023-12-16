@@ -1,0 +1,150 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}互助列表{/block}
+{block name="style"}
+<style>
+    .layui-table td, .layui-table th {
+        min-width: unset !important;
+    }
+    .role_user {
+        display: inline-block;
+        margin-right: 5px;
+        padding: 5px;
+        background-color: #f0f0f0;
+    }
+	.layui-form-radio {
+	    line-height: 1px;
+	    padding-right: 1px;
+	    cursor: pointer;
+	    margin: 0px 0px 0px 0px;
+	}
+</style>
+{/block}
+{block name="page"}
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                         <div class="layui-tab-content">
+                            <form class="layui-form layui-col-space5">
+                            	<input type="hidden" name="id" value="{$id}">
+                                <div class="layui-input-inline layui-show-xs-block">
+                                    <input type="text" name="serach" value="{$param_serach}" placeholder="账号搜索" autocomplete="off" class="layui-input">
+                                </div>
+
+                                <div class="layui-input-inline layui-show-xs-block">
+                                    <button class="layui-btn" lay-submit="" lay-filter="sreach">
+                                        <i class="layui-icon">&#xe615;</i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                <div class="layui-card-body ">
+                    <table class="layui-table layui-form">
+                        <thead>
+                        <tr>
+                            <th  style="min-width: 1%;"></th>
+                            <th  style="width: 50px;"><b>ID</b></th>
+                            <!-- <th  style="width: 50px;"><b>用户ID</b></th> -->
+                            <th  style="min-width: 50px;"><b>会员账号</b></th>
+                            <th  style="min-width: 30px;"><b>失败次数</b></th>
+                            <th  style="min-width: 30px;width: 30px;"><b>单场失败次数</b></th>
+                            <th  style="min-width: 30px;"><b>花费金额</b></th>
+                            <th  style="min-width: 60px;"><b>推荐人账号</b></th>
+                            <th  style="min-width: 60px;"><b>时间</b></th>
+                            <th  style="min-width: 60px;"><b>IP地址</b></th>
+                            <th  style="min-width: 60px;"><b>总资产</b></th>
+                            <th  style="min-width: 30px;"><b>备注</b></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {if !empty($list->items())}
+                        {volist name="list" id="user"}
+                        <tr align="center">
+                            <td data-id="{$user['id']}" onclick="chose_main('{$user[\'id\']}')"><input type="radio" name="radios" ></td>
+                            <td>{$user['id']}</td>
+                            <!-- <td>{$user['uid']}</td> -->
+                            <td>{$user['tel']}{if $user['real_name'] != ''}<br/>({$user['real_name']}){/if}</td>
+                            <td>{$user['fail_num']}</td>
+                            <td>{$user['total_count']}</td>
+                            <td>{$user['num']}</td>
+                            <td>{$user['f_tel']}{if $user['f_real_name'] != ''}<br/>({$user['f_real_name']}){/if}</td>
+                            <td>{:date('m-d H:i:s',$user['time'])}</td>
+                            <td>{$user['last_ip']}</td>
+                            <td>{$user['total_asset']}</td>
+                            {if $user['appoint_order'] == ''}
+                            <td>未指定</td>
+                            {else/}
+                            <td>已指定订单ID:{$user['appoint_order']}</td>
+                            {/if}
+                        </tr>
+                        {/volist}
+                        {else /}
+                        <tr>
+                            <td colspan="13" class="nodata_td">无记录</td>
+                        </tr>
+                        {/if}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="layui-card-body ">
+                    <div class="page">
+                        {$list|raw}
+                    </div>
+                </div>
+            {if in_array('/mutualaid/mutualaidorderappointpost', (array)session('power_action'))}
+            <div class="layui-form-item" style="position: fixed;bottom: 0;z-index: 100;">
+                <button class="layui-btn" lay-submit lay-filter="role_add">修改</button>
+            </div>
+            {else /}
+                                  无权限
+            {/if}
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    layui.use('form', function () {
+        let form = layui.form;
+        form.render();
+    });
+    
+    chose_id = 0;
+    id = {$id};
+    
+    function chose_main(main_id) {
+    	if(main_id != ''){
+    		chose_id = main_id;
+    	}
+    }
+    
+    $(function  () {
+        layui.use('form', function(){
+            let form = layui.form;
+            form.on('submit(role_add)', function(data){
+                $.ajax({
+                    url: "{:url('mutualaid/mutualAidOrderAppointPost')}",//'/admin/mutualaid/mutualAidOrderAppointPost',
+                    type: 'post',
+                    data: {
+                    	mu_id: id,
+                    	log_id:chose_id
+                    },
+                    success: function (data) {
+                        if(data.code === 1){
+                            layer.msg(data.msg);
+                            setTimeout(function(){
+                                parent.location.reload();
+                            }, 500);
+                        }else {
+                            layer.msg(data.msg);
+                        }
+                    }
+                });
+                return false;
+            });
+        });
+    });
+
+</script>
+{/block}

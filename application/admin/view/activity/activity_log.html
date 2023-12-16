@@ -1,0 +1,394 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}活动日志{/block}
+{block name="style"}
+<style>
+    .x-admin-sm .layui-form-pane .layui-form-label {
+        height: 38px;
+        line-height: 20px;
+    }
+    .x-admin-sm .layui-input, .x-admin-sm .layui-select, .x-admin-sm .layui-textarea {
+        height: 38px;
+        border-radius: 2px;
+    }
+    .layui-form-pane .layui-form-item[pane] {
+        border-style: unset;
+    }
+</style>
+{/block}
+{block name="page"}
+<div class="x-nav">
+    <span class="layui-breadcrumb">
+        <a href="javascript:;">系统</a>
+        <a href="javascript:;">活动中心</a>
+        <a><cite>活动日志</cite></a>
+    </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" onclick="location.reload()" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+    </a>
+</div>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15" >
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body ">
+                    <ul class="layui-tab-title">
+
+                        <li id="module_1" onclick="changeModule('1')">实名活动</li>
+                        <li id="module_2" onclick="changeModule('2')">买币活动</li>
+                        <li id="module_3" onclick="changeModule('3')">推广活动</li>
+                        <li id="module_4" onclick="changeModule('4')">升级活动</li>
+                        <li id="module_5" onclick="changeModule('5')">直通车活动</li>
+
+
+                    </ul>
+                    <div class="layui-tab-content">
+                        <div class="layui-tab-item" id="module_menus_box_1">
+                            <div class="layui-card-body ">
+                                <form class="layui-form layui-col-space5">
+                                    <div class="layui-input-inline layui-show-xs-block">
+                                        <input type="text" name="tel" value="{$param_name}" placeholder="手机号码" autocomplete="off" class="layui-input">
+                                    </div>
+                                    <div class="layui-inline layui-show-xs-block">
+                                        <input class="layui-input"  autocomplete="off" placeholder="添加开始时间" name="add_time_s" value="{$param_add_time_s}" id="add_time_s1">
+                                    </div>
+                                    <div class="layui-inline layui-show-xs-block">
+                                        <input class="layui-input"  autocomplete="off" placeholder="添加截至时间" name="add_time_e" value="{$param_add_time_e}" id="add_time_e1">
+                                    </div>
+                                    <div class="layui-input-inline layui-show-xs-block">
+                                        <input type="hidden" name="my_active_module" value="1">
+                                        <button class="layui-btn" lay-submit="" lay-filter="sreach">
+                                            <i class="layui-icon">&#xe615;</i>
+                                        </button>
+                                    </div>
+                                </form>
+                                <table class="layui-table layui-form">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: 5%;">记录ID</th>
+                                        <th style="width: 5%;">用户</th>
+                                        <th style="width: 5%;">活动ID</th>
+                                        <th style="width: 5%;">说明</th>
+                                        <th style="width: 5%;">时间</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {if !empty($realnamelog['list']->items())}
+                                    {volist name="realnamelog['list']" id="activity"}
+                                    <tr>
+                                        <td>{$activity['id']}</td>
+                                        <td><?php if(isset($realnamelog['member'][$activity['u_id']])) echo $realnamelog['member'][$activity['u_id']]['tel'];?></td>
+                                        <td>{$activity['a_id']}</td>
+                                        <td>{$activity['message']}</td>
+                                        <td>{$activity['time']|date='Y-m-d H:i:s'}</td>
+                                    </tr>
+                                    {/volist}
+                                    {else /}
+                                    <tr>
+                                        <td colspan="4" class="nodata_td">无记录</td>
+                                    </tr>
+                                    {/if}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="layui-card-body ">
+                                <div class="page">
+                                    {$realnamelog['list']|raw}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-tab-item" id="module_menus_box_2">
+                            <div class="layui-card-body ">
+                                <form class="layui-form layui-col-space5">
+                                    <div class="layui-input-inline layui-show-xs-block">
+                                        <input type="text" name="tel" value="{$param_name}" placeholder="手机号码" autocomplete="off" class="layui-input">
+                                    </div>
+                                    <div class="layui-inline layui-show-xs-block">
+                                        <input class="layui-input"  autocomplete="off" placeholder="添加开始时间" name="add_time_s" value="{$param_add_time_s}" id="add_time_s2">
+                                    </div>
+                                    <div class="layui-inline layui-show-xs-block">
+                                        <input class="layui-input"  autocomplete="off" placeholder="添加截至时间" name="add_time_e" value="{$param_add_time_e}" id="add_time_e2">
+                                    </div>
+                                    <div class="layui-input-inline layui-show-xs-block">
+                                        <input type="hidden" name="my_active_module" value="2">
+                                        <button class="layui-btn" lay-submit="" lay-filter="sreach">
+                                            <i class="layui-icon">&#xe615;</i>
+                                        </button>
+                                    </div>
+                                </form>
+                                <table class="layui-table layui-form">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: 5%;">记录ID</th>
+                                        <th style="width: 5%;">用户</th>
+                                        <th style="width: 5%;">活动ID</th>
+                                        <th style="width: 5%;">说明</th>
+                                        <th style="width: 5%;">时间</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {if !empty($buycoinslog['list']->items())}
+                                    {volist name="buycoinslog['list']" id="activity"}
+                                    <tr>
+                                        <td>{$activity['id']}</td>
+                                        <td><?php if(isset($buycoinslog['member'][$activity['u_id']])) echo $buycoinslog['member'][$activity['u_id']]['tel'];?></td>
+                                        <td>{$activity['a_id']}</td>
+                                        <td>{$activity['message']}</td>
+                                        <td>{$activity['time']|date='Y-m-d H:i:s'}</td>
+                                    </tr>
+                                    {/volist}
+                                    {else /}
+                                    <tr>
+                                        <td colspan="4" class="nodata_td">无记录</td>
+                                    </tr>
+                                    {/if}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="layui-card-body ">
+                                <div class="page">
+                                    {$buycoinslog['list']|raw}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-tab-item" id="module_menus_box_3">
+                            <div class="layui-card-body ">
+                                <form class="layui-form layui-col-space5">
+                                    <div class="layui-input-inline layui-show-xs-block">
+                                        <input type="text" name="tel" value="{$param_name}" placeholder="手机号码" autocomplete="off" class="layui-input">
+                                    </div>
+                                    <div class="layui-inline layui-show-xs-block">
+                                        <input class="layui-input"  autocomplete="off" placeholder="添加开始时间" name="add_time_s" value="{$param_add_time_s}" id="add_time_s3">
+                                    </div>
+                                    <div class="layui-inline layui-show-xs-block">
+                                        <input class="layui-input"  autocomplete="off" placeholder="添加截至时间" name="add_time_e" value="{$param_add_time_e}" id="add_time_e3">
+                                    </div>
+                                    <div class="layui-input-inline layui-show-xs-block">
+                                        <input type="hidden" name="my_active_module" value="4">
+                                        <button class="layui-btn" lay-submit="" lay-filter="sreach">
+                                            <i class="layui-icon">&#xe615;</i>
+                                        </button>
+                                    </div>
+                                </form>
+                                <table class="layui-table layui-form">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: 5%;">记录ID</th>
+                                        <th style="width: 5%;">用户id</th>
+                                        <th style="width: 5%;">活动ID</th>
+                                        <th style="width: 5%;">说明</th>
+                                        <th style="width: 5%;">时间</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {if !empty($extensionlog['list']->items())}
+                                    {volist name="extensionlog['list']" id="activity"}
+                                    <tr>
+                                        <td>{$activity['id']}</td>
+                                        <td><?php if(isset($extensionlog['member'][$activity['u_id']])) echo $extensionlog['member'][$activity['u_id']]['tel'];?></td>
+                                        <td>{$activity['a_id']}</td>
+                                        <td>{$activity['message']}</td>
+                                        <td>{$activity['time']|date='Y-m-d H:i:s'}</td>
+                                    </tr>
+                                    {/volist}
+                                    {else /}
+                                    <tr>
+                                        <td colspan="4" class="nodata_td">无记录</td>
+                                    </tr>
+                                    {/if}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="layui-card-body ">
+                                <div class="page">
+                                    {$extensionlog['list']|raw}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-tab-item" id="module_menus_box_4">
+                            <div class="layui-card-body ">
+                                <form class="layui-form layui-col-space5">
+                                    <div class="layui-input-inline layui-show-xs-block">
+                                        <input type="text" name="tel" value="{$param_name}" placeholder="手机号码" autocomplete="off" class="layui-input">
+                                    </div>
+                                    <div class="layui-inline layui-show-xs-block">
+                                        <input class="layui-input"  autocomplete="off" placeholder="添加开始时间" name="add_time_s" value="{$param_add_time_s}" id="add_time_s4">
+                                    </div>
+                                    <div class="layui-inline layui-show-xs-block">
+                                        <input class="layui-input"  autocomplete="off" placeholder="添加截至时间" name="add_time_e" value="{$param_add_time_e}" id="add_time_e4">
+                                    </div>
+                                    <div class="layui-input-inline layui-show-xs-block">
+                                        <input type="hidden" name="my_active_module" value="4">
+                                        <button class="layui-btn" lay-submit="" lay-filter="sreach">
+                                            <i class="layui-icon">&#xe615;</i>
+                                        </button>
+                                    </div>
+                                </form>
+                                <table class="layui-table layui-form">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: 5%;">记录ID</th>
+                                        <th style="width: 5%;">用户id</th>
+                                        <th style="width: 5%;">活动ID</th>
+                                        <th style="width: 5%;">说明</th>
+                                        <th style="width: 5%;">时间</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {if !empty($uplevellog['list']->items())}
+                                    {volist name="uplevellog['list']" id="activity"}
+                                    <tr>
+                                        <td>{$activity['id']}</td>
+                                        <td><?php if(isset($uplevellog['member'][$activity['u_id']])) echo $uplevellog['member'][$activity['u_id']]['tel'];?></td>
+                                        <td>{$activity['a_id']}</td>
+                                        <td>{$activity['message']}</td>
+                                        <td>{$activity['time']|date='Y-m-d H:i:s'}</td>
+                                    </tr>
+                                    {/volist}
+                                    {else /}
+                                    <tr>
+                                        <td colspan="4" class="nodata_td">无记录</td>
+                                    </tr>
+                                    {/if}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="layui-card-body ">
+                                <div class="page">
+                                    {$uplevellog['list']|raw}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 直通车活动 -->
+                        <div class="layui-tab-item" id="module_menus_box_5">
+                            <div class="layui-card-body ">
+                                <form class="layui-form layui-col-space5">
+                                    <div class="layui-input-inline layui-show-xs-block">
+                                        <input type="text" name="tel" value="{$param_name}" placeholder="手机号码" autocomplete="off" class="layui-input">
+                                    </div>
+                                    <div class="layui-inline layui-show-xs-block">
+                                        <input class="layui-input"  autocomplete="off" placeholder="添加开始时间" name="add_time_s" value="{$param_add_time_s}" id="add_time_s3">
+                                    </div>
+                                    <div class="layui-inline layui-show-xs-block">
+                                        <input class="layui-input"  autocomplete="off" placeholder="添加截至时间" name="add_time_e" value="{$param_add_time_e}" id="add_time_e3">
+                                    </div>
+                                    <div class="layui-input-inline layui-show-xs-block">
+                                        <input type="hidden" name="my_active_module" value="5">
+                                        <button class="layui-btn" lay-submit="" lay-filter="sreach">
+                                            <i class="layui-icon">&#xe615;</i>
+                                        </button>
+                                    </div>
+                                </form>
+                                <table class="layui-table layui-form">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: 5%;">记录ID</th>
+                                        <th style="width: 5%;">用户id</th>
+                                        <th style="width: 5%;">活动ID</th>
+                                        <th style="width: 5%;">说明</th>
+                                        <th style="width: 5%;">时间</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {if !empty($directlog['list']->items())}
+                                    {volist name="directlog['list']" id="activity"}
+                                    <tr>
+                                        <td>{$activity['id']}</td>
+                                        <td><?php if(isset($extensionlog['member'][$activity['u_id']])) echo $extensionlog['member'][$activity['u_id']]['tel'];?></td>
+                                        <td>{$activity['a_id']}</td>
+                                        <td>{$activity['message']}</td>
+                                        <td>{$activity['time']|date='Y-m-d H:i:s'}</td>
+                                    </tr>
+                                    {/volist}
+                                    {else /}
+                                    <tr>
+                                        <td colspan="4" class="nodata_td">无记录</td>
+                                    </tr>
+                                    {/if}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="layui-card-body ">
+                                <div class="page">
+                                    {$directlog['list']|raw}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 直通车活动 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    var active_module = "{$my_active_module}"; // 当前模块
+    $("#module_"+active_module).addClass('layui-this'); // 初始化系统模块
+    $("#module_menus_box_"+active_module).addClass('layui-show'); // 初始化系统模块菜单
+
+    // 切换模块
+    function changeModule(module_id) {
+        if(module_id != active_module){
+            window.location.href = "/index/activity/activityLog/my_active_module/" + module_id;
+            /*active_module = module_id; // 切换模块
+            $(".layui-tab-item").removeClass('layui-show'); // 先隐藏所有菜单
+            $("#module_menus_box_"+active_module).addClass('layui-show'); // 显示当前模块菜单*/
+        }
+    }
+    layui.use('form', function () {
+        let form = layui.form;
+        form.render();
+    });
+
+    //日期选择
+    layui.use(['laydate','form'], function(){
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#add_time_s1',
+            type: 'datetime'
+        });
+        laydate.render({
+            elem: '#add_time_e1',
+            type: 'datetime'
+        });
+    });
+    //日期选择
+    layui.use(['laydate','form'], function(){
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#add_time_s2',
+            type: 'datetime'
+        });
+        laydate.render({
+            elem: '#add_time_e2',
+            type: 'datetime'
+        });
+    });
+    //日期选择
+    layui.use(['laydate','form'], function(){
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#add_time_s3',
+            type: 'datetime'
+        });
+        laydate.render({
+            elem: '#add_time_e3',
+            type: 'datetime'
+        });
+    });
+    //日期选择
+    layui.use(['laydate','form'], function(){
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#add_time_s4',
+            type: 'datetime'
+        });
+        laydate.render({
+            elem: '#add_time_e4',
+            type: 'datetime'
+        });
+    });
+
+</script>
+{/block}

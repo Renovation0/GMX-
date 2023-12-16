@@ -1,0 +1,188 @@
+[31-Oct-2023 16:50:50 UTC] PHP Fatal error:  Uncaught think\exception\ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/Container.php:467
+Stack trace:
+#0 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(467): think\Error::appError()
+#1 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(437): think\Container->bindParams()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(284): think\Container->invokeClass()
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(132): think\Container->make()
+#4 /home/gemxpbra/public_html/thinkphp/library/think/exception/Handle.php(42): think\Container::get()
+#5 /home/gemxpbra/public_html/thinkphp/library/think/Error.php(51): think\exception\Handle->report()
+#6 [internal function]: think\Error::appException()
+#7 {main}
+  thrown in /home/gemxpbra/public_html/thinkphp/library/think/Container.php on line 467
+[31-Oct-2023 16:51:24 UTC] PHP Fatal error:  Uncaught think\exception\ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/Container.php:467
+Stack trace:
+#0 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(467): think\Error::appError()
+#1 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(437): think\Container->bindParams()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(284): think\Container->invokeClass()
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(132): think\Container->make()
+#4 /home/gemxpbra/public_html/thinkphp/library/think/exception/Handle.php(42): think\Container::get()
+#5 /home/gemxpbra/public_html/thinkphp/library/think/Error.php(51): think\exception\Handle->report()
+#6 [internal function]: think\Error::appException()
+#7 {main}
+  thrown in /home/gemxpbra/public_html/thinkphp/library/think/Container.php on line 467
+[31-Oct-2023 16:51:38 UTC] PHP Fatal error:  Uncaught think\exception\ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/Container.php:467
+Stack trace:
+#0 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(467): think\Error::appError()
+#1 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(437): think\Container->bindParams()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(284): think\Container->invokeClass()
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(132): think\Container->make()
+#4 /home/gemxpbra/public_html/thinkphp/library/think/exception/Handle.php(42): think\Container::get()
+#5 /home/gemxpbra/public_html/thinkphp/library/think/Error.php(51): think\exception\Handle->report()
+#6 [internal function]: think\Error::appException()
+#7 {main}
+  thrown in /home/gemxpbra/public_html/thinkphp/library/think/Container.php on line 467
+[31-Oct-2023 16:51:51 UTC] PHP Fatal error:  Uncaught think\exception\ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/Container.php:467
+Stack trace:
+#0 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(467): think\Error::appError()
+#1 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(437): think\Container->bindParams()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(284): think\Container->invokeClass()
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(132): think\Container->make()
+#4 /home/gemxpbra/public_html/thinkphp/library/think/exception/Handle.php(42): think\Container::get()
+#5 /home/gemxpbra/public_html/thinkphp/library/think/Error.php(51): think\exception\Handle->report()
+#6 [internal function]: think\Error::appException()
+#7 {main}
+  thrown in /home/gemxpbra/public_html/thinkphp/library/think/Container.php on line 467
+[31-Oct-2023 16:54:39 UTC] PHP Fatal error:  Uncaught think\exception\ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/Container.php:467
+Stack trace:
+#0 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(467): think\Error::appError()
+#1 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(437): think\Container->bindParams()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(284): think\Container->invokeClass()
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(132): think\Container->make()
+#4 /home/gemxpbra/public_html/thinkphp/library/think/exception/Handle.php(42): think\Container::get()
+#5 /home/gemxpbra/public_html/thinkphp/library/think/Error.php(51): think\exception\Handle->report()
+#6 [internal function]: think\Error::appException()
+#7 {main}
+  thrown in /home/gemxpbra/public_html/thinkphp/library/think/Container.php on line 467
+[01-Nov-2023 02:26:17 UTC] PHP Fatal error:  Uncaught think\exception\ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/Container.php:467
+Stack trace:
+#0 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(467): think\Error::appError()
+#1 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(437): think\Container->bindParams()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(284): think\Container->invokeClass()
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(132): think\Container->make()
+#4 /home/gemxpbra/public_html/thinkphp/library/think/exception/Handle.php(42): think\Container::get()
+#5 /home/gemxpbra/public_html/thinkphp/library/think/Error.php(51): think\exception\Handle->report()
+#6 [internal function]: think\Error::appException()
+#7 {main}
+  thrown in /home/gemxpbra/public_html/thinkphp/library/think/Container.php on line 467
+[01-Nov-2023 02:32:52 UTC] PHP Fatal error:  Uncaught think\exception\ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/Container.php:467
+Stack trace:
+#0 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(467): think\Error::appError()
+#1 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(437): think\Container->bindParams()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(284): think\Container->invokeClass()
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(132): think\Container->make()
+#4 /home/gemxpbra/public_html/thinkphp/library/think/exception/Handle.php(42): think\Container::get()
+#5 /home/gemxpbra/public_html/thinkphp/library/think/Error.php(51): think\exception\Handle->report()
+#6 [internal function]: think\Error::appException()
+#7 {main}
+  thrown in /home/gemxpbra/public_html/thinkphp/library/think/Container.php on line 467
+[01-Nov-2023 02:33:20 UTC] PHP Fatal error:  Uncaught think\exception\ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/Container.php:467
+Stack trace:
+#0 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(467): think\Error::appError()
+#1 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(437): think\Container->bindParams()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(284): think\Container->invokeClass()
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(132): think\Container->make()
+#4 /home/gemxpbra/public_html/thinkphp/library/think/exception/Handle.php(42): think\Container::get()
+#5 /home/gemxpbra/public_html/thinkphp/library/think/Error.php(51): think\exception\Handle->report()
+#6 [internal function]: think\Error::appException()
+#7 {main}
+  thrown in /home/gemxpbra/public_html/thinkphp/library/think/Container.php on line 467
+[01-Nov-2023 02:34:23 UTC] PHP Fatal error:  Uncaught think\exception\ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/Container.php:467
+Stack trace:
+#0 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(467): think\Error::appError()
+#1 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(437): think\Container->bindParams()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(284): think\Container->invokeClass()
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(132): think\Container->make()
+#4 /home/gemxpbra/public_html/thinkphp/library/think/exception/Handle.php(42): think\Container::get()
+#5 /home/gemxpbra/public_html/thinkphp/library/think/Error.php(51): think\exception\Handle->report()
+#6 [internal function]: think\Error::appException()
+#7 {main}
+  thrown in /home/gemxpbra/public_html/thinkphp/library/think/Container.php on line 467
+[01-Nov-2023 02:34:30 UTC] PHP Fatal error:  Uncaught think\exception\ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/Container.php:467
+Stack trace:
+#0 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(467): think\Error::appError()
+#1 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(437): think\Container->bindParams()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(284): think\Container->invokeClass()
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(132): think\Container->make()
+#4 /home/gemxpbra/public_html/thinkphp/library/think/exception/Handle.php(42): think\Container::get()
+#5 /home/gemxpbra/public_html/thinkphp/library/think/Error.php(51): think\exception\Handle->report()
+#6 [internal function]: think\Error::appException()
+#7 {main}
+  thrown in /home/gemxpbra/public_html/thinkphp/library/think/Container.php on line 467
+[01-Nov-2023 02:34:41 UTC] PHP Fatal error:  Uncaught think\exception\ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/Container.php:467
+Stack trace:
+#0 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(467): think\Error::appError()
+#1 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(437): think\Container->bindParams()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(284): think\Container->invokeClass()
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(132): think\Container->make()
+#4 /home/gemxpbra/public_html/thinkphp/library/think/exception/Handle.php(42): think\Container::get()
+#5 /home/gemxpbra/public_html/thinkphp/library/think/Error.php(51): think\exception\Handle->report()
+#6 [internal function]: think\Error::appException()
+#7 {main}
+  thrown in /home/gemxpbra/public_html/thinkphp/library/think/Container.php on line 467
+[01-Nov-2023 02:34:59 UTC] PHP Fatal error:  Uncaught think\exception\ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/Container.php:467
+Stack trace:
+#0 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(467): think\Error::appError()
+#1 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(437): think\Container->bindParams()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(284): think\Container->invokeClass()
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(132): think\Container->make()
+#4 /home/gemxpbra/public_html/thinkphp/library/think/exception/Handle.php(42): think\Container::get()
+#5 /home/gemxpbra/public_html/thinkphp/library/think/Error.php(51): think\exception\Handle->report()
+#6 [internal function]: think\Error::appException()
+#7 {main}
+  thrown in /home/gemxpbra/public_html/thinkphp/library/think/Container.php on line 467
+[01-Nov-2023 02:35:00 UTC] PHP Fatal error:  Uncaught think\exception\ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/Container.php:467
+Stack trace:
+#0 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(467): think\Error::appError()
+#1 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(437): think\Container->bindParams()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(284): think\Container->invokeClass()
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(132): think\Container->make()
+#4 /home/gemxpbra/public_html/thinkphp/library/think/exception/Handle.php(42): think\Container::get()
+#5 /home/gemxpbra/public_html/thinkphp/library/think/Error.php(51): think\exception\Handle->report()
+#6 [internal function]: think\Error::appException()
+#7 {main}
+  thrown in /home/gemxpbra/public_html/thinkphp/library/think/Container.php on line 467
+[01-Nov-2023 02:35:04 UTC] PHP Fatal error:  Uncaught think\exception\ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/Container.php:467
+Stack trace:
+#0 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(467): think\Error::appError()
+#1 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(437): think\Container->bindParams()
+#2 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(284): think\Container->invokeClass()
+#3 /home/gemxpbra/public_html/thinkphp/library/think/Container.php(132): think\Container->make()
+#4 /home/gemxpbra/public_html/thinkphp/library/think/exception/Handle.php(42): think\Container::get()
+#5 /home/gemxpbra/public_html/thinkphp/library/think/Error.php(51): think\exception\Handle->report()
+#6 [internal function]: think\Error::appException()
+#7 {main}
+  thrown in /home/gemxpbra/public_html/thinkphp/library/think/Container.php on line 467
+[14-Dec-2023 15:43:44 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[14-Dec-2023 15:46:35 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[14-Dec-2023 15:49:32 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[14-Dec-2023 15:53:45 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[14-Dec-2023 15:53:45 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[14-Dec-2023 15:53:45 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[14-Dec-2023 15:58:17 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[14-Dec-2023 16:02:17 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[14-Dec-2023 16:06:05 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[14-Dec-2023 16:36:03 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[14-Dec-2023 16:36:03 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[14-Dec-2023 16:36:03 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[14-Dec-2023 16:36:03 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[14-Dec-2023 16:36:03 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[14-Dec-2023 18:40:25 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[14-Dec-2023 18:40:25 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[14-Dec-2023 18:40:25 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[14-Dec-2023 21:15:37 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[15-Dec-2023 01:06:23 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[15-Dec-2023 01:24:24 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[15-Dec-2023 01:41:11 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[15-Dec-2023 01:41:11 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[15-Dec-2023 01:41:11 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[15-Dec-2023 01:44:58 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[15-Dec-2023 03:33:04 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[15-Dec-2023 10:11:49 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[15-Dec-2023 10:11:49 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[15-Dec-2023 10:17:46 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[15-Dec-2023 10:46:53 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[15-Dec-2023 11:24:53 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[15-Dec-2023 11:53:52 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[15-Dec-2023 11:58:35 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[15-Dec-2023 12:06:12 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568
+[15-Dec-2023 13:14:22 Asia/Shanghai] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/gemxpbra/public_html/thinkphp/library/think/db/Query.php on line 568

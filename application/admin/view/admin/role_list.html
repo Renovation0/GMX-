@@ -1,0 +1,241 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}角色列表{/block}
+{block name="style"}
+<style>
+    .layui-table td, .layui-table th {
+        min-width: unset !important;
+    }
+    .role_user {
+        display: inline-block;
+        margin:0 5px 5px 0;
+        padding: 5px;
+        background-color: #f0f0f0;
+    }
+    .layui-fluid{
+        min-width:800px;
+    }
+</style>
+{/block}
+{block name="page"}
+<div class="x-nav">
+    <span class="layui-breadcrumb">
+        <a href="javascript:;">系统</a>
+        <a href="javascript:;">权限分配</a>
+        <a><cite>角色列表</cite></a>
+    </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" onclick="location.reload()" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+    </a>
+</div>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body ">
+                     <div class="layui-tab-content">
+                        <form class="layui-form layui-col-space5">
+                            <div class="layui-input-inline layui-show-xs-block">
+                                <select name="status">
+                                    <option value="-1" <?php if($param_status == -1) echo 'selected';?>>使用状态</option>
+                                    <option value="1" <?php if($param_status == 1) echo 'selected';?>>已启用</option>
+                                    <option value="2" <?php if($param_status == 2) echo 'selected';?>>已禁用</option>
+                                </select>
+                            </div>
+                            <div class="layui-input-inline layui-show-xs-block">
+                                <input type="text" name="name" value="{$param_name}" placeholder="角色名" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="layui-input-inline layui-show-xs-block">
+                                <button class="layui-btn" lay-submit="" lay-filter="sreach">
+                                    <i class="layui-icon">&#xe615;</i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="layui-card-header">
+                    {if in_array('/admin/roleadd', (array)session('power_action'))} <!-- {:url('admin/roleAdd')} '/admin/admin/roleAdd' -->
+                    <button class="layui-btn layui-btn-normal" onclick="xadmin.open('添加角色','{:url('admin/roleAdd')}',600,400)">
+                        <i class="layui-icon"></i>添加
+                    </button>
+                    {else /}
+                    <button class="layui-btn layui-btn-disabled">
+                        <i class="layui-icon"></i>添加
+                    </button>
+                    {/if}
+                </div>
+                <div class="layui-card-body ">
+                    <table class="layui-table layui-form">
+                        <thead>
+                        <tr>
+                            <th style="width: 20px;">ID</th>
+                            <th style="width: 100px;">角色名</th>
+                            <th>描述</th>
+                            <th>授权用户</th>
+                            <th style="width: 40px;">状态</th>
+                            <th style="width: 290px;">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {if !empty($list->items())}
+                        {volist name="list" id="role"}
+                        <tr>
+                            <td>{$role['id']}</td>
+                            <td>{$role['name']}</td>
+                            <td>{$role['message']}</td>
+                            <td>
+                                {volist name="role['users']" id="user"}
+                                    <span class="role_user" data-id="{$user['id']}">{$user['username']}</span>
+                                {/volist}
+                            </td>
+                            <td>
+                                {switch $role['status']}
+                                {case 1}<span style="color: darkgreen;">已启用</span>{/case}
+                                {case 2}<span style="color: orangered;">已禁用</span>{/case}
+                                {case 3}<span style="color: grey;">已删除</span>{/case}
+                                {default /}<span style="color: grey;">未知</span>
+                                {/switch}
+                            </td>
+                            <td class="td-manage">
+                                <!--不是超级管理员-->
+                                {if $role['id'] != 1}
+                                <!--权限-->
+                                {if in_array('/admin/rolepower', (array)session('power_action'))}	<!-- /admin/admin/rolePower/id/{$role[\'id\']} -->
+                                <button class="layui-btn" onclick="xadmin.open('权限分配: {$role[\'name\']} [id=>{$role[\'id\']}]','{:url('admin/rolePower')}?id='+{$role[\'id\']},900,700)">
+                                    <i class="iconfont">&#xe6ab;</i> 权限
+                                </button>
+                                {else /}
+                                <button class="layui-btn layui-btn-disabled">
+                                    <i class="iconfont">&#xe6ab;</i> 权限
+                                </button>
+                                {/if}
+                                <!--编辑-->
+                                {if in_array('/admin/roleedit', (array)session('power_action'))}	<!-- '/admin/admin/roleEdit/id/{$role[\'id\']}' -->
+                                <button class="layui-btn layui-btn-normal" onclick="xadmin.open('编辑','{:url('admin/roleEdit')}?id='+{$role[\'id\']},600,400)">
+                                    <i class="iconfont">&#xe69e;</i> 编辑
+                                </button>
+                                {else /}
+                                <button class="layui-btn layui-btn-disabled">
+                                    <i class="iconfont">&#xe69e;</i> 编辑
+                                </button>
+                                {/if}
+                                <!--修改状态-->
+                                {if in_array('/admin/rolestatus', (array)session('power_action'))}
+                                {switch $role['status']}
+                                {case 2}
+                                <button class="layui-btn" onclick="role_status(this, '{$role[\'id\']}', 1)">
+                                    <i class="iconfont">&#xe6af;</i> 启用
+                                </button>
+                                {/case}
+                                {case 1}
+                                <button class="layui-btn layui-btn-warm" onclick="role_status(this, '{$role[\'id\']}', 2)">
+                                    <i class="iconfont">&#xe69c;</i> 停用
+                                </button>
+                                {/case}
+                                {default /}<span style="color: grey;">未知</span>
+                                {/switch}
+                                {else /}
+                                {switch $role['status']}
+                                {case 2}
+                                <button class="layui-btn">
+                                    <i class="iconfont">&#xe6af;</i> 启用
+                                </button>
+                                {/case}
+                                {case 1}
+                                <button class="layui-btn layui-btn-disabled">
+                                    <i class="iconfont">&#xe69c;</i> 停用
+                                </button>
+                                {/case}
+                                {default /}<span style="color: grey;">未知</span>
+                                {/switch}
+                                {/if}
+                                <!--删除-->
+                                {if in_array('/admin/roledelete', (array)session('power_action'))}
+                                <button class="layui-btn layui-btn-danger" onclick="role_del(this, '{$role[\'id\']}')">
+                                    <i class="iconfont">&#xe69d;</i> 删除
+                                </button>
+                                {else /}
+                                <button class="layui-btn layui-btn-disabled">
+                                    <i class="iconfont">&#xe69d;</i> 删除
+                                </button>
+                                {/if}
+                                {/if}
+                            </td>
+                        </tr>
+                        {/volist}
+                        {else /}
+                        <tr>
+                            <td colspan="6" class="nodata_td">无记录</td>
+                        </tr>
+                        {/if}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="layui-card-body ">
+                    <div class="page">
+                        {$list|raw}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    layui.use('form', function () {
+       let form = layui.form;
+       form.render();
+    });
+
+    // 修改角色状态
+    function role_status(obj, id, status) {
+        if(status !== 1 && status !== 2){
+            layer.msg('错误的操作');
+            return false;
+        }
+        layer.confirm(status === 1 ? '确定启用角色？' : '确定停用角色？', function(index) {
+            $.ajax({
+                url: "{:url('admin/roleStatus')}",//'/admin/admin/roleStatus',
+                type: 'post',
+                data: {
+                    id: id,
+                    status: status
+                },
+                success: function (data) {
+                    if(data.code === 1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            window.location.reload();
+                        }, 500);
+                    }else {
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+        });
+    }
+
+    // 删除角色
+    function role_del(obj, id) {
+        layer.confirm('确认要删除吗？', function(index) {
+            $.ajax({
+                url: "{:url('admin/roleDelete')}",//'/admin/admin/roleDelete',
+                type: 'post',
+                data: {
+                    id: id,
+                },
+                success: function (data) {
+                    if(data.code === 1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            window.location.reload();
+                        }, 500);
+                    }else {
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+        });
+    }
+</script>
+{/block}

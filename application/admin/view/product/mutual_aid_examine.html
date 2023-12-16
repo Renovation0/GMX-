@@ -1,0 +1,179 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}预约记录{/block}
+{block name="style"}
+<style>
+    .layui-table td, .layui-table th {
+        /* min-width: unset !important; */
+    }
+
+    .role_user {
+        display: inline-block;
+        margin-right: 5px;
+        padding: 5px;
+        background-color: #f0f0f0;
+    }
+</style>
+{/block}
+{block name="page"}
+<div class="x-nav">
+    <span class="layui-breadcrumb">
+        <a href="javascript:;">互助管理</a>
+        <a><cite>预约记录</cite></a>
+    </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+       onclick="location.reload()" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+    </a>
+</div>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                         <div class="layui-tab-content">
+                            <form class="layui-form layui-col-space5">
+                                <div class="layui-input-inline layui-show-xs-block">
+                                    <select name="name">
+                                        <option value="">选择宠物</option>
+                                        {volist name="info" id="aid"}
+				                        <option value="{$aid['id']}" <?php if($param_name == $aid['id']) echo 'selected';?>>{$aid['name']}</option>
+				                        {/volist}
+                                    </select>
+                                </div>
+                                <div class="layui-inline layui-show-xs-block">
+                                    <input class="layui-input" autocomplete="off" placeholder="添加开始时间" name="add_time_s"
+                                           value="{$param_add_time_s}" id="add_time_s">
+                                </div>
+                                <div class="layui-inline layui-show-xs-block">
+                                    <input class="layui-input" autocomplete="off" placeholder="添加截至时间" name="add_time_e"
+                                           value="{$param_add_time_e}" id="add_time_e">
+                                </div>
+                                <div class="layui-input-inline layui-show-xs-block">
+                                    <button class="layui-btn" lay-submit="" lay-filter="sreach">
+                                        <i class="layui-icon">&#xe615;</i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                <div class="layui-card-body layui-card-table">
+                    <table class="layui-table layui-form">
+                        <thead>
+                        <tr align="center">
+                            <th style="min-width: 50px;"><b>ID</b></th>
+                            <th><b>账号</b></th>
+                            <th><b>宠物</b></th>
+                            <th style="min-width: 120px;"><b>宠物编号</b></th>
+                            <th style="min-width: 50px;"><b>金额</b></th>
+                            <th style="min-width: 150px;"><b>状态</b></th>
+                            <th style="min-width: 100px;"><b>生成时间</b></th>
+                            <th style="min-width: 100px;"><b>审核时间</b></th>
+                            <th><b>操作</b></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {if !empty($list->items())}
+                        {volist name="list" id="user"}
+                        <tr align="center">
+                            <td>{$user['id']}</td>
+                            <td>{$user['tel']}</td>
+                            <td>{$user['name']}</td>
+                            <td>{$user['orderNo']}</td>
+                            <td style="color:red;">{$user['price']}</td>
+                            
+                            {switch $user['status']}
+                            {case 1}<td style="color: green"><span style="font-size:20px">●</span>审核中</td>{/case}
+                            {case 2}<td style="color: blue"><span style="font-size:20px">●</span>审核成功</td>{/case}
+                            {case 3}<td style="color: red"><span style="font-size:20px">●</span>审核失败</td>{/case}
+                            {/switch}
+                            
+                            <td>{:date('m-d H:i:s',$user['sta_time'])}</td>
+                            
+                            <td>
+                                {if $user['end_time'] == 0}
+                                    --
+                                {else/}
+                                    {:date('m-d H:i:s',$user['end_time'])}
+                                {/if}
+                            </td>
+
+                            
+                            <td>
+                                
+                            {switch $user['status']}
+	                            {case 1}
+                                <button class="layui-btn layui-btn-warm" onclick="up_confirm(this, '{$user[\'id\']}',2)">
+                                     同意
+                                </button>
+                                
+                                <button style="background:red;" class="layui-btn layui-btn-warm" onclick="up_confirm(this, '{$user[\'id\']}',3)">
+                                    拒绝
+                                </button>
+	                            {/case}                        
+	                            {default /}
+                            {/switch}
+                                
+                            </td>
+                        </tr>
+                        {/volist}
+                        {else /}
+                        <tr>
+                            <td colspan="13" class="nodata_td">无记录</td>
+                        </tr>
+                        {/if}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="layui-card-body ">
+                    <div class="page">
+                        {$list|raw}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+
+layui.use('form', function () {
+    let form = layui.form;
+    form.render();
+});
+//日期选择
+layui.use(['laydate', 'form'], function () {
+    var laydate = layui.laydate;
+    laydate.render({
+        elem: '#add_time_s',
+        type: 'datetime'
+    });
+    laydate.render({
+        elem: '#add_time_e',
+        type: 'datetime'
+    });
+});
+
+    //审核
+    function up_confirm(obj, id, status) {
+        layer.confirm('是否同意？', function(index) {
+            $.ajax({
+                url: "{:url('mutualaid/mutualAidExamineAgree')}",//'/admin/mutualaid/mutualaidmemberdelete',
+                type: 'post',
+                data: {
+                	id: id,
+	                status:status
+                },
+                success: function (data) {
+                    if(data.code === 1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            window.location.reload();
+                        }, 500);
+                    }else {
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+        });
+    }
+</script>
+{/block}

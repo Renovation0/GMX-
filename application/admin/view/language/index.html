@@ -1,0 +1,77 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}角色添加{/block}
+{block name="style"}
+<link rel="stylesheet" href="__STATIC__/codemirror/lib/codemirror.css">
+<link rel="stylesheet" href="__STATIC__/codemirror/theme/monokai.css">
+<style>
+    .CodeMirror {
+        height: 700px;
+        font-size: 18px;
+    }
+</style>
+{/block}
+{block name="page"}
+<div class="x-nav">
+    <span class="layui-breadcrumb">
+        <a href="javascript:;">语言包</a>
+        <a><cite>编辑</cite></a>
+    </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" onclick="location.reload()" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+    </a>
+</div>
+<div class="layui-fluid">
+    <div class="layui-row">
+        <form action="/admin/language/edit" method="post" class="layui-form layui-form-pane">
+            <textarea id="code">{$text}</textarea>
+            <div class="layui-form-item">
+                <button class="layui-btn" lay-submit lay-filter="role_add">提交</button>
+            </div>
+        </form>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script src="__STATIC__/codemirror/lib/codemirror.js"></script>
+<script src="__STATIC__/codemirror/addon/edit/closetag.js"></script>
+<script src="__STATIC__/codemirror/mode/xml/xml.js"></script>
+<script src="__STATIC__/codemirror/mode/javascript/javascript.js"></script>
+<script src="__STATIC__/codemirror/mode/css/css.js"></script>
+<script src="__STATIC__/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="__STATIC__/codemirror/code-blast.js"></script>
+<script>
+    let editor = CodeMirror.fromTextArea($("#code")[0], { //script_once_code为你的textarea的ID号
+        lineNumbers: true,//是否显示行号
+        mode: "php",　//默认脚本编码
+        lineWrapping: true, //是否强制换行
+        theme: 'monokai', // 主题
+    });
+
+    $(function  () {
+        layui.use('form', function(){
+            let form = layui.form;
+            form.on('submit(role_add)', function(data){
+                let code = editor.getValue();
+                $.ajax({
+                    url: '/admin/language/edit',
+                    type: 'post',
+                    data: {
+                        code: code,
+                    },
+                    success: function (data) {
+                        if(data.code === 1){
+                            layer.msg(data.msg);
+                            setTimeout(function(){
+                                window.location.reload();
+                            }, 500);
+                        }else {
+                            layer.msg(data.msg);
+                        }
+                    }
+                });
+                return false;
+            });
+        });
+    });
+</script>
+{/block}

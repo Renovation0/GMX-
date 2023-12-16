@@ -1,0 +1,226 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}管理员编辑{/block}
+{block name="style"}{/block}
+{block name="page"}
+<div class="layui-fluid">
+    <div class="layui-row">
+        <form class="layui-form" action="{:url('channel/channelEditPost')}">
+            <input type="hidden" name="id" value="{$channel['id']}">
+            <div class="layui-form-item">
+                <label for="tel" class="layui-form-label">
+                    名称
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="name" name="name" value="{$channel['name']}"  autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-word-aux">
+                    
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="tel" class="layui-form-label">
+                    备注名称
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="bname" name="bname" value="{$channel['bname']}"  autocomplete="off" class="layui-input" >
+                </div>
+                <div class="layui-form-mid layui-word-aux">
+                    
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="withdraw_status" class="layui-form-label">
+                    <span class="x-red">*</span>充值开关
+                </label>
+                <div class="layui-input-inline layui-show-xs-block">
+                    <select name="recharge_status" id="recharge_status" lay-verify="required">
+                        <option value="1" {if $channel['recharge_status'] == '1'} selected {/if}>开启</option>
+                        <option value="0" {if $channel['recharge_status'] == '0'} selected {/if}>关闭</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="withdraw_status" class="layui-form-label">
+                    <span class="x-red">*</span>提现开关
+                </label>
+                <div class="layui-input-inline layui-show-xs-block">
+                    <select name="withdraw_status" id="withdraw_status" lay-verify="required">
+                        <option value="1" {if $channel['withdraw_status'] == '1'} selected {/if}>开启</option>
+                        <option value="0" {if $channel['withdraw_status'] == '0'} selected {/if}>关闭</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label">
+                    <span class="x-red"></span>充值排序
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="recharge_order" name="recharge_order" value="{$channel['recharge_order']}"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label">
+                    <span class="x-red"></span>提现排序
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="withdraw_order" name="withdraw_order" value="{$channel['withdraw_order']}"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" >
+                    <span class="x-red"></span>通道url
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="channel_url" name="channel_url" value="{$channel['channel_url']}"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" >
+                    <span class="x-red"></span>商户号
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="channel_merchant" name="channel_merchant" value="{$channel['channel_merchant']}"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" >
+                    <span class="x-red"></span>通道编码
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="channel_type" name="channel_type" value="{$channel['channel_type']}"   autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" >
+                    <span class="x-red"></span>MD5KEY
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="channel_md5key" name="channel_md5key" value="{$channel['channel_md5key']}"   autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" >
+                    <span class="x-red"></span>代付URL
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="df_url" name="df_url" value="{$channel['df_url']}"   autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" >
+                    <span class="x-red"></span>代付通道编码
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="df_type" name="df_type" value="{$channel['df_type']}"   autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" >
+                    <span class="x-red"></span>代付MD5KEY
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="df_md5key" name="df_md5key" value="{$channel['df_md5key']}"   autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" >
+                    <span class="x-red"></span>充值单比最小额度（0无限制）
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="recharge_min" name="recharge_min" value="{$channel['recharge_min']}"   autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" >
+                    <span class="x-red"></span>充值单比最大额度（0无限制）
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="recharge_max" name="recharge_max" value="{$channel['recharge_max']}"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label" >
+                    <span class="x-red"></span>提现单比最小额度（0无限制）
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="withdraw_min" name="withdraw_min" value="{$channel['withdraw_min']}" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label">
+                    <span class="x-red"></span>提现单比最大额度（0无限制）
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="withdraw_max" name="withdraw_max"  value="{$channel['withdraw_max']}"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label">
+                    <span class="x-red"></span>处理文件
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="bingfile" name="bingfile"  value="{$channel['bingfile']}"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                </label>
+                <button  class="layui-btn" lay-filter="channel_edit" lay-submit="">
+                    提交
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+
+    layui.use(['form', 'layer'], function() {
+        $ = layui.jquery;
+        let form = layui.form,
+            layer = layui.layer;
+        //监听提交
+        form.on('submit(channel_edit)', function(data) {
+            $.ajax({
+                url: data.form.action,
+                type: 'post',
+                data: {
+                    id: data.field.id,
+                    name: data.field.name,
+                    bname: data.field.bname,
+                    recharge_status: data.field.recharge_status,
+                    withdraw_status: data.field.withdraw_status,
+                    recharge_order: data.field.recharge_order,
+                    withdraw_order: data.field.withdraw_order,
+                    channel_url: data.field.channel_url,
+                     channel_type: data.field.channel_type,
+                      channel_merchant: data.field.channel_merchant,
+                       channel_md5key: data.field.channel_md5key,
+                        recharge_min: data.field.recharge_min,
+                         recharge_max: data.field.recharge_max,
+                          withdraw_min: data.field.withdraw_min,
+                           withdraw_max: data.field.withdraw_max,
+                           bingfile:data.field.bingfile,
+                           df_url:data.field.df_url,
+                               df_type:data.field.df_type,
+                               df_md5key:data.field.df_md5key
+                },
+                success: function (data) {
+                    if(data.code === 1){
+                        layer.msg(data.msg);
+                        setTimeout(function(){
+                            parent.location.reload();
+                        }, 500);
+                    }else {
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+            return false;
+        });
+    });
+</script>
+{/block}

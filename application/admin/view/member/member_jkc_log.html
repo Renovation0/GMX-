@@ -1,0 +1,129 @@
+{extend name="../../../public/static/common/base" /}
+{block name="title"}用户资金记录{/block}
+{block name="style"}
+<style>
+    .layui-table td, .layui-table th {
+        min-width: unset !important;
+    }
+</style>
+{/block}
+{block name="page"}
+<div class="x-nav">
+    <span class="layui-breadcrumb">
+        <a href="javascript:;">用户</a>
+        <a href="javascript:;">用户管理</a>
+        <a><cite>资金记录</cite></a>
+    </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+       onclick="location.reload()" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+    </a>
+</div>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body ">
+                    <form class="layui-form layui-col-space5">
+                        <div class="layui-input-inline layui-show-xs-block">
+                            <select name="type">
+                                <option value="0" <?php if($param_type == 0) echo 'selected';?>>记录类型</option>
+                                <option value="71" <?php if($param_type == 71) echo 'selected';?>>系统发送</option>
+                                <option value="81" <?php if($param_type == 81) echo 'selected';?>>转入</option>
+                                <option value="82" <?php if($param_type == 82) echo 'selected';?>>转出</option>
+                                <option value="83" <?php if($param_type == 83) echo 'selected';?>>买币赠送</option>
+                            </select>
+                        </div>
+                        <div class="layui-input-inline layui-show-xs-block">
+                            <input type="text" name="user_tel" value="{$user_tel}" placeholder="手机号" autocomplete="off"
+                                   class="layui-input">
+                        </div>
+                        <div class="layui-inline layui-show-xs-block">
+                            <input class="layui-input"  autocomplete="off" placeholder="添加开始时间" name="add_time_s" value="{$param_add_time_s}" id="add_time_s">
+                        </div>
+                        <div class="layui-inline layui-show-xs-block">
+                            <input class="layui-input"  autocomplete="off" placeholder="添加截至时间" name="add_time_e" value="{$param_add_time_e}" id="add_time_e">
+                        </div>
+                        <div class="layui-input-inline layui-show-xs-block">
+                            <button class="layui-btn" lay-submit="" lay-filter="sreach">
+                                <i class="layui-icon">&#xe615;</i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="layui-card-body ">
+                    <table class="layui-table layui-form">
+                        <thead>
+                        <tr>
+                            <th style="width: 20px;">ID</th>
+                            <th style="width: 20px;">用户</th>
+                            <th style="width: 140px;">金额</th>
+                            <th style="width: 140px;">前金额</th>
+                            <th style="width: 140px;">说明</th>
+                            <th style="width: 140px;">类型</th>
+                            <th style="width: 140px;">时间</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {if !empty($list['list']->items())}
+                        {volist name="list['list']" id="user"}
+                        <tr>
+                            <td>{$user['id']}</td>
+                            <td><?php if(isset($list['member'][$user['u_id']])) echo $list['member'][$user['u_id']]['tel'];?></td>
+                            <td>{$user['bo_money']}</td>
+                            <td>{$user['former_money']}</td>
+                            <td>{$user['message']}</td>
+                            <td>
+                            {switch $user['type']}
+                            {case 71}系统发送{/case}
+                            {case 81}转入{/case}
+                            {case 82}转出{/case}
+                            {case 83}买币赠送{/case}
+                            {default /}
+                            未知
+                            {/switch}
+                            </td>
+                            <td>{$user['bo_time']|date='Y-m-d H:i:s'}</td>
+                        </tr>
+                        {/volist}
+                        {else /}
+                        <tr>
+                            <td colspan="7" class="nodata_td">无记录</td>
+                        </tr>
+                        {/if}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="layui-card-body ">
+                    <div class="page">
+                        {$list['list']|raw}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+
+    //日期选择
+    layui.use(['laydate','form'], function(){
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#add_time_s',
+            type: 'datetime'
+        });
+        laydate.render({
+            elem: '#add_time_e',
+            type: 'datetime'
+        });
+
+    });
+
+    layui.use('form', function () {
+        let form = layui.form;
+        form.render();
+    });
+</script>
+{/block}
